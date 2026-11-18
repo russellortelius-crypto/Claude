@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-15",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 15, 2026",
+  "window": "6:00 AM PT Nov 14 to 6:00 AM PT Nov 15, 2026",
+  "generated_at": "2026-11-15T06:01:00-08:00",
+  "top_line": "Iran's IRGC says it launched a second round of drone retaliation against US forces in Bahrain overnight, claiming six drones targeted a US air-defense radar at the Riffa helicopter base. Bahrain issued its first nationwide threat alert in months and says its air defenses intercepted the attacks; Washington has not confirmed the latest strikes. Separately, Houthi missile and drone attacks on Saudi Arabia continued, and a tanker was reported attacked in the Gulf just west of the Strait of Hormuz on Sunday.",
+  "launches_and_strikes": [
+    {
+      "label": "Iran at Bahrain (Nov 14-15)",
+      "text": "IRGC claims six drones targeted a US radar at Riffa helicopter base late Saturday, framed as the second phase of retaliation for a US strike on a telecom tower in Sirik, Hormozgan. Bahrain Defense Force says it intercepted and destroyed \"several\" Iranian aerial attacks before they reached targets. Exact numbers launched and intercepted are unconfirmed; the US has not commented."
+    },
+    {
+      "label": "Prior round (Nov 13, for context)",
+      "text": "CENTCOM said it intercepted two Iranian one-way attack drones aimed at Bahrain, with no damage or injuries, and rejected the IRGC claim that a US early-warning radar was destroyed."
+    },
+    {
+      "label": "Houthis at Saudi Arabia",
+      "text": "The Saudi-led coalition says it intercepted two ballistic missiles fired at Riyadh and three drones over the Eastern region on Sunday, plus two drones over Riyadh and the southern region on Saturday. Attribution to the Houthis is the coalition's."
+    },
+    {
+      "label": "Yemen",
+      "text": "Houthi spokesman claims 72 coalition air strikes over 24 hours and the downing of a coalition reconnaissance aircraft over al-Jawf (unconfirmed)."
+    },
+    {
+      "label": "Iranian drone claims",
+      "text": "The IRGC said Saturday it shot down a US MQ-1 Predator over Qeshm Island, its second such claim in two days. Not independently verified."
+    },
+    {
+      "label": "Running count",
+      "text": "JINSA's tally of Iranian missiles and drones launched since July 7 reached at least 624 as of Nov 13 (2 on Nov 12-13)."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "UKMTO, citing Indian shipping authorities, reported a tanker attacked on Sunday while eastbound in the Gulf just before entering the Strait of Hormuz. Crew accounted for and safe; damage and environmental impact unknown; vessel and attacker not named."
+    },
+    {
+      "label": null,
+      "text": "The IRGC Navy claims two oil tankers exploded and caught fire after hitting mines on an \"unauthorized route\" south of the Strait, and two others turned back after warnings. No vessel names given; maritime authorities have not confirmed any mine strikes. The IRGC also says the Strait remains closed."
+    },
+    {
+      "label": null,
+      "text": "A senior UN official urged Iran and the US to allow fertilizer shipments through Hormuz, citing food-price risks."
+    },
+    {
+      "label": null,
+      "text": "No new IMO running count was found; the latest remains 134 confirmed incidents and 25 seafarer deaths as of Nov 11."
+    }
+  ],
+  "casualties_and_damage": "No casualties or confirmed damage were reported from the Bahrain or Saudi interceptions or the Sunday tanker incident. Saudi authorities put deaths from suspected Houthi attacks in the kingdom since Sept 23 at 26 or more. Houthi media reported two women and two children injured by shelling in Sanaa.",
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Iran's Speaker Ghalibaf said Iran will not remain in a state of \"neither war nor peace\" and that a path to agreement opens if the US accepts Tehran's seven conditions, which were passed via Qatari mediation."
+    },
+    {
+      "label": null,
+      "text": "Foreign Ministry spokesman Baghaei rejected the GCC demand for compensation as baseless, said Iran will seek reparations from regional states for use of their territory, and said Iran will accept no nuclear commitments at present."
+    },
+    {
+      "label": null,
+      "text": "Bahrain condemned the attacks as a violation of sovereignty, cited UNSC Resolution 2817, reserved Article 51 self-defense rights and urged Security Council action."
+    },
+    {
+      "label": null,
+      "text": "Netanyahu said it was time to remove the Iran threat \"once and for all.\" Mossad Director Gofman is in Washington for talks, reportedly including CIA Director Ratcliffe."
+    },
+    {
+      "label": null,
+      "text": "The US Embassy in Riyadh issued a nationwide alert urging heightened vigilance over Houthi threats."
+    }
+  ],
+  "chart_updates": [
+    "Data updated today: two JINSA launch-count rows added (622 as of Nov 12; 624 as of Nov 13). Ship incident and casualty figures unchanged (no newer IMO count or JINSA casualty table found)."
+  ],
+  "sources": [
+    {
+      "outlet": "The National",
+      "title": "Bahrain intercepts Iranian attacks after first nationwide alert in months",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/15/bahrain-issues-first-nationwide-alert-in-months-as-iran-claims-attack-on-base-hosting-us-helicopters/"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Saudi-led coalition intercepts suspected Houthi missiles and drones",
+      "url": "https://www.aljazeera.com/news/2026/11/15/saudi-led-coalition-intercepts-two-missiles-two-drones-in-riyadh"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Live updates: Bahrain says it intercepted Iranian attacks",
+      "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "Live blog, Nov 14-15",
+      "url": "https://www.iranintl.com/en/liveblog/202611143682"
+    },
+    {
+      "outlet": "Anadolu Agency",
+      "title": "Tanker comes under attack in Gulf waters: UK maritime agency",
+      "url": "https://www.aa.com.tr/en/middle-east/tanker-comes-under-attack-in-gulf-waters-uk-maritime-agency/4125797"
+    },
+    {
+      "outlet": "Latin Times",
+      "title": "CENTCOM says two drones intercepted before reaching target",
+      "url": "https://www.latintimes.com/iran-us-radar-claim-bahrain-drones-intercepted-601328"
+    },
+    {
+      "outlet": "Middle East Eye",
+      "title": "Iran says it intercepted US MQ-1 over Qeshm Island",
+      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-said-it-intercepted-us-mq-1-predator-drone-over-qeshm-island"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update 11/13/26",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.13.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update 11/12/26",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.12.2026.pdf"
+    }
+  ]
+}

@@ -89,5 +89,5 @@ To deploy by hand from your machine, run `npx wrangler deploy`.
 
 ## Not built yet
 
-- **Backfill (spec step 11):** November 13 (marked as the manual test run), 16 and 17 are in. November 14 and 15 still need their emails converted.
+- **Backfill (spec step 11):** done. November 13 (marked as the manual test run) through 17 are all in.
 - **NVIDIA and Supabase:** the spec keeps the site static, with no database and no automated news gathering. The natural places for these later are the daily job (NVIDIA could draft the summary JSON) and, if the JSON files outgrow the repo, Supabase as the data store.

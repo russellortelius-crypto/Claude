@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-14",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 14, 2026",
+  "window": "6:00 AM PT Nov 13 to 6:00 AM PT Nov 14, 2026",
+  "generated_at": "2026-11-14T06:01:00-08:00",
+  "top_line": "Iran launched two one-way attack drones toward Bahrain. Iran's IRGC said they destroyed a US early-warning radar, in retaliation for a US strike on a telecom tower in Sirik. CENTCOM says both drones were intercepted and nothing was damaged. This is Iran's first claimed strike on a US asset in a Gulf state since September. Iran also kept up its claims of tankers hitting mines in Hormuz, while Israeli reporting and Netanyahu's lobbying in Washington pointed toward a possible resumption of US-Israeli strikes. CENTCOM called that reporting speculation.",
+  "launches_and_strikes": [
+    {
+      "label": "Iran to Bahrain",
+      "text": "2 drones launched, 2 intercepted by US forces (CENTCOM). The IRGC's claim that the radar was destroyed is disputed by CENTCOM and has not been independently verified."
+    },
+    {
+      "label": "US to Iran",
+      "text": "Iranian officials say an \"enemy\" strike hit Sirik, Hormozgan, on Nov 12, and Iranian media say it targeted a telecom tower. The US has not publicly detailed the strike."
+    },
+    {
+      "label": "Drone shootdown claim",
+      "text": "Iran's navy says it shot down a US MQ-1 Predator near Sirik / Kuhestak on Nov 13. This is an unconfirmed claim from a single source."
+    },
+    {
+      "label": "Running total",
+      "text": "JINSA now counts at least 624 Iranian missiles and drones launched since July 7, with 2 confirmed on Nov 12-13."
+    },
+    {
+      "label": "Houthis and Saudi Arabia",
+      "text": "The Houthis claimed a second drone strike in 24 hours on an East-West Pipeline pumping station. Saudi forces reported intercepting a Houthi drone near Riyadh and two in the Eastern Province, and Jazan received an early-warning alert on Nov 13. The Houthi claims are unverified."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "The IRGC Navy claimed a liquefied-gas carrier hit a mine and exploded east of Hormuz on Nov 13 after using the US-escorted southern route. It gave no casualty or damage details."
+    },
+    {
+      "label": null,
+      "text": "On Nov 14, Iran's navy warned tankers to stay out of a restricted zone east of the strait after it said an oil tanker hit a mine and caught fire. Secondary reporting says Iran has now claimed 5 mine strikes in under 24 hours. None of these claims has been confirmed by CENTCOM or UKMTO."
+    },
+    {
+      "label": null,
+      "text": "CTP-ISW assesses that the mine claims are an Iranian information campaign to push ships into Iranian-controlled lanes. It has seen no sign that Iran has re-mined the strait."
+    },
+    {
+      "label": null,
+      "text": "No new UKMTO-confirmed attack was found in the window. The IMO count is unchanged at 134 confirmed incidents and 25 seafarer deaths, as of Nov 11. Washington Institute data cited by Reuters show at least 10 ships hit in the first 10 days of November, after 37 in October."
+    }
+  ],
+  "casualties_and_damage": "No new deaths or injuries were reported in the window. CENTCOM reported no injuries or damage from the Bahrain drone attempt. No newer JINSA casualty table was found.",
+  "diplomacy_and_statements": [
+    {
+      "label": "Israel",
+      "text": "Axios reports that Mossad chief Roman Gofman is in Washington meeting CIA Director Ratcliffe as Netanyahu presses Trump to resume strikes. Kan reports that NAVCENT told Israel to prepare for possible imminent conflict, that about 200 US aerial refuelers are in the region, and that a third US carrier will arrive within a week. CENTCOM called Israeli reports of a war resumption \"pure speculation.\""
+    },
+    {
+      "label": "US",
+      "text": "Trump told Hugh Hewitt he would use force against Iran \"without hesitation\" if needed. Treasury Secretary Bessent said the economic campaign is working, and confirmed he moved onto a military base because of Iranian threats."
+    },
+    {
+      "label": "Iran",
+      "text": "FM Araghchi called US and Israeli attacks a violation of international law. The Assembly of Experts described NPT withdrawal as an \"unavoidable necessity.\" MP Ebrahim Azizi warned that any renewed aggression would get a stronger response."
+    },
+    {
+      "label": "IAEA",
+      "text": "The agency says it cannot verify whether Iran has diverted nuclear material, citing about 440 kg of 60 percent enriched uranium that is unaccounted for and the undeclared-status Isfahan enrichment plant. Iran says inspections cannot resume while it is under strike threats."
+    },
+    {
+      "label": "Oil",
+      "text": "Brent was $96.70 at 9:00 AM ET on Nov 13 (JINSA)."
+    }
+  ],
+  "chart_updates": [
+    "Updated today: the launches data now includes JINSA rows for Nov 12 (622) and Nov 13 (624). The ship incident and casualty figures are unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 13, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.13.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 11-12, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.12.2026.pdf"
+    },
+    {
+      "outlet": "CTP-ISW",
+      "title": "Iran Update, November 13, 2026",
+      "url": "https://www.criticalthreats.org/analysis/iran-update-november-13-2026"
+    },
+    {
+      "outlet": "RFE/RL",
+      "title": "CENTCOM Denies Iranian Claim It Struck A US Radar In Bahrain",
+      "url": "https://www.rferl.org/a/iran-us-sirik-bahrain-war-nuclear-talks/33897951.html"
+    },
+    {
+      "outlet": "Daily Times (Reuters)",
+      "title": "CENTCOM says it shot down two Iranian drones heading towards Bahrain",
+      "url": "https://dailytimes.com.pk/1581231/centcom-says-it-shot-down-two-iranian-drones-heading-towards-bahrain/"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates, Nov 13",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-americans-tired-forever-wars-araghchi/?id=137967256"
+    },
+    {
+      "outlet": "Dawn",
+      "title": "Live updates, Nov 13",
+      "url": "https://www.dawn.com/live/iran-israel-war"
+    },
+    {
+      "outlet": "Times of Israel",
+      "title": "Liveblog, Nov 13",
+      "url": "https://www.timesofisrael.com/liveblog-november-13-2026/"
+    },
+    {
+      "outlet": "ANI",
+      "title": "Iran's navy warns tankers against entering restricted Hormuz zone",
+      "url": "https://www.aninews.in/news/world/middle-east/iran8217s-navy-warns-tankers-against-entering-restricted-hormuz-zone-after-vessel-hits-naval-mine-catches-fire20261114143205/"
+    },
+    {
+      "outlet": "House of Saud",
+      "title": "IRGC claims 2 more tankers hit mines in Hormuz on November 14",
+      "url": "https://houseofsaud.com/irgc-2-tankers-mines-hormuz-nov14/"
+    },
+    {
+      "outlet": "gCaptain",
+      "title": "IMO warns of mounting human toll",
+      "url": "https://gcaptain.com/imo-warns-of-mounting-human-toll-as-attacks-on-commercial-shipping-continue/"
+    },
+    {
+      "outlet": "WarHistory.org",
+      "title": "2026 Iran war map, November 2026",
+      "url": "https://warhistory.org/maps/iran/2026-11"
+    }
+  ]
+}
