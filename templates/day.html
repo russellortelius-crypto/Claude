@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% from "_charts.html" import chart_cards %}
-{% macro items(list) %}
-      <ul>
+{% macro items(list, indent="      ") %}
+{{ indent }}<ul>
 {% for item in list %}
-        <li>{% if item.label %}<b>{{ item.label }}:</b> {% endif %}{{ item.text }}</li>
+{{ indent }}  <li>{% if item.label %}<b>{{ item.label }}:</b> {% endif %}{{ item.text }}
+{%- if item.subitems %}
+
+{{ items(item.subitems, indent ~ "    ") }}{{ indent }}  {% endif %}</li>
 {% else %}
-        <li>Nothing was reported in the window.</li>
+{{ indent }}  <li>Nothing was reported in the window.</li>
 {% endfor %}
-      </ul>
+{{ indent }}</ul>
 {% endmacro %}
 {% block title %}{{ s.title }}{% endblock %}
 {% block content %}
@@ -21,6 +24,9 @@
             {% if next %}<a href="/{{ next.date }}/" rel="next">Next: {{ next.short_date }}</a>{% endif %}
           </nav>
         </div>
+{% if s.note %}
+        <p class="note">{{ s.note }}</p>
+{% endif %}
       </header>
 
       <section>
@@ -40,7 +46,11 @@
 
       <section>
         <h2>Casualties and damage</h2>
+{% if s.casualties_and_damage is string %}
         <p>{{ s.casualties_and_damage }}</p>
+{% else %}
+{{ items(s.casualties_and_damage) }}
+{% endif %}
       </section>
 
       <section>
@@ -48,22 +58,17 @@
 {{ items(s.diplomacy_and_statements) }}
       </section>
 
+{% if s.charts %}
       <section class="charts">
         <h2>Charts</h2>
-{% if s.chart_updates %}
-        <div class="muted chart-status">
-          <p>Chart data updated today:</p>
-          <ul>
 {% for line in s.chart_updates %}
-            <li>{{ line }}</li>
-{% endfor %}
-          </ul>
-        </div>
+        <p class="muted chart-status">{{ line }}</p>
 {% else %}
         <p class="muted chart-status">Chart data: no figures were updated today.</p>
-{% endif %}
+{% endfor %}
 {{ chart_cards() }}
       </section>
+{% endif %}
 
       <section class="sources">
         <h2>Sources</h2>
@@ -77,6 +82,8 @@
 {% endblock %}
 {% block footer %}<span>Generated {{ s.generated_display }}</span> <a href="/archive/">Archive</a>{% endblock %}
 {% block scripts %}
+{% if s.charts %}
   <script src="/assets/chart.umd.min.js" defer></script>
   <script src="/assets/charts.js" defer></script>
+{% endif %}
 {% endblock %}

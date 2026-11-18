@@ -8,6 +8,9 @@
       <li>
         <time class="muted" datetime="{{ s.date }}">{{ s.long_date }}</time>
         <a href="/{{ s.date }}/">{{ s.title }}</a>
+{% if s.note %}
+        <span class="badge">Manual test run</span>
+{% endif %}
         <p>{{ s.first_sentence }}</p>
       </li>
 {% endfor %}

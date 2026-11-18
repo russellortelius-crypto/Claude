@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 16, 2026",
+  "window": "6:00 AM Pacific, Nov 15 to 6:00 AM Pacific, Nov 16, 2026",
+  "generated_at": "2026-11-16T06:01:00-08:00",
+  "top_line": "Attacks on Gulf shipping continued. UKMTO confirmed a tanker was hit by an unknown projectile while leaving the Strait of Hormuz early Monday, and the IRGC claimed more tankers hit mines, including one it says sank. The USS Theodore Roosevelt entered CENTCOM's area on Nov 15, putting three US carrier strike groups in the region, and Iranian officials warned Tehran will not wait for a US first strike.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "Bahrain: Just before this window (early Nov 15 local time), the IRGC said it launched six drones at a US air defense radar at Riffa air base. The Bahrain Defence Force said it intercepted and destroyed the incoming attacks; the IRGC claimed the radar was hit. It was the second claimed IRGC attack on a US radar in Bahrain in three days. On Nov 13, CENTCOM said it downed two Iranian drones there with no damage. CENTCOM had not publicly confirmed the Nov 15 interceptions as of the latest reports."
+    },
+    {
+      "label": null,
+      "text": "Saudi Arabia: The Saudi-led coalition reported intercepting two Houthi ballistic missiles fired toward Riyadh and several drones over the Eastern Province and other areas on Nov 15. Counts differ by outlet: three drones (Al Arabiya), five (Al Jazeera) and six (Gulf News). Most of these reports also came early on Nov 15, at the edge of the window."
+    },
+    {
+      "label": null,
+      "text": "US strikes: Some outlets reported US strikes at Sirik and Bandar Lengeh on Iran's southern coast and Iranian missiles fired toward the Arabian Sea. These reports are unconfirmed, and CENTCOM has not confirmed either. No major US strike has been confirmed since Nov 6, apart from the Nov 12 strike Iran reported on a telecom tower in Sirik."
+    },
+    {
+      "label": null,
+      "text": "Running count: JINSA's Nov 13 update puts Iranian missiles and drones launched since July 7 at at least 624, with 2 confirmed on Nov 12-13."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "UKMTO: An outbound tanker was struck by an unknown projectile in the Strait of Hormuz at 05:58 UTC Nov 16, causing an engine room fire. No casualties were reported, all crew were accounted for, and the damage and environmental impact are not yet known."
+    },
+    {
+      "label": null,
+      "text": "UKMTO, citing Indian shipping authorities: A tanker approaching Hormuz in the Arabian Gulf was hit in the steering gear room on Nov 15 and turned back toward Dubai."
+    },
+    {
+      "label": null,
+      "text": "IRGC claims: Iran said five tankers hit mines in the Strait over 48 hours. Late on Nov 15 it said another tanker caught fire after hitting a mine while crossing a \"restricted zone\" with its transponder off, and it claimed a VLCC sank. None of the vessels were named, and none of the claims have been independently verified."
+    },
+    {
+      "label": null,
+      "text": "The IMO's latest count is unchanged: 134 confirmed incidents and 25 seafarer deaths as of Nov 11."
+    }
+  ],
+  "casualties_and_damage": "No new deaths were reported in the window. Both tanker strikes caused fires, but no crew injuries were reported. No damage was reported from the Bahrain and Saudi interceptions.",
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Deputy FM Kazem Gharibabadi told IRNA that Tehran \"will not wait for the US to attack first.\" He also accused Washington of using talks to buy time for a new operation."
+    },
+    {
+      "label": null,
+      "text": "Speaker and chief negotiator Ghalibaf said that if the US \"makes another mistake,\" Iran's forces will decide where the fighting happens."
+    },
+    {
+      "label": null,
+      "text": "Bahrain's foreign ministry said it holds Iran \"fully responsible\" and rejects its territory being used for \"settling scores.\" The US Embassy in Manama warned Americans to prepare for security alerts, flight cancellations and airspace closures."
+    },
+    {
+      "label": null,
+      "text": "Talks remain stalled. Iran is waiting for a US reply to its seven conditions, and the US has called them unacceptable. No new negotiating round was reported in the window."
+    }
+  ],
+  "chart_updates": [
+    "Figures updated today: launches (JINSA, 624 as of Nov 13). No newer IMO ship incident count or JINSA casualty table was found."
+  ],
+  "sources": [
+    {
+      "outlet": "Seatrade Maritime",
+      "title": "Two tankers confirmed struck, Iran claims VLCC sinking in Hormuz",
+      "url": "https://www.seatrade-maritime.com/security/tanker-confirmed-struck-in-the-gulf-iran-claims-vlcc-sinking"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "Tanker targeted by unknown projectile in Strait of Hormuz",
+      "url": "https://www.arabnews.com/middle-east/british-authority-tanker-targeted-by-unknown-projectile-in-strait-of-hormuz-fire-erupts-3012196"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates: Tanker attacked in Strait of Hormuz",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto/?id=138171071&entryId=138171210"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Third aircraft carrier enters region",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-us-iran-tensions-escalate-as-third-aircraft-carrier-enters-region-1.500748608"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Saudi Arabia intercepts Houthi missiles targeting Riyadh",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-as-bahrain-issues-threat-alert-1.500747797"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran says it targets US radar in Bahrain",
+      "url": "https://aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Saudi-led coalition intercepts suspected Houthi missiles and drones",
+      "url": "https://www.aljazeera.com/news/2026/11/15/saudi-led-coalition-intercepts-two-missiles-two-drones-in-riyadh"
+    },
+    {
+      "outlet": "Al Arabiya",
+      "title": "Saudi-led coalition intercepts two Houthi missiles, three drones",
+      "url": "https://english.alarabiya.net/News/middle-east/2026/11/15/saudiled-coalition-intercepts-two-houthi-missiles-three-drones"
+    },
+    {
+      "outlet": "The National",
+      "title": "Bahrain intercepts Iranian attacks after first nationwide alert in months",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/15/bahrain-issues-first-nationwide-alert-in-months-as-iran-claims-attack-on-base-hosting-us-helicopters/"
+    },
+    {
+      "outlet": "RTE",
+      "title": "Bahrain intercepts Iranian missiles targeting US base",
+      "url": "https://www.rte.ie/news/2026/1115/1599264-bahrain-iran-attacks/"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 13, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.13.26.pdf"
+    },
+    {
+      "outlet": "IMO",
+      "title": "Middle East highlighted (confirmed) incidents",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
+    }
+  ]
+}

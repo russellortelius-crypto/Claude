@@ -45,10 +45,23 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(any("missing required field" in e for e in errors_for(s)))
         self.assertTrue(any("must match its date" in e for e in errors_for(SAMPLE, "2026-11-18.json")))
 
-    def test_rejects_label_in_diplomacy(self):
+    def test_optional_formats(self):
         s = copy.deepcopy(SAMPLE)
-        s["diplomacy_and_statements"][0]["label"] = "Oman"
-        self.assertTrue(any("no lead label" in e for e in errors_for(s)))
+        s["casualties_and_damage"] = [{"label": None, "text": "None reported."}]
+        s["maritime_and_shipping"][0]["subitems"] = [{"label": None, "text": "Detail."}]
+        s["note"] = "Manual test run."
+        s["charts"] = False
+        self.assertEqual(errors_for(s), [])
+        s["maritime_and_shipping"][0]["subitems"][0]["subitems"] = [{"label": None, "text": "Too deep."}]
+        s["charts"] = "no"
+        errs = errors_for(s)
+        self.assertTrue(any("one level" in e for e in errs))
+        self.assertTrue(any("true or false" in e for e in errs))
+
+    def test_all_summaries_valid(self):
+        for path in sorted((ROOT / "data/summaries").glob("*.json")):
+            with self.subTest(path.name):
+                self.assertEqual(build.validate_summary(path, json.loads(path.read_text(encoding="utf-8"))), [])
 
     def test_chart_rows_null_not_zero(self):
         rows = [{"date": "2026-11-11", "confirmed_incidents": 134, "seafarer_deaths": None, "source": "IMO"}]

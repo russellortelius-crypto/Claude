@@ -102,7 +102,7 @@ def check_text(errors: list[str], where: str, value, *, allow_empty=False) -> No
         errors.append(f"{where}: contains HTML; text fields must be plain text")
 
 
-def check_items(errors: list[str], where: str, items, *, labels_allowed=True) -> None:
+def check_items(errors: list[str], where: str, items, *, depth=0) -> None:
     if not isinstance(items, list):
         errors.append(f"{where}: expected a list")
         return
@@ -111,12 +111,18 @@ def check_items(errors: list[str], where: str, items, *, labels_allowed=True) ->
         if not isinstance(item, dict):
             errors.append(f"{w}: expected an object with label and text")
             continue
+        unknown = set(item) - {"label", "text", "subitems"}
+        if unknown:
+            errors.append(f"{w}: unknown field(s) {', '.join(sorted(unknown))}")
         label = item.get("label")
         if label is not None:
             check_text(errors, f"{w}.label", label)
-            if not labels_allowed:
-                errors.append(f"{w}.label: this section's items have no lead label; use null")
         check_text(errors, f"{w}.text", item.get("text"))
+        if item.get("subitems") is not None:
+            if depth >= 1:
+                errors.append(f"{w}.subitems: only one level of sub-bullets is supported")
+            else:
+                check_items(errors, f"{w}.subitems", item["subitems"], depth=depth + 1)
 
 
 def check_url(errors: list[str], where: str, url) -> None:
@@ -146,8 +152,21 @@ def validate_summary(path: Path, s) -> list[str]:
     elif path.stem != s["date"]:
         errors.append(f"{name}: file name must match its date ({s['date']}.json)")
 
-    for key in ("title", "window", "top_line", "casualties_and_damage"):
+    for key in ("title", "window", "top_line"):
         check_text(errors, f"{name}: {key}", s[key])
+
+    # Usually one paragraph; a list of bullet items is also accepted (the Nov 13 test run used bullets).
+    if isinstance(s["casualties_and_damage"], list):
+        check_items(errors, f"{name}: casualties_and_damage", s["casualties_and_damage"])
+    else:
+        check_text(errors, f"{name}: casualties_and_damage", s["casualties_and_damage"])
+
+    # Optional: a short note shown under the window line (e.g. marking a test run),
+    # and charts: false for a summary that had no charts section.
+    if s.get("note") is not None:
+        check_text(errors, f"{name}: note", s["note"])
+    if "charts" in s and not isinstance(s["charts"], bool):
+        errors.append(f"{name}: charts must be true or false")
 
     try:
         gen = datetime.fromisoformat(s["generated_at"])
@@ -158,7 +177,7 @@ def validate_summary(path: Path, s) -> list[str]:
 
     check_items(errors, f"{name}: launches_and_strikes", s["launches_and_strikes"])
     check_items(errors, f"{name}: maritime_and_shipping", s["maritime_and_shipping"])
-    check_items(errors, f"{name}: diplomacy_and_statements", s["diplomacy_and_statements"], labels_allowed=False)
+    check_items(errors, f"{name}: diplomacy_and_statements", s["diplomacy_and_statements"])
 
     if not isinstance(s["chart_updates"], list):
         errors.append(f"{name}: chart_updates must be a list (empty when nothing changed)")
@@ -276,6 +295,17 @@ def load_and_validate():
 
     summaries.sort(key=lambda s: s["date"])
     for s in summaries:
+        # Fill optional fields so templates can stay strict about everything else.
+        s.setdefault("note", None)
+        s.setdefault("charts", True)
+        lists = [s["launches_and_strikes"], s["maritime_and_shipping"], s["diplomacy_and_statements"]]
+        if isinstance(s["casualties_and_damage"], list):
+            lists.append(s["casualties_and_damage"])
+        for items in lists:
+            for item in items:
+                item.setdefault("subitems", None)
+                for sub in item["subitems"] or []:
+                    sub.setdefault("subitems", None)
         s["short_date"] = short_date(s["date"])
         s["long_date"] = long_date(s["date"])
         s["generated_display"] = generated_display(s["generated_at"])

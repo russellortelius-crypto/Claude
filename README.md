@@ -57,6 +57,13 @@ The daily 6:00 AM PT job does this, and nobody edits HTML:
 
 To check a file without building, run `python build.py --check`.
 
+Optional fields, for summaries that don't follow the usual layout (see `2026-11-13.json`):
+
+- `"note"`: a short note shown under the window line, also flagged in the archive (used to mark the Nov 13 manual test run).
+- `"charts": false`: leave out the Charts section, for a summary that had none.
+- `"subitems"` on a bullet: one level of sub-bullets.
+- `casualties_and_damage` may be a list of bullets instead of one paragraph.
+
 ## Deploy on Cloudflare
 
 Connect the repository once. Every push to `main` then rebuilds and publishes the site.
@@ -73,5 +80,5 @@ To deploy by hand from your machine, run `npx wrangler deploy`.
 
 ## Not built yet
 
-- **Backfill (spec step 11):** the November 13 to 16 summaries need their emails converted into `data/summaries/` files.
+- **Backfill (spec step 11):** November 13 (marked as the manual test run), 16 and 17 are in. November 14 and 15 still need their emails converted.
 - **NVIDIA and Supabase:** the spec keeps the site static, with no database and no automated news gathering. The natural places for these later are the daily job (NVIDIA could draft the summary JSON) and, if the JSON files outgrow the repo, Supabase as the data store.

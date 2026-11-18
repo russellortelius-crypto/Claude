@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-13",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 13, 2026",
+  "window": "6:00 AM PT Nov 12 to morning Nov 13, 2026",
+  "generated_at": "2026-11-12T18:35:00-08:00",
+  "note": "Manual test run. This summary was sent by hand on the evening of Nov 12, before the daily 6:00 AM PT schedule began, and has no charts section.",
+  "charts": false,
+  "top_line": "No new US or Israeli strikes on Iran were reported in the window, but the political signals pointed both ways. Trump posted on Nov 12 that the US does \"not need a deal with Iran\" and pulled VP Vance off the talks track, then said Gulf allies (reportedly the UAE, Saudi Arabia, Qatar and Bahrain) had asked him to hold off on further attacks. Houthi attacks on Saudi Arabia went on, and Gulf shipping is still being hit by projectiles.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "Saudi Arabia / Houthis: On Thursday Nov 12, coalition spokesman Maj. Gen. Turki al-Maliki said suspected Houthi drones were intercepted over the Riyadh region and the Eastern Province. No count was given. Saudi Gazette's headline says two drones; the full text could not be checked."
+    },
+    {
+      "label": null,
+      "text": "Houthi spokesman Yahya Saree claimed the following, none of it independently confirmed: a drone hit a pumping station on the East-West Pipeline; the Yanbu oil facility and Saudi Aramco HQ in Riyadh were targeted; a drone was sent at a military cargo plane at Sharurah airport; and a ballistic missile scored a \"direct hit\" on Khamis Mushait airbase."
+    },
+    {
+      "label": null,
+      "text": "Disputed: Saudi Arabia says the Houthis fired at the Mecca region on Wednesday Nov 11 (two ballistic missiles destroyed, debris in Sabuhah village). The Houthis call this a \"grave falsehood\"."
+    },
+    {
+      "label": null,
+      "text": "Iran / Israel / US: No confirmed Iranian missile or drone launches at Gulf states, and no US or Israeli strikes on Iran, were reported in the window. Israeli media reported on Nov 11 that the security cabinet ordered the military to step up preparations for a possible attack on Iran. Iranian officials warned that any base used in an attack, \"from West Asia to Europe\", would be a legitimate target."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "No new vessel strikes inside the window were confirmed in the sources reviewed. Reports published Nov 12 covered these earlier incidents:",
+      "subitems": [
+        {
+          "label": null,
+          "text": "Dominica Prosperity (Liberia-flagged crude tanker): engine-room hit by a projectile around 1800 UTC Nov 11, about 14 nm NW of Ras Al Khaimah, per UKMTO. The fire was still burning on Nov 12. All 22 crew were evacuated by the UAE Coast Guard, with no casualties. Ambrey instead placed the hit near the stern as the ship exited Hormuz."
+        },
+        {
+          "label": null,
+          "text": "Fujairah Energy: hit by an unknown projectile on Nov 10 while eastbound in the Gulf; several crew were injured and taken ashore (UKMTO)."
+        },
+        {
+          "label": null,
+          "text": "NCC Fajr was hit north of Khasab, Oman, on Nov 11, with crew safe. An unidentified tanker was hit about 19 nm NE of Lima, Oman, on Nov 10."
+        }
+      ]
+    },
+    {
+      "label": null,
+      "text": "The IRGC said two supertankers carrying more than 4 million barrels were ablaze after an \"accident\" on a route Iran considers unauthorized."
+    },
+    {
+      "label": null,
+      "text": "Counts differ: UKMTO reported two tanker attacks, while JMIC's Nov 12 advisory counted four since its last report (181 maritime incidents since Mar 1) and did not attribute them individually."
+    },
+    {
+      "label": null,
+      "text": "Traffic: JMIC tracking shows single-digit to low double-digit Hormuz transits per day, and about 211 vessels are waiting at anchor east of the strait. The White House says the US blockade (Operation Economic Outcast) and Iron Gate operations continue \"with full effect.\""
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "No deaths were reported in the Gulf in the window. Crew injuries from the Nov 10 Fujairah Energy strike are confirmed but not quantified. The Houthi damage claims against Saudi energy sites are unverified, and Saudi Arabia has given no damage assessment."
+    },
+    {
+      "label": null,
+      "text": "Yemen: OCHA reports more than 333,000 displaced since early August, including more than 24,000 in the past week."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Trump (Nov 12, Truth Social): \"We don't need a deal with Iran\". Vance was redirected to domestic anti-fraud work. Trump later said Gulf allies urged a pause in strikes."
+    },
+    {
+      "label": null,
+      "text": "Qatar's mediation track continues. Iran has added a demand for compensation for environmental damage, raised at COP13."
+    },
+    {
+      "label": null,
+      "text": "Reports of a heated Trump-Netanyahu call (Ynet) were denied by Netanyahu's office."
+    },
+    {
+      "label": null,
+      "text": "UN Security Council (Nov 12) unanimously extended Yemen sanctions for a year and condemned Houthi cross-border attacks. Reuters reports Saudi Arabia is pressing the EU to designate the Houthis as a terrorist organization."
+    },
+    {
+      "label": null,
+      "text": "Erdogan met Pezeshkian and urged diplomacy \"without further delay.\""
+    },
+    {
+      "label": null,
+      "text": "Oil: Brent was around $91-92."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran war live: Trump says Gulf allies urged pause in Iran strikes",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/iran-war-live-riyadh-china-discuss-houthis-as-group-claims-aramco-attacks"
+    },
+    {
+      "outlet": "Arabian Business",
+      "title": "Trump says UAE, Saudi Arabia, Qatar and Bahrain urged US to avoid fresh Iran attacks",
+      "url": "https://www.arabianbusiness.com/politics/trump-says-uae-saudi-arabia-qatar-and-bahrain-urged-us-to-avoid-fresh-iran-attacks"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Live updates: Trump says US does not 'need a deal with Iran'",
+      "url": "https://gulfnews.com/world/mena/us-israel-iran-war-tehran-threatens-american-bases-from-middle-east-to-europe-houthi-missile-debris-lands-in-makkah-eisenkot-cautions-netanyahu-1.500744472"
+    },
+    {
+      "outlet": "Yahoo / Al Jazeera",
+      "title": "Yemen's Houthis renew strikes on Saudi Arabia as UNSC extends sanctions",
+      "url": "https://www.yahoo.com/news/world/articles/yemen-houthis-renew-strikes-saudi-235238180.html"
+    },
+    {
+      "outlet": "Saudi Gazette",
+      "title": "Coalition intercepts drones in Riyadh and eastern regions",
+      "url": "https://saudigazette.com.sa/article/666216/saudi-arabia/coalition-intercepts-drones-in-riyadh-and-eastern-regions"
+    },
+    {
+      "outlet": "gCaptain",
+      "title": "Tanker Ablaze Off UAE as More Attacks Rattle Gulf Shipping",
+      "url": "https://gcaptain.com/tanker-ablaze-off-uae-as-more-attacks-rattle-gulf-shipping/"
+    },
+    {
+      "outlet": "Siasat",
+      "title": "Two tanker attacks reported in Gulf waters within 24 hours",
+      "url": "https://www.siasat.com/two-tanker-attacks-reported-in-gulf-waters-within-24-hours-3575733/"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Live updates (Nov 12)",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-nuclear-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran warns of expanded retaliation as Israel reportedly readies to attack",
+      "url": "https://www.aljazeera.com/news/2026/11/12/iran-warns-of-expanded-retaliation-as-israel-reportedly-readies-to-attack"
+    },
+    {
+      "outlet": "Fox News",
+      "title": "Live updates (Nov 12)",
+      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-israel-hormuz-november-12"
+    }
+  ]
+}
