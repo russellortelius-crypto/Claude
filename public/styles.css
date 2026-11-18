@@ -1,0 +1,105 @@
+:root {
+  --bg: #f7f5f1;
+  --surface: #ffffff;
+  --text: #1c1b19;
+  --muted: #6b675f;
+  --border: #e3dfd6;
+  --accent: #b4532a;
+  --accent-soft: #f6e6dc;
+  --link: #1d4e89;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412;
+    --surface: #1d1c1a;
+    --text: #ece9e2;
+    --muted: #a19c92;
+    --border: #34322e;
+    --accent: #e0855a;
+    --accent-soft: #3a2519;
+    --link: #8db8ec;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 var(--sans);
+}
+
+a { color: var(--link); }
+a:hover { text-decoration-thickness: 2px; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+.muted { color: var(--muted); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Masthead */
+.masthead { border-bottom: 3px double var(--border); background: var(--surface); }
+.masthead-inner { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between; padding-top: 24px; padding-bottom: 16px; }
+h1 { font: 700 2.2rem/1.1 var(--serif); margin: 0; letter-spacing: -0.01em; }
+.tagline { margin: 4px 0 0; color: var(--muted); }
+.masthead-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; }
+
+.btn {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: 6px 14px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--text);
+}
+.btn:hover { border-color: var(--accent); }
+.btn:disabled { opacity: 0.6; cursor: progress; }
+
+h2 { font: 700 1.25rem/1.3 var(--serif); margin: 0; }
+
+/* Briefing */
+.briefing {
+  margin: 24px 0 32px; padding: 20px 22px;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+.briefing-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.pill { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.briefing-body p { margin: 0 0 10px; }
+.briefing-body ul { margin: 0 0 10px; padding-left: 20px; }
+.briefing-body li { margin-bottom: 6px; }
+.briefing-body sup a { text-decoration: none; font-size: 0.75em; padding: 0 1px; }
+.briefing-sources { font-size: 0.875rem; margin-top: 8px; }
+.briefing-sources summary { cursor: pointer; color: var(--muted); }
+.briefing-sources ol { padding-left: 24px; }
+.fineprint { font-size: 0.8rem; color: var(--muted); margin: 12px 0 0; }
+
+/* Articles */
+.section-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
+.toolbar input, .toolbar select {
+  font: inherit; font-size: 0.9rem; padding: 6px 10px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.toolbar input { width: 220px; max-width: 100%; }
+
+.articles { list-style: none; margin: 0; padding: 0; }
+.article { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.article h3 { font: 600 1.08rem/1.35 var(--serif); margin: 0 0 4px; }
+.article h3 a { color: var(--text); text-decoration: none; }
+.article h3 a:hover { color: var(--link); text-decoration: underline; }
+.article .meta { font-size: 0.8rem; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.article .meta .outlet { font-weight: 600; color: var(--accent); }
+.article p { margin: 6px 0 0; font-size: 0.92rem; color: var(--muted); }
+
+.notice { font-size: 0.85rem; padding: 8px 12px; border-radius: 6px; background: var(--accent-soft); }
+
+.footer { padding-top: 24px; padding-bottom: 40px; font-size: 0.8rem; color: var(--muted); }
+
+@media (max-width: 560px) {
+  h1 { font-size: 1.8rem; }
+  .briefing { padding: 16px; }
+  .toolbar, .toolbar input, .toolbar select { width: 100%; }
+}

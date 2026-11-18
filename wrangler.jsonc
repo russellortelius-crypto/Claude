@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gulf-news-monitor",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "observability": { "enabled": true },
+
+  // Static frontend in ./public; requests that don't match a file fall through to the Worker.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+
+  // Pull fresh articles (and, if configured, write an AI briefing) every 30 minutes.
+  "triggers": {
+    "crons": ["*/30 * * * *"]
+  },
+
+  // Non-secret settings. Secrets (SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY,
+  // NVIDIA_API_KEY, ADMIN_TOKEN) go in .dev.vars locally and `wrangler secret put` in prod.
+  "vars": {
+    "NVIDIA_MODEL": "meta/llama-3.3-70b-instruct"
+  }
+}

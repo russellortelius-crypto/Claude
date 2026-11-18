@@ -1,0 +1,12 @@
+# Copy to .dev.vars for local development (never commit .dev.vars).
+# In production, set each of these with: npx wrangler secret put <NAME>
+
+# Supabase — Project Settings > API
+SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=
+
+# NVIDIA API — https://build.nvidia.com (key starts with nvapi-)
+NVIDIA_API_KEY=
+
+# Protects POST /api/refresh (any long random string)
+ADMIN_TOKEN=
