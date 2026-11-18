@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from "_charts.html" import chart_cards %}
+{% block title %}Charts - Persian Gulf Daily Summary{% endblock %}
+{% block content %}
+    <h1>Charts</h1>
+    <p class="muted">Running totals and compiled figures used in the daily summary. Hover over a bar for its values and source.</p>
+    <section class="charts charts-page">
+{{ chart_cards(heading_level=2, open_tables=true, show_sources=true) }}
+    </section>
+    <section>
+      <h2>Interactive charts: data files</h2>
+      <p>Each chart reads one of these JSON files. New figures are added as new rows; existing rows are never edited.</p>
+      <ul>
+{% for f in data_files %}
+        <li><a href="/data/{{ f }}">{{ f }}</a></li>
+{% endfor %}
+      </ul>
+    </section>
+{% endblock %}
+{% block scripts %}
+  <script src="/assets/chart.umd.min.js" defer></script>
+  <script src="/assets/charts.js" defer></script>
+{% endblock %}

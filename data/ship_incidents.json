@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-08-25",
+    "confirmed_incidents": 68,
+    "seafarer_deaths": 20,
+    "source": "IMO, via JINSA update Aug 26 (deaths: seafarers or port workers)"
+  },
+  {
+    "date": "2026-10-14",
+    "confirmed_incidents": 113,
+    "seafarer_deaths": 24,
+    "source": "IMO, via gCaptain"
+  },
+  {
+    "date": "2026-10-27",
+    "confirmed_incidents": 121,
+    "seafarer_deaths": 24,
+    "source": "IMO, via Seatrade Maritime"
+  },
+  {
+    "date": "2026-11-02",
+    "confirmed_incidents": 125,
+    "seafarer_deaths": null,
+    "source": "IMO, via The National"
+  },
+  {
+    "date": "2026-11-11",
+    "confirmed_incidents": 134,
+    "seafarer_deaths": 25,
+    "source": "IMO highlighted (confirmed) incidents page"
+  }
+]

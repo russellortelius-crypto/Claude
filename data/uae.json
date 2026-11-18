@@ -1,0 +1,128 @@
+[
+  {
+    "date": "2026-03-01",
+    "ballistic": 165,
+    "cruise": 2,
+    "drones": 541,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-06",
+    "ballistic": 205,
+    "cruise": 8,
+    "drones": 1184,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-09",
+    "ballistic": 253,
+    "cruise": 8,
+    "drones": 1440,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-12",
+    "ballistic": 278,
+    "cruise": 15,
+    "drones": 1540,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-13",
+    "ballistic": 285,
+    "cruise": 15,
+    "drones": 1567,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-14",
+    "ballistic": 294,
+    "cruise": 15,
+    "drones": 1600,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-16",
+    "ballistic": 304,
+    "cruise": 15,
+    "drones": 1627,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-18",
+    "ballistic": 327,
+    "cruise": 15,
+    "drones": 1699,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-03-23",
+    "ballistic": 352,
+    "cruise": 15,
+    "drones": 1789,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-01",
+    "ballistic": 438,
+    "cruise": 19,
+    "drones": 2012,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-02",
+    "ballistic": 457,
+    "cruise": 19,
+    "drones": 2038,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-03",
+    "ballistic": 475,
+    "cruise": 23,
+    "drones": 2085,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-04",
+    "ballistic": 498,
+    "cruise": 23,
+    "drones": 2141,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-06",
+    "ballistic": 519,
+    "cruise": 26,
+    "drones": 2210,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-07",
+    "ballistic": 520,
+    "cruise": 26,
+    "drones": 2221,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-04-08",
+    "ballistic": 537,
+    "cruise": 26,
+    "drones": 2256,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-05-08",
+    "ballistic": 551,
+    "cruise": 29,
+    "drones": 2263,
+    "source": "UAE Ministry of Defence, as reported"
+  },
+  {
+    "date": "2026-05-10",
+    "ballistic": 551,
+    "cruise": 29,
+    "drones": 2265,
+    "source": "UAE Ministry of Defence, as reported"
+  }
+]

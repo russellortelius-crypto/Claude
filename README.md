@@ -1,89 +1,77 @@
-# Gulf Watch
+# Persian Gulf Daily Summary
 
-A Cloudflare Workers site with continuously updated coverage of the conflict in the Persian Gulf. It pulls headlines from news feeds, can store them in **Supabase**, and can write an AI situation briefing with the **NVIDIA API**.
+A static website that publishes each daily "Persian Gulf hostilities - 24-hour summary" as a web page. It has a permanent URL per day, an archive, and five interactive charts. It follows *Persian Gulf Daily Summary Website - Specification v1.0* (November 17, 2026).
 
-It works before anything is configured, and each service you add turns on more:
-
-| Configured | What you get |
+| URL | Page |
 |---|---|
-| Nothing | Headlines fetched live from the feeds on each visit (cached for 10 minutes) |
-| + `NVIDIA_API_KEY` | An AI briefing above the headlines, with numbered citations (cached for 30 minutes) |
-| + Supabase | A cron job every 30 minutes stores new articles and saves a fresh briefing only when new articles came in |
+| `/` | Latest summary |
+| `/2026-11-17/` | One page per day, same sections and order as the email |
+| `/archive/` | Every summary, newest first |
+| `/charts/` | The five charts, full width, with sources, data tables, and links to the data files |
+| `/data/*.json` | Chart data and one summary file per day |
 
-## Structure
+## How it works
 
 ```
-public/            static frontend (HTML/CSS/JS, no build step)
-src/index.js       Worker: /api routes + cron handler
-src/feeds.js       news sources, RSS/Atom parser, relevance filter
-src/nvidia.js      briefing generation (OpenAI-compatible chat completions)
-src/supabase.js    PostgREST calls over fetch (no SDK)
-supabase/migrations/0001_init.sql   tables + read-only public RLS
+data/summaries/YYYY-MM-DD.json   one file per day (spec Section 4)
+data/*.json                      chart data, append-only (spec Section 6)
+templates/                       Jinja2 templates (base, day, archive, charts, 404)
+assets/                          styles.css, charts.js, chart.umd.min.js (Chart.js 4.5.1, MIT)
+build.py                         validates the data, then writes site/
+site/                            build output; not committed and never edited by hand
 ```
 
-API:
+`build.py` checks every file before it writes anything. Each required field must be present, dates must be valid, and source URLs must be `https://` direct links, never `google.com/url?q=` wrappers. Text fields must be plain text with no HTML and no en or em dashes. Chart numbers must be whole numbers or `null`. If anything is wrong, the build stops and lists each problem with its file and field.
 
-- `GET /api/news`: latest articles (`mode` is `supabase` or `live`)
-- `GET /api/briefing`: latest AI briefing, or `status: not_configured`
-- `GET /api/status`: which integrations are configured
-- `POST /api/refresh`: run ingestion now (`Authorization: Bearer $ADMIN_TOKEN`)
+The charts read the JSON files in the browser. Subtitle values such as "Latest: 620 as of Nov 9" and "Not shown: Iran 3,724; Lebanon 4,346 killed" are computed from the data. A correction is a new row with the same date (or country); the chart uses the last row.
 
 ## Run locally
 
 ```bash
-npm install
-cp .dev.vars.example .dev.vars   # fill in only what you have
-npm run dev                      # http://localhost:8787
-npm test
-```
-
-To trigger the cron handler locally, start the dev server with `npx wrangler dev --test-scheduled`, then run:
-
-```bash
-curl "http://localhost:8787/cdn-cgi/handler/scheduled"
-```
-
-## Set up Supabase
-
-1. Create a project at supabase.com.
-2. Open **SQL Editor**, paste `supabase/migrations/0001_init.sql`, and run it.
-3. From **Project Settings → API**, copy the project URL and the `service_role` (or `sb_secret_…`) key. The Worker uses this key for writes. It must stay server-side and never go in `public/`.
-
-## Set up NVIDIA
-
-1. Create an API key at build.nvidia.com (it starts with `nvapi-`).
-2. Optional: change `NVIDIA_MODEL` in `wrangler.jsonc` to any chat model listed there. The default is `meta/llama-3.3-70b-instruct`.
-
-The prompt (`src/nvidia.js`) tells the model to use only the supplied headlines, cite them by number, attribute claims, and flag anything unconfirmed. The page labels the briefing as AI-generated and lists its sources.
-
-## Deploy to Cloudflare
-
-```bash
-npx wrangler login
+pip install -r requirements.txt
 ```
 
 ```bash
-npx wrangler secret put SUPABASE_URL
+python build.py
 ```
 
 ```bash
-npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+python -m http.server -d site 8000
 ```
+
+Open http://localhost:8000. The charts need a local server because browsers block JSON loads from `file://`.
+
+To run the tests:
 
 ```bash
-npx wrangler secret put NVIDIA_API_KEY
+python -m unittest discover -s tests
 ```
 
-```bash
-npx wrangler secret put ADMIN_TOKEN
-```
+## Publishing a new day
 
-```bash
-npm run deploy
-```
+The daily 6:00 AM PT job does this, and nobody edits HTML:
 
-You can also connect the GitHub repo in the Cloudflare dashboard (**Workers & Pages → Create → Import a repository**) so every push deploys. Add the same secrets under the Worker's **Settings → Variables and Secrets**.
+1. Write `data/summaries/YYYY-MM-DD.json` using the same shape as `2026-11-17.json`.
+2. If a newer figure was found, append a row to the matching `data/*.json` file and describe it in that day's `chart_updates`, for example `"Launches: 620 to 628 (JINSA, Nov 18)"`.
+3. Commit and push. Cloudflare rebuilds and publishes. The new day becomes the home page, and the previous/next links and the archive update themselves.
 
-## Changing sources
+To check a file without building, run `python build.py --check`.
 
-Edit `FEEDS` and `RELEVANCE` in `src/feeds.js`. Feeds marked `filter: true` are general Middle East or world feeds, so the Worker keeps only items that match the regional keyword filter. The Google News feed is already a targeted search, so it is not filtered.
+## Deploy on Cloudflare
+
+Connect the repository once. Every push to `main` then rebuilds and publishes the site.
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and choose this repo.
+2. Set **Build command** to `pip install -r requirements.txt && python build.py`.
+3. Set **Deploy command** to `npx wrangler deploy`. It reads `wrangler.jsonc`, which serves the `site/` folder.
+
+If you choose a Cloudflare **Pages** project instead, use the same build command and set the output directory to `site`.
+
+To deploy by hand from your machine, run `python build.py` and then `npx wrangler deploy`.
+
+**Keeping it private:** the site is public by default. To limit it to specific people, put it behind **Cloudflare Access** (Zero Trust → Access → Applications) with an email allow-list.
+
+## Not built yet
+
+- **Backfill (spec step 11):** the November 13 to 16 summaries need their emails converted into `data/summaries/` files.
+- **NVIDIA and Supabase:** the spec keeps the site static, with no database and no automated news gathering. The natural places for these later are the daily job (NVIDIA could draft the summary JSON) and, if the JSON files outgrow the repo, Supabase as the data store.

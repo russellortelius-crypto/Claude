@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-17",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 17, 2026",
+  "window": "6:00 AM PT Nov 16 to 6:00 AM PT Nov 17, 2026",
+  "generated_at": "2026-11-17T06:00:52-08:00",
+  "top_line": "Iran's IRGC launched another drone attack on Bahrain on Tuesday, claiming a US radar at Sheikh Isa Air Base as the target. Bahrain and CENTCOM say it was intercepted with no damage. In the Strait of Hormuz, the Panama-flagged LPG tanker Tara Gas was disabled by an attack north of Khasab, Oman, then struck a second time, and UKMTO now lists its crew as unaccounted for. Iran's foreign minister held talks in Muscat on maritime security and de-escalation.",
+  "launches_and_strikes": [
+    {
+      "label": "Bahrain, Nov 17",
+      "text": "Iran's IRGC said it fired drones at a US-operated radar system at Sheikh Isa Air Base. Bahrain issued a nationwide threat alert, and explosions were heard in Manama. Bahraini state TV said the attack was thwarted, and the Interior Ministry later gave the all-clear. ABC reports CENTCOM said the attack was defeated without any damage. No source has given a drone count yet. This is Iran's third claimed attack on Bahrain since Nov 13. The IRGC described it as a response to US drones violating Iranian airspace."
+    },
+    {
+      "label": "US strikes on Iran",
+      "text": "No new US strikes reported in the window."
+    },
+    {
+      "label": "Running count",
+      "text": "No new JINSA launch total was found. The latest figure is still at least 620 since July 7, as of Nov 9."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "Tara Gas (Panama-flagged LPG tanker)",
+      "text": "UKMTO reported an attack about 7 nm north of Khasab, Oman, at about 19:00 UTC on Nov 16. The attack disabled the vessel and started an engine room fire. India's shipping minister said the 25 crew, including 24 Indian nationals, were safe. Gulf News reports it was a missile attack. On Nov 17, UKMTO said the vessel had been struck a second time, starting a fire on board, and that the crew are now unaccounted for."
+    },
+    {
+      "label": "Iranian claims",
+      "text": "Iran's regular navy and the IRGC said a combined total of three tankers hit mines in the Strait. The navy described one as a \"violator\" in a restricted zone. These claims are not independently confirmed and may overlap with the UKMTO-reported incidents."
+    },
+    {
+      "label": "Delayed report",
+      "text": "UKMTO issued a verified report that a tanker was struck by a projectile while heading east through the Arabian Gulf toward Hormuz. The attack took place on Nov 13, at an unconfirmed time."
+    },
+    {
+      "label": "Traffic",
+      "text": "JMIC recorded 83 US-facilitated transits from Nov 12 to 14. Non-facilitated traffic remains in the single digits to low double digits per day."
+    },
+    {
+      "label": "Running count",
+      "text": "No newer IMO total than 134 confirmed incidents (as of Nov 11) was found."
+    }
+  ],
+  "casualties_and_damage": "No deaths were reported in the window. The status of the Tara Gas crew is unclear: India said they were safe after the first strike, but UKMTO now lists them as unaccounted for after the second. No damage was reported in Bahrain. No new JINSA casualty table was found.",
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Iranian FM Araghchi met Omani FM Albusaidi in Muscat. They discussed safeguarding maritime corridors in Hormuz and reaffirmed support for de-escalation through dialogue."
+    },
+    {
+      "label": null,
+      "text": "US VP Vance told Fox News that Trump will not let the conflict become a \"forever war.\""
+    },
+    {
+      "label": null,
+      "text": "Iranian Parliament Speaker Ghalibaf warned that Iran could treat dams, ports and power plants near US or Israeli bases as \"dual-use\" targets."
+    },
+    {
+      "label": null,
+      "text": "Iranian FM spokesman Baghaei criticized Secretary Rubio's justification for the war as undermining international law."
+    },
+    {
+      "label": null,
+      "text": "CNN and other outlets, citing seven US officials, reported intelligence that Iran is developing plans for a dirty bomb or chemical attack on senior US officials in Washington. The officials described it as option-building, not an imminent threat. The US government has not confirmed this publicly."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Reuters via US News",
+      "title": "Iran Attacks US Military Radar System in Bahrain With Drones",
+      "url": "https://www.usnews.com/news/world/articles/2026-11-17/oman-iran-foreign-ministers-discuss-safeguarding-maritime-corridors"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Tanker incident near Hormuz as Vance rules out 'forever war' (live)",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-tanker-incident-near-hormuz-as-vance-rules-out-forever-war-1.500749924"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Explosions heard in Bahrain after threat alert",
+      "url": "https://gulfnews.com/world/gulf/bahrain/explosions-heard-in-bahrain-after-threat-alert-iran-claims-drone-attack-on-us-radar-1.500750199"
+    },
+    {
+      "outlet": "The National",
+      "title": "Oman discusses maritime security with Iran",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz/"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto/?id=138171071"
+    },
+    {
+      "outlet": "gCaptain",
+      "title": "UKMTO Reports Two Tanker Attacks in Strait of Hormuz",
+      "url": "https://gcaptain.com/ukmto-reports-two-tanker-attacks-in-strait-of-hormuz/"
+    },
+    {
+      "outlet": "IranWire",
+      "title": "Oil Tanker Targeted While Exiting the Strait of Hormuz",
+      "url": "https://iranwire.com/en/news/160315-oil-tanker-targeted-while-exiting-the-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Middle East Eye",
+      "title": "Tanker transiting Strait of Hormuz attacked near Oman",
+      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/ukmto-tanker-transiting-strait-hormuz-attacked-near-oman"
+    },
+    {
+      "outlet": "Logistics Middle East",
+      "title": "Two tanker fires reported in Strait of Hormuz",
+      "url": "https://www.logisticsmiddleeast.com/news/two-tanker-fires-reported-in-strait-of-hormuz-on-monday"
+    }
+  ]
+}

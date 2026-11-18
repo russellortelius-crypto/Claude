@@ -1,0 +1,26 @@
+[
+  {
+    "country": "UAE",
+    "missiles": 342,
+    "drones": 1699,
+    "source": "UAE MoD Mar 18 (327 ballistic + 15 cruise)"
+  },
+  {
+    "country": "Saudi Arabia",
+    "missiles": 38,
+    "drones": 435,
+    "source": "Wikipedia: 2026 Iranian strikes on Arab countries"
+  },
+  {
+    "country": "Bahrain",
+    "missiles": 132,
+    "drones": 234,
+    "source": "Wikipedia: 2026 Iranian strikes on Arab countries"
+  },
+  {
+    "country": "Qatar",
+    "missiles": 203,
+    "drones": 87,
+    "source": "Wikipedia: 2026 Iranian strikes on Arab countries"
+  }
+]

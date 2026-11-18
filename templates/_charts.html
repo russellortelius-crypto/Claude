@@ -1,0 +1,26 @@
+{#- Chart cards, in the order of spec Section 5. charts.js finds them by data-chart. -#}
+{% set CHARTS = [
+  ("launches", "Iranian missiles and drones launched since July 7", "Running total, JINSA count (lower bound)."),
+  ("ships", "Attacks on ships in the Gulf, Hormuz and Gulf of Oman", "IMO running count of confirmed incidents since Feb 28."),
+  ("casualties", "Deaths outside Iran and Lebanon", "JINSA compiled figures (lower bounds)."),
+  ("uae", "UAE air defense engagements", "Running totals reported by the UAE Ministry of Defence."),
+  ("opening-wave", "Opening wave: launches at Gulf states", "Missiles and drones fired at each country, Feb 28 to Mar 18"),
+] %}
+{% macro chart_cards(heading_level=3, open_tables=false, show_sources=false) %}
+{% for key, title, subtitle in CHARTS %}
+    <figure class="chart chart-{{ key }}" id="chart-{{ key }}" data-chart="{{ key }}">
+      <figcaption>
+        <h{{ heading_level }} class="chart-title">{{ title }}</h{{ heading_level }}>
+        <p class="chart-subtitle">{{ subtitle }}</p>
+      </figcaption>
+      <div class="chart-canvas" role="img" aria-label="{{ title }}: loading chart data">
+        <canvas></canvas>
+      </div>
+      {% if show_sources %}<p class="chart-sources muted"></p>{% endif %}
+      <details class="chart-data"{% if open_tables %} open{% endif %}>
+        <summary>Show data</summary>
+        <div class="table-wrap"></div>
+      </details>
+    </figure>
+{% endfor %}
+{% endmacro %}

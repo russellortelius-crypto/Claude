@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Archive - Persian Gulf Daily Summary{% endblock %}
+{% block content %}
+    <h1>Archive</h1>
+    <p class="muted">{{ summaries | length }} daily {{ "summary" if summaries | length == 1 else "summaries" }}, newest first.</p>
+    <ol class="archive" reversed>
+{% for s in summaries %}
+      <li>
+        <time class="muted" datetime="{{ s.date }}">{{ s.long_date }}</time>
+        <a href="/{{ s.date }}/">{{ s.title }}</a>
+        <p>{{ s.first_sentence }}</p>
+      </li>
+{% endfor %}
+    </ol>
+{% endblock %}

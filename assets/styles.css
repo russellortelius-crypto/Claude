@@ -1,0 +1,163 @@
+/* Persian Gulf Daily Summary - styles per spec Section 3 (visual design). */
+
+:root {
+  --text: #222222;
+  --muted: #666666;
+  --link: #1A5FB4;
+  --border: #E5E5E5;
+  --rule: #DDDDDD;
+  --content: 760px;
+  --wide: 960px;
+  --gutter: 20px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: var(--text);
+  font-family: Calibri, Carlito, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+
+.muted { color: var(--muted); }
+
+/* 1. Site bar */
+.sitebar { border-bottom: 1px solid var(--rule); }
+.sitebar-inner {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 12px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.sitename { color: var(--text); font-weight: 700; }
+.sitenav { display: flex; gap: 18px; }
+.sitenav a[aria-current="page"] { color: var(--text); font-weight: 700; }
+
+/* Content column */
+.content, .footer {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.content { padding-top: 24px; padding-bottom: 8px; }
+
+h1 { font-size: 28px; font-weight: 700; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 28px 0 8px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+/* 2. Page title row */
+.window-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.window { margin: 0; }
+.daynav { display: flex; gap: 16px; margin-left: auto; font-size: 15px; }
+
+/* 8. Charts */
+.chart-status { margin-bottom: 16px; }
+.chart-status ul { margin-bottom: 0; }
+
+.chart {
+  /* Charts may extend past the 760px text column, up to 960px, centered. */
+  width: min(var(--wide), calc(100vw - 2 * var(--gutter)));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 0 20px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.chart-title { font-size: 17px; font-weight: 700; margin: 0; }
+.chart-subtitle { font-size: 14px; color: var(--muted); margin: 2px 0 10px; }
+.chart-canvas { position: relative; height: 340px; }
+.chart-casualties .chart-canvas { height: 400px; }
+.chart-opening-wave .chart-canvas { height: 260px; }
+.chart-error { color: var(--muted); padding: 24px 0; margin: 0; }
+.chart-sources { font-size: 14px; margin: 10px 0 0; }
+
+.chart-data { margin-top: 10px; font-size: 15px; }
+.chart-data summary { cursor: pointer; color: var(--link); width: max-content; }
+.table-wrap { overflow-x: auto; margin-top: 8px; }
+.chart-data table { border-collapse: collapse; width: 100%; font-size: 14px; }
+.chart-data th, .chart-data td { text-align: left; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+.chart-data th { font-weight: 700; white-space: nowrap; }
+.chart-data td.num, .chart-data th.num { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* 9. Sources */
+.sources li { margin-bottom: 6px; }
+
+/* Archive */
+.archive { list-style: none; padding: 0; margin: 16px 0 0; }
+.archive li { padding: 14px 0; border-bottom: 1px solid var(--border); margin: 0; }
+.archive time { display: block; font-size: 15px; }
+.archive a { font-weight: 700; }
+.archive p { margin: 4px 0 0; }
+
+/* 10. Footer */
+.footer {
+  color: var(--muted);
+  font-size: 15px;
+  padding-top: 16px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  justify-content: space-between;
+  border-top: 1px solid var(--rule);
+  margin-top: 32px;
+}
+
+@media (max-width: 599px) {
+  body { font-size: 16px; }
+  h1 { font-size: 24px; }
+  .chart { padding: 12px; }
+  .chart-canvas { height: 260px; }
+  .chart-casualties .chart-canvas { height: 360px; }
+  .chart-opening-wave .chart-canvas { height: 220px; }
+}
+
+/* Print: clean document similar to the email PDF. */
+@media print {
+  @page { margin: 16mm 14mm; }
+  body { font-size: 11pt; color: #000000; }
+  .sitebar, .daynav, .chart-data, .chart-sources { display: none !important; }
+  .content, .footer { max-width: none; padding: 0; }
+  h1 { font-size: 18pt; }
+  h2 { font-size: 13pt; break-after: avoid; }
+  a { color: inherit; }
+  .chart {
+    width: 100%;
+    left: 0;
+    transform: none;
+    border: none;
+    padding: 0;
+    break-inside: avoid;
+  }
+  .chart-canvas { height: 240px; }
+  /* Fit the drawn chart to the page even if the browser does not re-layout it for print. */
+  .chart-canvas canvas { width: 100% !important; height: 100% !important; }
+  .chart-casualties .chart-canvas { height: 300px; }
+  .chart-opening-wave .chart-canvas { height: 200px; }
+  .sources a::after { content: " (" attr(href) ")"; color: #444444; font-size: 9pt; word-break: break-all; }
+  .footer { border-top: 1px solid #999999; }
+}

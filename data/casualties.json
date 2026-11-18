@@ -1,0 +1,106 @@
+[
+  {
+    "country": "Lebanon",
+    "killed": 4346,
+    "injured": 12301,
+    "as_of": "2026-09-04",
+    "note": "Does not separate Hezbollah fighters from civilians",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Iran",
+    "killed": 3724,
+    "injured": 26580,
+    "as_of": "2026-09-28",
+    "note": "Includes 1,229+ military",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Iraq",
+    "killed": 127,
+    "injured": null,
+    "as_of": "2026-09-04",
+    "note": "Includes 28 in Iraqi Kurdistan",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Israel",
+    "killed": 67,
+    "injured": 7800,
+    "as_of": "2026-09-28",
+    "note": "26 civilians, 41 troops fighting Hezbollah",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "International waters",
+    "killed": 22,
+    "injured": null,
+    "as_of": "2026-09-28",
+    "note": "Seafarers",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "United States",
+    "killed": 19,
+    "injured": 861,
+    "as_of": "2026-09-28",
+    "note": "1 missing",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "UAE",
+    "killed": 12,
+    "injured": 230,
+    "as_of": "2026-09-28",
+    "note": "",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Kuwait",
+    "killed": 8,
+    "injured": 161,
+    "as_of": "2026-09-04",
+    "note": "Injured includes 90 soldiers",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Qatar",
+    "killed": 7,
+    "injured": 23,
+    "as_of": "2026-09-28",
+    "note": "Killed in Mar 22 helicopter crash",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Syria",
+    "killed": 4,
+    "injured": null,
+    "as_of": "2026-09-04",
+    "note": "",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Bahrain",
+    "killed": 3,
+    "injured": 46,
+    "as_of": "2026-09-28",
+    "note": "",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Oman",
+    "killed": 3,
+    "injured": 17,
+    "as_of": "2026-09-28",
+    "note": "Lower bound",
+    "source": "JINSA casualty table"
+  },
+  {
+    "country": "Saudi Arabia",
+    "killed": 3,
+    "injured": 34,
+    "as_of": "2026-09-04",
+    "note": "",
+    "source": "JINSA casualty table"
+  }
+]

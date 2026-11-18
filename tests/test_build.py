@@ -1,0 +1,113 @@
+"""Tests for build.py: validation rules and the add-a-summary publish flow."""
+
+import copy
+import json
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+
+import build
+
+ROOT = Path(__file__).resolve().parent.parent
+SAMPLE = json.loads((ROOT / "data/summaries/2026-11-17.json").read_text(encoding="utf-8"))
+
+
+def errors_for(summary, name="2026-11-17.json"):
+    return build.validate_summary(Path(name), summary)
+
+
+class ValidationTests(unittest.TestCase):
+    def test_sample_is_valid(self):
+        self.assertEqual(errors_for(SAMPLE), [])
+
+    def test_rejects_google_redirect(self):
+        s = copy.deepcopy(SAMPLE)
+        s["sources"][0]["url"] = "https://www.google.com/url?q=https://example.com/a"
+        self.assertTrue(any("Google redirect" in e for e in errors_for(s)))
+
+    def test_rejects_non_https(self):
+        s = copy.deepcopy(SAMPLE)
+        s["sources"][0]["url"] = "http://example.com/a"
+        self.assertTrue(any("https://" in e for e in errors_for(s)))
+
+    def test_rejects_dashes_and_html(self):
+        s = copy.deepcopy(SAMPLE)
+        s["top_line"] = "Talks resumed — officials said."
+        s["casualties_and_damage"] = "None <b>reported</b>."
+        errs = errors_for(s)
+        self.assertTrue(any("dash" in e for e in errs))
+        self.assertTrue(any("HTML" in e for e in errs))
+
+    def test_rejects_missing_field_and_bad_name(self):
+        s = copy.deepcopy(SAMPLE)
+        del s["window"]
+        self.assertTrue(any("missing required field" in e for e in errors_for(s)))
+        self.assertTrue(any("must match its date" in e for e in errors_for(SAMPLE, "2026-11-18.json")))
+
+    def test_rejects_label_in_diplomacy(self):
+        s = copy.deepcopy(SAMPLE)
+        s["diplomacy_and_statements"][0]["label"] = "Oman"
+        self.assertTrue(any("no lead label" in e for e in errors_for(s)))
+
+    def test_chart_rows_null_not_zero(self):
+        rows = [{"date": "2026-11-11", "confirmed_incidents": 134, "seafarer_deaths": None, "source": "IMO"}]
+        self.assertEqual(build.validate_chart_file("ship_incidents.json", rows), [])
+        rows[0]["confirmed_incidents"] = None
+        self.assertTrue(build.validate_chart_file("ship_incidents.json", rows))
+
+    def test_formatting(self):
+        self.assertEqual(build.generated_display("2026-11-17T06:00:52-08:00"), "Tuesday, November 17, 2026, 6:00 AM PT")
+        self.assertEqual(build.first_sentence(SAMPLE["top_line"]),
+                         "Iran's IRGC launched another drone attack on Bahrain on Tuesday, claiming a US radar at Sheikh Isa Air Base as the target.")
+        self.assertEqual(build.first_sentence('He said "no." Then left.'), 'He said "no."')
+
+
+class PublishFlowTests(unittest.TestCase):
+    """Adding a summary file and running the build publishes a new page with no other edits."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        for d in ("data", "templates", "assets"):
+            shutil.copytree(ROOT / d, self.tmp / d)
+        self._saved = {k: getattr(build, k) for k in ("ROOT", "DATA", "SUMMARIES", "TEMPLATES", "ASSETS", "OUT")}
+        build.ROOT, build.DATA = self.tmp, self.tmp / "data"
+        build.SUMMARIES, build.TEMPLATES = self.tmp / "data/summaries", self.tmp / "templates"
+        build.ASSETS, build.OUT = self.tmp / "assets", self.tmp / "site"
+
+    def tearDown(self):
+        for k, v in self._saved.items():
+            setattr(build, k, v)
+        shutil.rmtree(self.tmp)
+
+    def test_new_summary_publishes(self):
+        nxt = copy.deepcopy(SAMPLE)
+        nxt.update(date="2026-11-18", title="Persian Gulf hostilities - 24-hour summary - November 18, 2026",
+                   generated_at="2026-11-18T06:00:10-08:00", top_line="Test day. Second sentence.")
+        (self.tmp / "data/summaries/2026-11-18.json").write_text(json.dumps(nxt), encoding="utf-8")
+
+        self.assertEqual(build.main([]), 0)
+        site = self.tmp / "site"
+        home = (site / "index.html").read_text(encoding="utf-8")
+        old = (site / "2026-11-17/index.html").read_text(encoding="utf-8")
+        new = (site / "2026-11-18/index.html").read_text(encoding="utf-8")
+        archive = (site / "archive/index.html").read_text(encoding="utf-8")
+
+        self.assertIn("November 18, 2026", home)
+        self.assertIn('href="/2026-11-18/" rel="next"', old)
+        self.assertIn('href="/2026-11-17/" rel="prev"', new)
+        self.assertLess(archive.index("2026-11-18"), archive.index("2026-11-17"))
+        self.assertIn("<p>Test day.</p>", archive)
+        self.assertTrue((site / "data/summaries/2026-11-18.json").exists())
+
+    def test_invalid_summary_stops_build(self):
+        bad = copy.deepcopy(SAMPLE)
+        bad.update(date="2026-11-18")
+        bad["sources"][0]["url"] = "https://www.google.com/url?q=x"
+        (self.tmp / "data/summaries/2026-11-18.json").write_text(json.dumps(bad), encoding="utf-8")
+        self.assertEqual(build.main([]), 1)
+        self.assertFalse((self.tmp / "site").exists())
+
+
+if __name__ == "__main__":
+    unittest.main()

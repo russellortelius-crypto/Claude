@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% from "_charts.html" import chart_cards %}
+{% macro items(list) %}
+      <ul>
+{% for item in list %}
+        <li>{% if item.label %}<b>{{ item.label }}:</b> {% endif %}{{ item.text }}</li>
+{% else %}
+        <li>Nothing was reported in the window.</li>
+{% endfor %}
+      </ul>
+{% endmacro %}
+{% block title %}{{ s.title }}{% endblock %}
+{% block content %}
+    <article class="summary">
+      <header class="page-head">
+        <h1>{{ s.title }}</h1>
+        <div class="window-row">
+          <p class="muted window">Window: {{ s.window }}</p>
+          <nav class="daynav" aria-label="Other days">
+            {% if prev %}<a href="/{{ prev.date }}/" rel="prev">Previous: {{ prev.short_date }}</a>{% endif %}
+            {% if next %}<a href="/{{ next.date }}/" rel="next">Next: {{ next.short_date }}</a>{% endif %}
+          </nav>
+        </div>
+      </header>
+
+      <section>
+        <h2>Top line</h2>
+        <p>{{ s.top_line }}</p>
+      </section>
+
+      <section>
+        <h2>Launches and strikes</h2>
+{{ items(s.launches_and_strikes) }}
+      </section>
+
+      <section>
+        <h2>Maritime and shipping</h2>
+{{ items(s.maritime_and_shipping) }}
+      </section>
+
+      <section>
+        <h2>Casualties and damage</h2>
+        <p>{{ s.casualties_and_damage }}</p>
+      </section>
+
+      <section>
+        <h2>Diplomacy and statements</h2>
+{{ items(s.diplomacy_and_statements) }}
+      </section>
+
+      <section class="charts">
+        <h2>Charts</h2>
+{% if s.chart_updates %}
+        <div class="muted chart-status">
+          <p>Chart data updated today:</p>
+          <ul>
+{% for line in s.chart_updates %}
+            <li>{{ line }}</li>
+{% endfor %}
+          </ul>
+        </div>
+{% else %}
+        <p class="muted chart-status">Chart data: no figures were updated today.</p>
+{% endif %}
+{{ chart_cards() }}
+      </section>
+
+      <section class="sources">
+        <h2>Sources</h2>
+        <ul>
+{% for src in s.sources %}
+          <li><a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.outlet }}: {{ src.title }}</a></li>
+{% endfor %}
+        </ul>
+      </section>
+    </article>
+{% endblock %}
+{% block footer %}<span>Generated {{ s.generated_display }}</span> <a href="/archive/">Archive</a>{% endblock %}
+{% block scripts %}
+  <script src="/assets/chart.umd.min.js" defer></script>
+  <script src="/assets/charts.js" defer></script>
+{% endblock %}
