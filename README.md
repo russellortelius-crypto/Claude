@@ -61,13 +61,13 @@ To check a file without building, run `python build.py --check`.
 
 Connect the repository once. Every push to `main` then rebuilds and publishes the site.
 
-1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and choose this repo.
-2. Set **Build command** to `pip install -r requirements.txt && python build.py`.
-3. Set **Deploy command** to `npx wrangler deploy`. It reads `wrangler.jsonc`, which serves the `site/` folder.
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and choose this repo. Name the Worker `claude`, the name in `wrangler.jsonc`. If you pick another name, change it in that file too, because Cloudflare requires the two to match.
+2. Leave **Build command** empty. Cloudflare installs `requirements.txt` by itself.
+3. Set **Deploy command** to `npx wrangler deploy`. `wrangler.jsonc` makes it run `build.py` first, then publish the `site/` folder.
 
-If you choose a Cloudflare **Pages** project instead, use the same build command and set the output directory to `site`.
+If you choose a Cloudflare **Pages** project instead, set the build command to `pip install -r requirements.txt && python build.py` and the output directory to `site`.
 
-To deploy by hand from your machine, run `python build.py` and then `npx wrangler deploy`.
+To deploy by hand from your machine, run `npx wrangler deploy`.
 
 **Keeping it private:** the site is public by default. To limit it to specific people, put it behind **Cloudflare Access** (Zero Trust → Access → Applications) with an email allow-list.
 

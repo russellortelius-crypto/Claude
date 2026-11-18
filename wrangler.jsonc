@@ -1,9 +1,12 @@
 // Cloudflare: serve the built static site (site/) from a Worker with static assets.
-// Build first with `python build.py`; Cloudflare's Git integration runs the build for you (see README).
+// `wrangler deploy` (and `wrangler dev`) run build.py first, so no separate build step is needed.
 {
   "$schema": "https://unpkg.com/wrangler@4.160.0/config-schema.json",
-  "name": "persian-gulf-daily-summary",
+  "name": "claude",
   "compatibility_date": "2026-11-01",
+  "build": {
+    "command": "python3 build.py"
+  },
   "assets": {
     "directory": "./site",
     "html_handling": "auto-trailing-slash",
