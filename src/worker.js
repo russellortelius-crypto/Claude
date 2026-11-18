@@ -133,17 +133,38 @@ async function handleAsk(request, env) {
   }
 
   if (!res.ok) {
-    const detail = (await res.text()).slice(0, 500);
-    console.error('LLM error', res.status, detail);
-    if (res.status === 503) return json({ error: 'The AI model is starting up. Try again in a minute.' }, 503);
-    if (res.status === 429) return json({ error: 'The AI model is busy. Please try again shortly.' }, 503);
-    return json({ error: 'The AI model returned an error. Please try again later.' }, 502);
+    const raw = await res.text();
+    console.error('LLM error', res.status, env.LLM_MODEL, raw.slice(0, 1000));
+    return json({ error: describeUpstreamError(res.status, raw, env.LLM_MODEL) }, res.status === 503 || res.status === 429 ? 503 : 502);
   }
 
   const data = await res.json();
   const answer = cleanAnswer(data?.choices?.[0]?.message?.content);
   if (!answer) return json({ error: 'The AI model returned an empty answer. Please rephrase and try again.' }, 502);
   return json({ answer, model: env.LLM_MODEL });
+}
+
+// Turn the provider's error into a message that says what to fix. The provider's own
+// error text is included (shortened, tags stripped); it never contains the API key.
+function describeUpstreamError(status, raw, model) {
+  let detail = '';
+  try {
+    const body = JSON.parse(raw);
+    const e = body.error ?? body.message ?? body.detail ?? '';
+    detail = typeof e === 'string' ? e : (e.message || JSON.stringify(e));
+  } catch {
+    detail = raw;
+  }
+  detail = String(detail).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240);
+  const suffix = detail ? ` Details: ${detail}` : '';
+
+  if (status === 401) return `The AI provider rejected the API key (HTTP 401). Check that the Hugging Face token saved in Cloudflare is correct and has not been deleted.${suffix}`;
+  if (status === 403) return `The API key is not allowed to use the model "${model}" (HTTP 403). The token needs the "Make calls to Inference Providers" permission, and gated models need their license accepted on Hugging Face.${suffix}`;
+  if (status === 402) return `The Hugging Face account has run out of inference credits (HTTP 402).${suffix}`;
+  if (status === 400 || status === 404 || status === 422) return `The AI provider could not use the model "${model}" (HTTP ${status}). The model id may be wrong or not offered by any provider.${suffix}`;
+  if (status === 429) return 'The AI model is busy. Please try again shortly.';
+  if (status === 503) return 'The AI model is starting up. Try again in a minute.';
+  return `The AI model returned an error (HTTP ${status}). Please try again later.${suffix}`;
 }
 
 function cleanAnswer(text) {
