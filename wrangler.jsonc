@@ -4,6 +4,8 @@
   "$schema": "https://unpkg.com/wrangler@4.160.0/config-schema.json",
   "name": "claude",
   "compatibility_date": "2026-11-01",
+  // Publish at https://claude.<account-subdomain>.workers.dev
+  "workers_dev": true,
   "build": {
     "command": "python3 build.py"
   },
