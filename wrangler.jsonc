@@ -21,14 +21,15 @@
 
   // "Ask the data" settings. The API key is a secret, set separately:
   //   Cloudflare dashboard > this Worker > Settings > Variables and secrets > Add > Secret:
-  //   HUGGINGFACE_API_KEY (or LLM_API_KEY; either name works)
+  //   NVIDIA_API_KEY for NVIDIA, HUGGINGFACE_API_KEY for Hugging Face (or LLM_API_KEY for either).
   // LLM_API_URL: any OpenAI-compatible chat completions endpoint.
+  //   NVIDIA API (build.nvidia.com):    https://integrate.api.nvidia.com/v1/chat/completions
   //   Hugging Face Inference Providers: https://router.huggingface.co/v1/chat/completions
   //   Hugging Face Inference Endpoint:  https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions
-  // LLM_MODEL: the model id, e.g. "Qwen/Qwen2.5-72B-Instruct" (for an Inference Endpoint, use "tgi").
+  // LLM_MODEL: the model id as the provider names it, e.g. "meta/llama-3.3-70b-instruct" on NVIDIA.
   "vars": {
-    "LLM_API_URL": "https://router.huggingface.co/v1/chat/completions",
-    "LLM_MODEL": "Qwen/Qwen2.5-72B-Instruct"
+    "LLM_API_URL": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "LLM_MODEL": "meta/llama-3.3-70b-instruct"
   },
 
   // At most 10 questions per visitor (IP address) per minute, to protect the LLM bill.

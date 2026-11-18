@@ -5,8 +5,10 @@
 // and chart data published on this site. Every other request is served from the files.
 //
 // Settings (wrangler.jsonc "vars"):  LLM_API_URL, LLM_MODEL
-// Secret (Cloudflare dashboard or `npx wrangler secret put ...`):  LLM_API_KEY or HUGGINGFACE_API_KEY
+// Secret (Cloudflare dashboard or `npx wrangler secret put ...`): the provider's API key,
+//   NVIDIA_API_KEY or HUGGINGFACE_API_KEY (or LLM_API_KEY, which works with any provider).
 // LLM_API_URL must be an OpenAI-compatible chat completions endpoint, for example
+//   NVIDIA API (build.nvidia.com):     https://integrate.api.nvidia.com/v1/chat/completions
 //   Hugging Face Inference Providers:  https://router.huggingface.co/v1/chat/completions
 //   Hugging Face Inference Endpoint:   https://<name>.endpoints.huggingface.cloud/v1/chat/completions
 
@@ -61,9 +63,23 @@ export default {
   },
 };
 
-// The API key may be saved under either name.
+// Which provider LLM_API_URL points at, so the matching key is used and errors name it.
+function provider(env) {
+  let host = '';
+  try { host = new URL(env.LLM_API_URL).hostname; } catch { /* invalid URL: isConfigured() will fail */ }
+  if (host.endsWith('nvidia.com')) return 'nvidia';
+  if (host.endsWith('huggingface.co') || host.endsWith('huggingface.cloud')) return 'huggingface';
+  return 'other';
+}
+
+// LLM_API_KEY always wins; otherwise use the key saved for this provider. A key saved for
+// a different provider is never sent (e.g. the Hugging Face key is not sent to NVIDIA).
 function apiKey(env) {
-  return env.LLM_API_KEY || env.HUGGINGFACE_API_KEY || '';
+  if (env.LLM_API_KEY) return env.LLM_API_KEY;
+  const p = provider(env);
+  if (p === 'nvidia') return env.NVIDIA_API_KEY || '';
+  if (p === 'huggingface') return env.HUGGINGFACE_API_KEY || '';
+  return ''; // any other endpoint needs LLM_API_KEY
 }
 
 function isConfigured(env) {
@@ -135,7 +151,7 @@ async function handleAsk(request, env) {
   if (!res.ok) {
     const raw = await res.text();
     console.error('LLM error', res.status, env.LLM_MODEL, raw.slice(0, 1000));
-    return json({ error: describeUpstreamError(res.status, raw, env.LLM_MODEL) }, res.status === 503 || res.status === 429 ? 503 : 502);
+    return json({ error: describeUpstreamError(res.status, raw, env.LLM_MODEL, provider(env)) }, res.status === 503 || res.status === 429 ? 503 : 502);
   }
 
   const data = await res.json();
@@ -146,7 +162,9 @@ async function handleAsk(request, env) {
 
 // Turn the provider's error into a message that says what to fix. The provider's own
 // error text is included (shortened, tags stripped); it never contains the API key.
-function describeUpstreamError(status, raw, model) {
+function describeUpstreamError(status, raw, model, prov) {
+  const name = prov === 'nvidia' ? 'NVIDIA' : prov === 'huggingface' ? 'Hugging Face' : 'AI provider';
+  const keyName = prov === 'nvidia' ? 'NVIDIA_API_KEY' : prov === 'huggingface' ? 'HUGGINGFACE_API_KEY' : 'LLM_API_KEY';
   let detail = '';
   try {
     const body = JSON.parse(raw);
@@ -158,10 +176,10 @@ function describeUpstreamError(status, raw, model) {
   detail = String(detail).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240);
   const suffix = detail ? ` Details: ${detail}` : '';
 
-  if (status === 401) return `The AI provider rejected the API key (HTTP 401). Check that the Hugging Face token saved in Cloudflare is correct and has not been deleted.${suffix}`;
-  if (status === 403) return `The API key is not allowed to use the model "${model}" (HTTP 403). The token needs the "Make calls to Inference Providers" permission, and gated models need their license accepted on Hugging Face.${suffix}`;
-  if (status === 402) return `The Hugging Face account has run out of inference credits (HTTP 402).${suffix}`;
-  if (status === 400 || status === 404 || status === 422) return `The AI provider could not use the model "${model}" (HTTP ${status}). The model id may be wrong or not offered by any provider.${suffix}`;
+  if (status === 401) return `${name} rejected the API key (HTTP 401). Check that the ${keyName} secret in Cloudflare holds a current key.${suffix}`;
+  if (status === 403) return `The API key is not allowed to use the model "${model}" (HTTP 403).${prov === 'huggingface' ? ' The token needs the "Make calls to Inference Providers" permission, and gated models need their license accepted on Hugging Face.' : ''}${suffix}`;
+  if (status === 402) return `The ${name} account has run out of credits (HTTP 402).${suffix}`;
+  if (status === 400 || status === 404 || status === 422) return `${name} could not use the model "${model}" (HTTP ${status}). The model id may be wrong or not offered.${suffix}`;
   if (status === 429) return 'The AI model is busy. Please try again shortly.';
   if (status === 503) return 'The AI model is starting up. Try again in a minute.';
   return `The AI model returned an error (HTTP ${status}). Please try again later.${suffix}`;

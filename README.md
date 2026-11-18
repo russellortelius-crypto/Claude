@@ -91,17 +91,24 @@ To deploy by hand from your machine, run `npx wrangler deploy`.
 
 Each daily page has an "Ask the data" box, and there is an **Ask** page in the top bar. A question goes to `/api/ask`, handled by `src/worker.js`. The Worker gives the model the 10 most recent summaries plus all chart data, with instructions to answer only from them, cite the summary date or chart, and keep the summaries' caveats. Every other URL is still served straight from `site/`.
 
-**Switching it on**
+**Switching it on (NVIDIA API, the current setting)**
 
-1. Create a Hugging Face access token. Use a fine-grained token that can only make inference calls.
-2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `HUGGINGFACE_API_KEY` (or `LLM_API_KEY`; either works), and paste the token.
-3. Set the model in `wrangler.jsonc` under `vars` and push:
-   - **Inference Providers** (pay per use): `LLM_API_URL` = `https://router.huggingface.co/v1/chat/completions`, and `LLM_MODEL` = the model id, such as `Qwen/Qwen2.5-72B-Instruct`.
-   - **Inference Endpoint** (your own server): `LLM_API_URL` = `https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions`, and `LLM_MODEL` = `tgi`.
+1. Sign in at build.nvidia.com and create an API key. It starts with `nvapi-`.
+2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `NVIDIA_API_KEY`, and paste the key.
+3. To use a different model, change `LLM_MODEL` in `wrangler.jsonc` to its id on build.nvidia.com (default `meta/llama-3.3-70b-instruct`) and push.
 
-   Any other OpenAI-compatible chat API works the same way, including the NVIDIA API.
+**Other providers**
 
-Until the key is set, the box shows "Questions are not switched on yet."
+Any OpenAI-compatible chat API works. Set `LLM_API_URL` and `LLM_MODEL` in `wrangler.jsonc`, then save the key as a secret:
+
+| Provider | `LLM_API_URL` | Secret name |
+|---|---|---|
+| NVIDIA API | `https://integrate.api.nvidia.com/v1/chat/completions` | `NVIDIA_API_KEY` |
+| Hugging Face Inference Providers (needs credits) | `https://router.huggingface.co/v1/chat/completions` | `HUGGINGFACE_API_KEY` |
+| Hugging Face Inference Endpoint (`LLM_MODEL` = `tgi`) | `https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions` | `HUGGINGFACE_API_KEY` |
+| Anything else | its chat completions URL | `LLM_API_KEY` |
+
+Each named key is only sent to its own provider. `LLM_API_KEY`, if set, is used with any provider. Until a matching key is set, the box shows "Questions are not switched on yet." If the provider returns an error, the box shows its reason (bad key, unknown model, no credits).
 
 **Safeguards**
 
@@ -111,7 +118,7 @@ Until the key is set, the box shows "Questions are not switched on yet."
 
 **Local testing**
 
-Put `LLM_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wrangler dev`.
+Put `NVIDIA_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wrangler dev`.
 
 ## Not built yet
 
