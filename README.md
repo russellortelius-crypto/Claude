@@ -94,14 +94,14 @@ Each daily page has an "Ask the data" box, and there is an **Ask** page in the t
 **Switching it on**
 
 1. Create a Hugging Face access token. Use a fine-grained token that can only make inference calls.
-2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `LLM_API_KEY`, and paste the token.
+2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `HUGGINGFACE_API_KEY` (or `LLM_API_KEY`; either works), and paste the token.
 3. Set the model in `wrangler.jsonc` under `vars` and push:
    - **Inference Providers** (pay per use): `LLM_API_URL` = `https://router.huggingface.co/v1/chat/completions`, and `LLM_MODEL` = the model id, such as `Qwen/Qwen2.5-72B-Instruct`.
    - **Inference Endpoint** (your own server): `LLM_API_URL` = `https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions`, and `LLM_MODEL` = `tgi`.
 
    Any other OpenAI-compatible chat API works the same way, including the NVIDIA API.
 
-Until `LLM_API_KEY` is set, the box shows "Questions are not switched on yet."
+Until the key is set, the box shows "Questions are not switched on yet."
 
 **Safeguards**
 

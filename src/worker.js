@@ -5,7 +5,7 @@
 // and chart data published on this site. Every other request is served from the files.
 //
 // Settings (wrangler.jsonc "vars"):  LLM_API_URL, LLM_MODEL
-// Secret (Cloudflare dashboard or `npx wrangler secret put LLM_API_KEY`):  LLM_API_KEY
+// Secret (Cloudflare dashboard or `npx wrangler secret put ...`):  LLM_API_KEY or HUGGINGFACE_API_KEY
 // LLM_API_URL must be an OpenAI-compatible chat completions endpoint, for example
 //   Hugging Face Inference Providers:  https://router.huggingface.co/v1/chat/completions
 //   Hugging Face Inference Endpoint:   https://<name>.endpoints.huggingface.cloud/v1/chat/completions
@@ -61,8 +61,13 @@ export default {
   },
 };
 
+// The API key may be saved under either name.
+function apiKey(env) {
+  return env.LLM_API_KEY || env.HUGGINGFACE_API_KEY || '';
+}
+
 function isConfigured(env) {
-  return Boolean(env.LLM_API_KEY && env.LLM_MODEL && env.LLM_API_URL);
+  return Boolean(apiKey(env) && env.LLM_MODEL && env.LLM_API_URL);
 }
 
 // ---------------------------------------------------------------- /api/ask
@@ -106,7 +111,7 @@ async function handleAsk(request, env) {
     res = await fetch(env.LLM_API_URL, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${env.LLM_API_KEY}`,
+        Authorization: `Bearer ${apiKey(env)}`,
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },

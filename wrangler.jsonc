@@ -20,7 +20,8 @@
   },
 
   // "Ask the data" settings. The API key is a secret, set separately:
-  //   Cloudflare dashboard > this Worker > Settings > Variables and secrets > Add > Secret: LLM_API_KEY
+  //   Cloudflare dashboard > this Worker > Settings > Variables and secrets > Add > Secret:
+  //   HUGGINGFACE_API_KEY (or LLM_API_KEY; either name works)
   // LLM_API_URL: any OpenAI-compatible chat completions endpoint.
   //   Hugging Face Inference Providers: https://router.huggingface.co/v1/chat/completions
   //   Hugging Face Inference Endpoint:  https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions
