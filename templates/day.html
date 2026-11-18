@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_charts.html" import chart_cards %}
+{% from "_ask.html" import ask_box %}
 {% macro items(list, indent="          ") %}
 {{ indent }}<ul class="items">
 {% for item in list %}
@@ -81,6 +82,14 @@
 {% endif %}
 {% set n.i = n.i + 1 %}
 
+      <section class="section section-ask">
+{{ head("%02d" | format(n.i), "Ask the data") }}
+        <div class="section-body">
+{{ ask_box(date=s.date) }}
+        </div>
+      </section>
+{% set n.i = n.i + 1 %}
+
       <section class="section">
 {{ head("%02d" | format(n.i), "Launches and strikes") }}
         <div class="section-body">
@@ -135,4 +144,5 @@
   <script src="/assets/chart.umd.min.js" defer></script>
   <script src="/assets/charts.js" defer></script>
 {% endif %}
+  <script src="/assets/ask.js" defer></script>
 {% endblock %}

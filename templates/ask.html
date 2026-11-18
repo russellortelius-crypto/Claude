@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from "_ask.html" import ask_box %}
+{% block title %}Ask the data - Persian Gulf Daily Summary{% endblock %}
+{% block content %}
+    <header class="hero hero-small">
+      <p class="kicker">Questions answered from the published summaries</p>
+      <h1 class="hero-date">Ask the data</h1>
+      <p class="hero-intro">Ask about anything in the daily summaries or the charts: events, claims, counts and who reported them. The answer cites the summary date or chart it comes from.</p>
+    </header>
+    <section class="section">
+      <div class="section-head">
+        <h2>Your question</h2>
+      </div>
+      <div class="section-body">
+{{ ask_box() }}
+      </div>
+    </section>
+{% endblock %}
+{% block scripts %}
+  <script src="/assets/ask.js" defer></script>
+{% endblock %}

@@ -190,6 +190,37 @@ main.frame { border-left: 1px solid var(--line-soft); border-right: 1px solid va
 .chart-data td.num, .chart-data th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chart-data td.num { color: var(--text); }
 
+/* ---------- Ask the data ---------- */
+.ask-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.ask textarea {
+  width: 100%; min-height: 54px; resize: vertical;
+  padding: 14px 16px;
+  background: var(--panel); color: var(--text);
+  border: 1px solid #555555; border-radius: 0;
+  font: inherit; font-size: 17px; line-height: 1.4;
+}
+.ask textarea::placeholder { color: #8A8A8A; }
+.ask textarea:focus { outline: 2px solid var(--blue-text); outline-offset: 0; border-color: transparent; }
+.ask textarea:disabled, .ask button:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--blue); border-color: var(--blue); color: #FFFFFF; padding: 0 26px; font-size: 16px; cursor: pointer; }
+.btn-primary:hover:not(:disabled) { background: #2F6BE0; border-color: #2F6BE0; }
+.ask-examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip {
+  padding: 6px 12px; background: transparent; color: var(--body);
+  border: 1px solid var(--line); font: inherit; font-size: 14px; cursor: pointer; text-align: left;
+}
+.chip:hover:not(:disabled) { border-color: var(--blue-text); color: var(--text); }
+.ask-answer { margin-top: 20px; border: 1px solid var(--line); border-left: 3px solid var(--blue); background: var(--panel); padding: 16px 18px; }
+.ask-q { margin: 0 0 10px; color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+.ask-a { color: var(--text); white-space: pre-line; }
+.ask-answer.is-loading .ask-a::before { content: ""; display: block; height: 3px; width: 100%; background: linear-gradient(90deg, transparent, var(--blue), transparent); background-size: 50% 100%; background-repeat: no-repeat; animation: ask-scan 1.2s linear infinite; }
+@keyframes ask-scan { from { background-position: -50% 0; } to { background-position: 150% 0; } }
+@media (prefers-reduced-motion: reduce) { .ask-answer.is-loading .ask-a::before { animation: none; background: var(--blue); } }
+.ask-status { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+.ask-status[hidden] { display: none; }
+.ask-error { color: #FF8A80; }
+.ask-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
 /* ---------- Sources ---------- */
 .source-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-soft); }
 .source-list li { border-bottom: 1px solid var(--line-soft); }
@@ -245,6 +276,8 @@ main.frame { border-left: 1px solid var(--line-soft); border-right: 1px solid va
   .figure-label { margin-top: 0; font-size: 10px; }
   .figure-asof { font-size: 10px; }
   .badge { margin: 8px 0 0; }
+  .ask-row { grid-template-columns: minmax(0, 1fr); }
+  .btn-primary { justify-content: center; padding: 12px 20px; }
   .daynav { margin-left: 0; }
   .section { padding: 32px 0; }
   .chart { padding: 16px 14px 14px; }
@@ -259,7 +292,7 @@ main.frame { border-left: 1px solid var(--line-soft); border-right: 1px solid va
   @page { margin: 14mm 12mm; }
   :root { --text: #000000; --body: #222222; --muted: #555555; --line: #BBBBBB; --line-soft: #DDDDDD; --blue-text: #1A5FB4; }
   body { background: #FFFFFF; color: #222222; font-size: 10.5pt; }
-  .sitebar, .stripes, .daynav, .chart-data, .chart-sources, .skip { display: none !important; }
+  .sitebar, .stripes, .daynav, .chart-data, .chart-sources, .skip, .section-ask { display: none !important; }
   .frame { max-width: none; padding: 0; }
   main.frame { border: none; }
   .hero { padding: 0 0 12px; }

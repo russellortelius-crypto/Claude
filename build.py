@@ -353,10 +353,14 @@ def render_site(summaries) -> list[Path]:
         "charts/index.html",
         env.get_template("charts.html").render(data_files=list(CHART_FILES), active="charts", canonical="/charts/"),
     )
+    write("ask/index.html", env.get_template("ask.html").render(active="ask", canonical="/ask/"))
     write("404.html", env.get_template("404.html").render(active=None, canonical=None))
 
     shutil.copytree(ASSETS, OUT / "assets")
     shutil.copytree(DATA, OUT / "data")
+    # Index of published summaries, newest first (read by the "Ask the data" Worker).
+    index = {"dates": [s["date"] for s in reversed(summaries)]}
+    (OUT / "data/summaries/index.json").write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
     return written
 
 

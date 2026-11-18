@@ -1,0 +1,21 @@
+{#- "Ask the data" box. assets/ask.js wires up every form with data-ask. -#}
+{% macro ask_box(date="", input_id="ask-q") %}
+          <form class="ask" data-ask data-date="{{ date }}" novalidate>
+            <label class="sr-only" for="{{ input_id }}">Your question about the summaries and chart data</label>
+            <div class="ask-row">
+              <textarea id="{{ input_id }}" name="question" rows="2" maxlength="500" placeholder="Ask about the summaries or chart data" disabled></textarea>
+              <button class="btn btn-primary" type="submit" disabled>Ask</button>
+            </div>
+            <div class="ask-examples">
+              <button type="button" class="chip" disabled>What happened in Bahrain this week?</button>
+              <button type="button" class="chip" disabled>How many ship attacks has the IMO confirmed?</button>
+              <button type="button" class="chip" disabled>What has Iran claimed about mines in Hormuz?</button>
+            </div>
+            <div class="ask-answer" aria-live="polite" hidden>
+              <p class="ask-q"></p>
+              <div class="ask-a"></div>
+            </div>
+            <p class="ask-status">Checking whether questions are available...</p>
+            <p class="ask-note">Answers are written by an AI model using only the summaries and chart data on this site. They can be wrong or incomplete; check the summaries and their sources.</p>
+          </form>
+{% endmacro %}

@@ -1,17 +1,41 @@
-// Cloudflare: serve the built static site (site/) from a Worker with static assets.
+// Cloudflare: serves the built static site (site/) and runs src/worker.js for /api/* only.
 // `wrangler deploy` (and `wrangler dev`) run build.py first, so no separate build step is needed.
 {
   "$schema": "https://unpkg.com/wrangler@4.160.0/config-schema.json",
   "name": "claude",
+  "main": "src/worker.js",
   "compatibility_date": "2026-11-01",
   // Publish at https://claude.<account-subdomain>.workers.dev
   "workers_dev": true,
+  "observability": { "enabled": true },
   "build": {
     "command": "python3 build.py"
   },
   "assets": {
     "directory": "./site",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
-  }
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // "Ask the data" settings. The API key is a secret, set separately:
+  //   Cloudflare dashboard > this Worker > Settings > Variables and secrets > Add > Secret: LLM_API_KEY
+  // LLM_API_URL: any OpenAI-compatible chat completions endpoint.
+  //   Hugging Face Inference Providers: https://router.huggingface.co/v1/chat/completions
+  //   Hugging Face Inference Endpoint:  https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions
+  // LLM_MODEL: the model id, e.g. "Qwen/Qwen2.5-72B-Instruct" (for an Inference Endpoint, use "tgi").
+  "vars": {
+    "LLM_API_URL": "https://router.huggingface.co/v1/chat/completions",
+    "LLM_MODEL": "Qwen/Qwen2.5-72B-Instruct"
+  },
+
+  // At most 10 questions per visitor (IP address) per minute, to protect the LLM bill.
+  "ratelimits": [
+    {
+      "name": "ASK_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 10, "period": 60 }
+    }
+  ]
 }

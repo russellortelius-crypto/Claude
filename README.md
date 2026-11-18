@@ -87,6 +87,32 @@ To deploy by hand from your machine, run `npx wrangler deploy`.
 
 **Keeping it private:** the site is public by default. To limit it to specific people, put it behind **Cloudflare Access** (Zero Trust → Access → Applications) with an email allow-list.
 
+## Ask the data (LLM questions)
+
+Each daily page has an "Ask the data" box, and there is an **Ask** page in the top bar. A question goes to `/api/ask`, handled by `src/worker.js`. The Worker gives the model the 10 most recent summaries plus all chart data, with instructions to answer only from them, cite the summary date or chart, and keep the summaries' caveats. Every other URL is still served straight from `site/`.
+
+**Switching it on**
+
+1. Create a Hugging Face access token. Use a fine-grained token that can only make inference calls.
+2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `LLM_API_KEY`, and paste the token.
+3. Set the model in `wrangler.jsonc` under `vars` and push:
+   - **Inference Providers** (pay per use): `LLM_API_URL` = `https://router.huggingface.co/v1/chat/completions`, and `LLM_MODEL` = the model id, such as `Qwen/Qwen2.5-72B-Instruct`.
+   - **Inference Endpoint** (your own server): `LLM_API_URL` = `https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions`, and `LLM_MODEL` = `tgi`.
+
+   Any other OpenAI-compatible chat API works the same way, including the NVIDIA API.
+
+Until `LLM_API_KEY` is set, the box shows "Questions are not switched on yet."
+
+**Safeguards**
+
+- **Rate limit:** at most 10 questions per minute per visitor (`ratelimits` in `wrangler.jsonc`).
+- **Length and origin:** questions are capped at 500 characters, and only pages on this site can send them.
+- **Display:** answers are shown as plain text, never HTML. The page labels them as AI-generated.
+
+**Local testing**
+
+Put `LLM_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wrangler dev`.
+
 ## Not built yet
 
 - **Backfill (spec step 11):** done. November 13 (marked as the manual test run) through 17 are all in.
