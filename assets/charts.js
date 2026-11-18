@@ -5,8 +5,10 @@
 (function () {
   'use strict';
 
-  var COLORS = { blue: '#2F6DB5', orange: '#D9822B', green: '#5A9E6F', grid: '#E6E6E6', axis: '#555555', label: '#333333' };
-  var FONT = 'Calibri, Carlito, Arial, sans-serif';
+  // Dark theme: series colors brightened from the spec palette so they read on charcoal.
+  var COLORS = { blue: '#4C86F5', orange: '#E8913A', green: '#5DB37E', grid: '#333333', axis: '#A0A0A0', label: '#E8E8E8', panel: '#1A1A1A' };
+  var FONT = '"Inter Tight", "Helvetica Neue", Arial, sans-serif';
+  var MONO = '"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace';
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   var MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var DATA_BASE = (document.body && document.body.getAttribute('data-data-base')) || '/data/';
@@ -23,7 +25,13 @@
 
   // ---------- data helpers ----------
 
+  var loaded = {};
   function load(file) {
+    if (!loaded[file]) loaded[file] = fetchRows(file);
+    return loaded[file];
+  }
+
+  function fetchRows(file) {
     return fetch(DATA_BASE + file, { cache: 'no-cache' }).then(function (res) {
       if (!res.ok) throw new Error(file + ': HTTP ' + res.status);
       return res.json();
@@ -96,6 +104,19 @@
     if (details) details.hidden = true;
   }
 
+  // ---------- panel background (so the chart prints as a dark panel) ----------
+
+  var panelBackground = {
+    id: 'panelBackground',
+    beforeDraw: function (chart) {
+      var ctx = chart.ctx;
+      ctx.save();
+      ctx.fillStyle = COLORS.panel;
+      ctx.fillRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    },
+  };
+
   // ---------- value labels (small Chart.js plugin) ----------
   // options.plugins.valueLabels.mode: 'all' (every bar), 'last' (final bar of each series),
   // or 'total' (one label at the end of each stacked bar).
@@ -110,7 +131,7 @@
       if (!visible.length) return;
       var size = isNarrow() ? 10 : 11;
       ctx.save();
-      ctx.font = size + 'px ' + FONT;
+      ctx.font = '500 ' + size + 'px ' + MONO;
       ctx.fillStyle = COLORS.label;
 
       function draw(text, bar, spacing) {
@@ -170,7 +191,10 @@
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: 'rgba(34,34,34,0.92)',
+          backgroundColor: '#0F0F0F',
+          borderColor: '#4A4A4A',
+          borderWidth: 1,
+          cornerRadius: 0,
           titleFont: { family: FONT, size: 13, weight: 'bold' },
           bodyFont: { family: FONT, size: 13 },
           footerFont: { family: FONT, size: 12, weight: 'normal' },
@@ -180,8 +204,8 @@
         valueLabels: { mode: 'all' },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { color: COLORS.axis, autoSkip: true, maxRotation: 0, autoSkipPadding: 10 } },
-        y: { beginAtZero: true, grid: { color: COLORS.grid }, border: { display: false }, ticks: { color: COLORS.axis, callback: function (v) { return num(v); } } },
+        x: { grid: { display: false }, border: { color: '#4A4A4A' }, ticks: { color: COLORS.axis, font: { family: MONO, size: 11 }, autoSkip: true, maxRotation: 0, autoSkipPadding: 10 } },
+        y: { beginAtZero: true, grid: { color: COLORS.grid }, border: { display: false }, ticks: { color: COLORS.axis, font: { family: MONO, size: 11 }, callback: function (v) { return num(v); } } },
       },
     };
     return merge(o, extra || {});
@@ -198,7 +222,7 @@
 
   function draw(card, config) {
     var canvas = card.querySelector('canvas');
-    config.plugins = [valueLabels];
+    config.plugins = [panelBackground, valueLabels];
     var chart = new window.Chart(canvas, config);
     charts.push(chart);
     return chart;
@@ -311,8 +335,8 @@
             },
           } } },
           scales: {
-            x: { beginAtZero: true, grid: { display: true, color: COLORS.grid }, ticks: { callback: function (v) { return num(v); } } },
-            y: { beginAtZero: false, grid: { display: false }, border: { display: true }, ticks: { autoSkip: false, callback: function (_v, i) { return shown[i].country; } } },
+            x: { beginAtZero: true, grid: { display: true, color: COLORS.grid }, border: { display: false }, ticks: { callback: function (v) { return num(v); } } },
+            y: { beginAtZero: false, grid: { display: false }, border: { display: true, color: '#4A4A4A' }, ticks: { autoSkip: false, color: COLORS.label, font: { family: FONT, size: 13 }, callback: function (_v, i) { return shown[i].country; } } },
           },
         }),
       });
@@ -353,7 +377,7 @@
           datasets: { bar: { categoryPercentage: 0.8, barPercentage: 0.9 } },
           layout: { padding: { top: 6, right: 30 } },
           plugins: {
-            legend: { display: true, position: 'top', align: 'start', labels: { boxWidth: 12, boxHeight: 10, color: COLORS.axis, font: { family: FONT, size: 13 } } },
+            legend: { display: true, position: 'top', align: 'start', labels: { boxWidth: 10, boxHeight: 10, color: COLORS.label, font: { family: MONO, size: 11 } } },
             valueLabels: { mode: 'last' },
             tooltip: { displayColors: true, callbacks: {
               title: function (items) { return longDate(rows[items[0].dataIndex].date); },
@@ -400,7 +424,7 @@
           datasets: { bar: { categoryPercentage: 0.75, barPercentage: 0.9 } },
           layout: { padding: { top: 4, right: 44 } },
           plugins: {
-            legend: { display: true, position: 'bottom', align: 'end', labels: { boxWidth: 12, boxHeight: 10, color: COLORS.axis, font: { family: FONT, size: 13 } } },
+            legend: { display: true, position: 'bottom', align: 'end', labels: { boxWidth: 10, boxHeight: 10, color: COLORS.label, font: { family: MONO, size: 11 } } },
             valueLabels: { mode: 'total' },
             tooltip: { displayColors: true, callbacks: {
               title: function (items) { return rows[items[0].dataIndex].country; },
@@ -412,8 +436,8 @@
             } },
           },
           scales: {
-            x: { stacked: true, beginAtZero: true, grid: { display: true, color: COLORS.grid }, ticks: { callback: function (v) { return num(v); } } },
-            y: { stacked: true, beginAtZero: false, grid: { display: false }, border: { display: true }, ticks: { autoSkip: false, callback: function (_v, i) { return rows[i].country; } } },
+            x: { stacked: true, beginAtZero: true, grid: { display: true, color: COLORS.grid }, border: { display: false }, ticks: { callback: function (v) { return num(v); } } },
+            y: { stacked: true, beginAtZero: false, grid: { display: false }, border: { display: true, color: '#4A4A4A' }, ticks: { autoSkip: false, color: COLORS.label, font: { family: FONT, size: 13 }, callback: function (_v, i) { return rows[i].country; } } },
           },
         }),
       });
@@ -427,6 +451,36 @@
     });
   }
 
+  // ---------- key figures (hero strip on daily pages) ----------
+
+  function setFigure(name, value, asof) {
+    var box = document.querySelector('[data-figure="' + name + '"]');
+    if (!box) return;
+    box.querySelector('.figure-value').textContent = value;
+    box.querySelector('.figure-asof').textContent = asof;
+  }
+
+  function hideFigure(name) {
+    var box = document.querySelector('[data-figure="' + name + '"]');
+    if (box) box.hidden = true;
+  }
+
+  function fillFigures() {
+    if (!document.querySelector('[data-figure]')) return;
+    load('launches.json').then(function (raw) {
+      var r = byDate(raw).pop();
+      setFigure('launches', num(r.launched_since_jul7), 'As of ' + shortDate(r.date));
+    }).catch(function () { hideFigure('launches'); });
+    load('ship_incidents.json').then(function (raw) {
+      var rows = byDate(raw);
+      var r = rows[rows.length - 1];
+      setFigure('ships', num(r.confirmed_incidents), 'As of ' + shortDate(r.date));
+      var deaths = rows.filter(function (x) { return x.seafarer_deaths !== null && x.seafarer_deaths !== undefined; }).pop();
+      if (deaths) setFigure('seafarers', num(deaths.seafarer_deaths), 'As of ' + shortDate(deaths.date));
+      else hideFigure('seafarers');
+    }).catch(function () { hideFigure('ships'); hideFigure('seafarers'); });
+  }
+
   // ---------- boot ----------
 
   var BUILDERS = {
@@ -438,6 +492,7 @@
   };
 
   function init() {
+    fillFigures();
     var cards = document.querySelectorAll('figure.chart[data-chart]');
     if (!cards.length) return;
     if (!window.Chart) {
@@ -463,6 +518,13 @@
     window.addEventListener('afterprint', function () { charts.forEach(function (c) { c.resize(); }); });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  // Draw once the web fonts are ready, so canvas text uses them (fall back after 1.5 s).
+  function start() {
+    var fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    var timeout = new Promise(function (resolve) { setTimeout(resolve, 1500); });
+    Promise.race([fontsReady, timeout]).then(init, init);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();

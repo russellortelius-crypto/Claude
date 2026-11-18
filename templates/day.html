@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_charts.html" import chart_cards %}
-{% macro items(list, indent="      ") %}
-{{ indent }}<ul>
+{% macro items(list, indent="          ") %}
+{{ indent }}<ul class="items">
 {% for item in list %}
 {{ indent }}  <li>{% if item.label %}<b>{{ item.label }}:</b> {% endif %}{{ item.text }}
 {%- if item.subitems %}
@@ -12,71 +12,120 @@
 {% endfor %}
 {{ indent }}</ul>
 {% endmacro %}
+{% macro head(num, title) %}
+        <div class="section-head">
+          <span class="section-no" aria-hidden="true">{{ num }}/</span>
+          <h2>{{ title }}</h2>
+        </div>
+{% endmacro %}
 {% block title %}{{ s.title }}{% endblock %}
 {% block content %}
-    <article class="summary">
-      <header class="page-head">
-        <h1>{{ s.title }}</h1>
-        <div class="window-row">
-          <p class="muted window">Window: {{ s.window }}</p>
+    <article class="day">
+      <header class="hero">
+        <h1 class="hero-title">
+          <span class="kicker">{{ s.title_kicker }}<span class="sr-only"> - </span></span>
+          <span class="hero-date">{{ s.title_main }}</span>
+        </h1>
+        <div class="hero-meta">
+          <p class="window"><span class="meta-label">Window:</span> {{ s.window }}</p>
           <nav class="daynav" aria-label="Other days">
-            {% if prev %}<a href="/{{ prev.date }}/" rel="prev">Previous: {{ prev.short_date }}</a>{% endif %}
-            {% if next %}<a href="/{{ next.date }}/" rel="next">Next: {{ next.short_date }}</a>{% endif %}
+            {% if prev %}<a class="btn" href="/{{ prev.date }}/" rel="prev"><span aria-hidden="true">&larr;</span> Previous: {{ prev.short_date }}</a>{% endif %}
+            {% if next %}<a class="btn" href="/{{ next.date }}/" rel="next">Next: {{ next.short_date }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
           </nav>
         </div>
 {% if s.note %}
         <p class="note">{{ s.note }}</p>
 {% endif %}
+{% if s.charts %}
+        <div class="figures" aria-label="Key figures">
+          <div class="figure" data-figure="launches">
+            <span class="figure-value">&hellip;</span>
+            <span class="figure-label">Iranian missiles and drones launched since July 7 (JINSA, lower bound)</span>
+            <span class="figure-asof"></span>
+          </div>
+          <div class="figure" data-figure="ships">
+            <span class="figure-value">&hellip;</span>
+            <span class="figure-label">Confirmed attacks on ships since Feb 28 (IMO)</span>
+            <span class="figure-asof"></span>
+          </div>
+          <div class="figure figure-accent" data-figure="seafarers">
+            <span class="figure-value">&hellip;</span>
+            <span class="figure-label">Seafarer deaths in confirmed ship attacks (IMO)</span>
+            <span class="figure-asof"></span>
+          </div>
+        </div>
+{% endif %}
       </header>
 
-      <section>
-        <h2>Top line</h2>
-        <p>{{ s.top_line }}</p>
+      <section class="section section-lead">
+{{ head("01", "Top line") }}
+        <div class="section-body">
+          <p class="lead">{{ s.top_line }}</p>
+        </div>
       </section>
-
-      <section>
-        <h2>Launches and strikes</h2>
-{{ items(s.launches_and_strikes) }}
-      </section>
-
-      <section>
-        <h2>Maritime and shipping</h2>
-{{ items(s.maritime_and_shipping) }}
-      </section>
-
-      <section>
-        <h2>Casualties and damage</h2>
-{% if s.casualties_and_damage is string %}
-        <p>{{ s.casualties_and_damage }}</p>
-{% else %}
-{{ items(s.casualties_and_damage) }}
-{% endif %}
-      </section>
-
-      <section>
-        <h2>Diplomacy and statements</h2>
-{{ items(s.diplomacy_and_statements) }}
-      </section>
-
+{% set n = namespace(i=1) %}
 {% if s.charts %}
-      <section class="charts">
-        <h2>Charts</h2>
+{% set n.i = n.i + 1 %}
+
+      <section class="section section-charts">
+{{ head("%02d" | format(n.i), "Charts") }}
+        <div class="section-body">
 {% for line in s.chart_updates %}
-        <p class="muted chart-status">{{ line }}</p>
+          <p class="chart-status">{{ line }}</p>
 {% else %}
-        <p class="muted chart-status">Chart data: no figures were updated today.</p>
+          <p class="chart-status">Chart data: no figures were updated today.</p>
 {% endfor %}
+        </div>
 {{ chart_cards() }}
       </section>
 {% endif %}
+{% set n.i = n.i + 1 %}
 
-      <section class="sources">
-        <h2>Sources</h2>
-        <ul>
+      <section class="section">
+{{ head("%02d" | format(n.i), "Launches and strikes") }}
+        <div class="section-body">
+{{ items(s.launches_and_strikes) }}
+        </div>
+      </section>
+{% set n.i = n.i + 1 %}
+
+      <section class="section">
+{{ head("%02d" | format(n.i), "Maritime and shipping") }}
+        <div class="section-body">
+{{ items(s.maritime_and_shipping) }}
+        </div>
+      </section>
+{% set n.i = n.i + 1 %}
+
+      <section class="section">
+{{ head("%02d" | format(n.i), "Casualties and damage") }}
+        <div class="section-body">
+{% if s.casualties_and_damage is string %}
+          <p>{{ s.casualties_and_damage }}</p>
+{% else %}
+{{ items(s.casualties_and_damage) }}
+{% endif %}
+        </div>
+      </section>
+{% set n.i = n.i + 1 %}
+
+      <section class="section">
+{{ head("%02d" | format(n.i), "Diplomacy and statements") }}
+        <div class="section-body">
+{{ items(s.diplomacy_and_statements) }}
+        </div>
+      </section>
+{% set n.i = n.i + 1 %}
+
+      <section class="section sources">
+{{ head("%02d" | format(n.i), "Sources") }}
+        <div class="section-body">
+          <ul class="source-list">
 {% for src in s.sources %}
-          <li><a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.outlet }}: {{ src.title }}</a></li>
+            <li><a href="{{ src.url }}" target="_blank" rel="noopener noreferrer"><span class="outlet">{{ src.outlet }}:</span> <span class="headline">{{ src.title }}</span><span class="ext" aria-hidden="true">&nearr;</span></a></li>
 {% endfor %}
-        </ul>
+          </ul>
+        </div>
       </section>
     </article>
 {% endblock %}

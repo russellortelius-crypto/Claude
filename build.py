@@ -310,6 +310,9 @@ def load_and_validate():
         s["long_date"] = long_date(s["date"])
         s["generated_display"] = generated_display(s["generated_at"])
         s["first_sentence"] = first_sentence(s["top_line"])
+        # "Persian Gulf hostilities - 24-hour summary - November 17, 2026" -> kicker + large date
+        kicker, sep, main = s["title"].rpartition(" - ")
+        s["title_kicker"], s["title_main"] = (kicker, main) if sep else ("", s["title"])
     return summaries
 
 

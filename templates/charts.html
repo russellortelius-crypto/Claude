@@ -2,19 +2,26 @@
 {% from "_charts.html" import chart_cards %}
 {% block title %}Charts - Persian Gulf Daily Summary{% endblock %}
 {% block content %}
-    <h1>Charts</h1>
-    <p class="muted">Running totals and compiled figures used in the daily summary. Hover over a bar for its values and source.</p>
-    <section class="charts charts-page">
+    <header class="hero hero-small">
+      <p class="kicker">Running totals and compiled figures</p>
+      <h1 class="hero-date">Charts</h1>
+      <p class="hero-intro">The figures behind the daily summary. Hover over a bar for its values and source, or open the data under each chart.</p>
+    </header>
+    <section class="section section-charts charts-page">
 {{ chart_cards(heading_level=2, open_tables=true, show_sources=true) }}
     </section>
-    <section>
-      <h2>Interactive charts: data files</h2>
-      <p>Each chart reads one of these JSON files. New figures are added as new rows; existing rows are never edited.</p>
-      <ul>
+    <section class="section">
+      <div class="section-head">
+        <h2>Interactive charts: data files</h2>
+      </div>
+      <div class="section-body">
+        <p>Each chart reads one of these JSON files. New figures are added as new rows; existing rows are never edited.</p>
+        <ul class="file-list">
 {% for f in data_files %}
-        <li><a href="/data/{{ f }}">{{ f }}</a></li>
+          <li><a href="/data/{{ f }}">{{ f }}</a></li>
 {% endfor %}
-      </ul>
+        </ul>
+      </div>
     </section>
 {% endblock %}
 {% block scripts %}

@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Archive - Persian Gulf Daily Summary{% endblock %}
 {% block content %}
-    <h1>Archive</h1>
-    <p class="muted">{{ summaries | length }} daily {{ "summary" if summaries | length == 1 else "summaries" }}, newest first.</p>
+    <header class="hero hero-small">
+      <p class="kicker">{{ summaries | length }} daily {{ "summary" if summaries | length == 1 else "summaries" }}, newest first</p>
+      <h1 class="hero-date">Archive</h1>
+    </header>
     <ol class="archive" reversed>
 {% for s in summaries %}
       <li>
-        <time class="muted" datetime="{{ s.date }}">{{ s.long_date }}</time>
-        <a href="/{{ s.date }}/">{{ s.title }}</a>
+        <time datetime="{{ s.date }}">{{ s.long_date }}</time>
+        <div class="archive-main">
+          <a href="/{{ s.date }}/">{{ s.title }}</a>
 {% if s.note %}
-        <span class="badge">Manual test run</span>
+          <span class="badge">Manual test run</span>
 {% endif %}
-        <p>{{ s.first_sentence }}</p>
+          <p>{{ s.first_sentence }}</p>
+        </div>
+        <span class="archive-arrow" aria-hidden="true">&rarr;</span>
       </li>
 {% endfor %}
     </ol>

@@ -10,6 +10,15 @@ A static website that publishes each daily "Persian Gulf hostilities - 24-hour s
 | `/charts/` | The five charts, full width, with sources, data tables, and links to the data files |
 | `/data/*.json` | Chart data and one summary file per day |
 
+## Design
+
+A dark editorial theme, set by the site owner after spec v1.0, replaces the spec's white Calibri layout (Section 3):
+
+- **Colors:** charcoal background (`#222222`), off-white text, hairline rules and one blue accent. Chart series use brighter versions of the spec colors so they read on charcoal.
+- **Fonts:** Inter Tight for text and JetBrains Mono for small uppercase labels. Both are self-hosted in `assets/fonts/` under the SIL Open Font License.
+- **Daily page order:** title and key figures (latest launch total, ship attacks and seafarer deaths, computed from the data files), Top line, **Charts**, then Launches and strikes, Maritime and shipping, Casualties and damage, Diplomacy and statements, and Sources. Charts come right after the Top line instead of after Diplomacy as in the email. The text of each section still matches the email word for word.
+- **Print:** the page prints as a light document; the charts print as dark panels.
+
 ## How it works
 
 ```

@@ -3,31 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#222222">
   <title>{% block title %}{% endblock %}</title>
 {% if canonical %}
   <link rel="canonical" href="{{ canonical }}">
 {% endif %}
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%232F6DB5'/%3E%3Crect x='3' y='8' width='2' height='5' fill='white'/%3E%3Crect x='7' y='5' width='2' height='8' fill='white'/%3E%3Crect x='11' y='3' width='2' height='10' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23222222'/%3E%3Crect x='3' y='9' width='2' height='4' fill='%23BBBBBB'/%3E%3Crect x='7' y='6' width='2' height='7' fill='%23BBBBBB'/%3E%3Crect x='11' y='3' width='2' height='10' fill='%234C86F5'/%3E%3C/svg%3E">
+  <link rel="preload" href="/assets/fonts/inter-tight-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/jetbrains-mono-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body data-data-base="/data/">
+  <a class="skip" href="#main">Skip to content</a>
   <header class="sitebar">
-    <div class="sitebar-inner">
-      <a class="sitename" href="/">Persian Gulf Daily Summary</a>
+    <div class="frame sitebar-inner">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="0.5" y="0.5" width="23" height="23" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
+          <rect x="5" y="13" width="2" height="6" fill="currentColor"/>
+          <rect x="9" y="10" width="2" height="9" fill="currentColor"/>
+          <rect x="13" y="7" width="2" height="12" fill="currentColor"/>
+          <rect x="17" y="4" width="2" height="15" fill="#4C86F5"/>
+        </svg>
+        <span>Persian Gulf Daily Summary</span>
+      </a>
       <nav class="sitenav" aria-label="Site">
         <a href="/"{% if active == "latest" %} aria-current="page"{% endif %}>Latest</a>
+        <span class="dot" aria-hidden="true"></span>
         <a href="/archive/"{% if active == "archive" %} aria-current="page"{% endif %}>Archive</a>
+        <span class="dot" aria-hidden="true"></span>
         <a href="/charts/"{% if active == "charts" %} aria-current="page"{% endif %}>Charts</a>
       </nav>
     </div>
   </header>
 
-  <main class="content">
+  <main id="main" class="frame">
 {% block content %}{% endblock %}
   </main>
 
-  <footer class="footer">
-    {% block footer %}<a href="/archive/">Archive</a>{% endblock %}
+  <div class="stripes" aria-hidden="true"></div>
+  <footer class="frame footer">
+    {% block footer %}<span></span><a href="/archive/">Archive</a>{% endblock %}
   </footer>
 {% block scripts %}{% endblock %}
 </body>
