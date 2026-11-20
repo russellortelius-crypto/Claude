@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-19",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 19, 2026",
+  "window": "6:00 AM PT Nov 18 to 6:00 AM PT Nov 19, 2026. Some items below were first reported just before the window and are included because follow-up reporting landed inside it; dates are given for each.",
+  "generated_at": "2026-11-19T06:01:00-08:00",
+  "top_line": "Iran's renewed pressure on Gulf states and Hormuz shipping continued. Another tanker was hit by a projectile north of Khasab, Oman on Nov 18 (1645 UTC), and Iran claimed three more tankers struck mines east of the strait, without evidence. The Trump-Xi-Putin meeting in Shenzhen on Nov 19 produced a joint statement on nuclear risk and UN reform, but no Iran breakthrough.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "No new launch counts were reported inside the window. The latest JINSA running total is at least 648 Iranian missiles and drones launched since July 7, as of Nov 16 (13 of them on Nov 13-16)."
+    },
+    {
+      "label": null,
+      "text": "Context from just before the window: on Nov 17 the IRGC said it sent drones at a US radar at Isa Air Base, Bahrain; CENTCOM said they were intercepted with no injuries or damage. US jets then struck an IRGC missile launch site on Qeshm Island, which a US official called self-defense. Iranian officials said there was no damage to residential, commercial or critical infrastructure."
+    },
+    {
+      "label": null,
+      "text": "Early Nov 18 (Gulf time), Kuwait's air defenses intercepted drones. Iran's army said it targeted Patriot systems at Ali Al-Salem Air Base; this was not independently confirmed. Bahrain reported intercepting several Iranian aerial attacks, its fourth Iranian attack in six days per Al Jazeera. No counts were given."
+    },
+    {
+      "label": null,
+      "text": "Yemen: on Nov 18 the Saudi-led coalition said it intercepted two Houthi cruise missiles aimed at Riyadh, and an explosion was heard in the city."
+    },
+    {
+      "label": null,
+      "text": "Iran's army claimed it shot down a US LUCAS drone over Hormuz. The US did not comment."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "Nov 18, 1645 UTC: UKMTO said an outbound tanker was struck in the engine room by an unknown projectile about 6 nm north of Khasab, Oman. All crew were safe. The vessel and attacker were not identified, and the alert was delayed until 2:30 AM on Nov 19."
+    },
+    {
+      "label": null,
+      "text": "Nov 18 evening: Iran's military, via IRIB, claimed three tankers caught fire after hitting naval mines east of the strait. No vessels were named, and Reuters could not confirm it."
+    },
+    {
+      "label": null,
+      "text": "ADNOC L&S tanker Navig8 Messi (struck evening Nov 17, about 13 nm north of Khasab): ADNOC reported 11 injured and one missing. On Nov 18 India's Ports Minister said all crew were safe and accounted for. ADNOC had not confirmed that at last report."
+    },
+    {
+      "label": null,
+      "text": "Bloomberg reported on Nov 19 that Iran is intensifying Hormuz tanker attacks as oil prices slide. The full article was not accessible."
+    },
+    {
+      "label": null,
+      "text": "IMO count: no update. The latest figure is still 134 confirmed incidents and 25 seafarer deaths as of Nov 11."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "No confirmed deaths from Gulf hostilities inside the window. One ADNOC crew member's status is disputed (see above)."
+    },
+    {
+      "label": null,
+      "text": "Bahrain Civil Defense evacuated a building in Souq Waqif and put out a fire there; the cause is under investigation."
+    },
+    {
+      "label": null,
+      "text": "No new JINSA casualty table was found."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Trump, Xi and Putin met in Shenzhen on the APEC sidelines on Nov 19. Their joint statement covered nuclear risk reduction, UN reform and fuel supply, but did not mention Iran. Trump said he raised Iran in one-on-one meetings and that all three share an interest in oil moving through Hormuz."
+    },
+    {
+      "label": null,
+      "text": "Saudi Arabia, the UAE, Qatar, the GCC, the Arab League and the Arab Interior Ministers Council condemned the attacks on Kuwait, Bahrain and the UAE tanker. Qatar warned that further escalation makes a negotiated settlement harder."
+    },
+    {
+      "label": null,
+      "text": "Iran's army chief, Maj. Gen. Hatami, said Iran is watching US movements after a third carrier arrived, and that any US misstep would bring a stronger response."
+    },
+    {
+      "label": null,
+      "text": "The US State Department reissued security warnings for US citizens in Saudi Arabia and Bahrain."
+    },
+    {
+      "label": null,
+      "text": "Oman and Qatar continue to mediate. Iran's foreign minister met Omani officials in Muscat on Nov 17 without a Hormuz agreement."
+    }
+  ],
+  "chart_updates": [
+    "Updated today: JINSA launch total, with new rows for Nov 12 (622), Nov 13 (624) and Nov 16 (648). The ship-incident and casualty figures are unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "Gulf News",
+      "title": "Tanker struck by unknown projectile near Oman",
+      "url": "https://gulfnews.com/world/gulf/oman/tanker-hit-by-unknown-projectile-near-oman-in-latest-hormuz-attack-1.500752860"
+    },
+    {
+      "outlet": "House of Saud",
+      "title": "Iran claims 3 tankers hit mines east of Hormuz",
+      "url": "https://houseofsaud.com/iran-3-tankers-mines-hormuz-nov18"
+    },
+    {
+      "outlet": "Riviera",
+      "title": "ADNOC tanker strike, crew update",
+      "url": "https://www.rivieramm.com/news-content-hub/11-injured-one-missing-from-adnoc-tanker-following-strike-in-strait-of-hormuz-90615"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "ADNOC says one missing after ship hit in Hormuz",
+      "url": "https://www.arabnews.com/middle-east/adnoc-says-one-missing-after-ship-hit-in-hormuz-3012669"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "Kuwait, Bahrain fend off Iranian aerial attacks",
+      "url": "https://www.arabnews.com/middle-east/kuwait-bahrain-fend-off-iranian-aerial-attacks-3012614"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Kuwait, Bahrain face new Iran attacks after US strike on Qeshm",
+      "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Live timeline: Iran targets Bahrain, ADNOC vessel attacked, US strikes",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-iran-attacks-bahrain-kuwait-drone-threats-keep-gulf-on-high-alert-as-us-hits-irans-qeshm-1.500751444"
+    },
+    {
+      "outlet": "The Nation",
+      "title": "US strikes Iranian missile site after drone attack on Bahrain",
+      "url": "https://www.nation.com.pk/18-Nov-2026/us-strikes-iranian-missile-site-drone-attack-bahrain"
+    },
+    {
+      "outlet": "KSL (AP)",
+      "title": "China, Russia and US agree to UN reforms, no major breakthroughs",
+      "url": "https://www.ksl.com/article/51646797/china-russia-and-us-agree-to-un-reforms-reducing-nuclear-risks-no-major-breakthroughs"
+    },
+    {
+      "outlet": "Bloomberg",
+      "title": "Iran intensifies Hormuz tanker attacks as oil prices slide (headline only)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/iran-intensifies-hormuz-tanker-attacks-just-as-oil-prices-slide"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 14-16, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.16.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 13, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.13.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 11-12, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.12.2026.pdf"
+    }
+  ]
+}
