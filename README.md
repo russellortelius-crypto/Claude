@@ -124,3 +124,12 @@ Put `NVIDIA_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wran
 
 - **Backfill (spec step 11):** done. November 13 (marked as the manual test run) through 17 are all in.
 - **NVIDIA and Supabase:** the spec keeps the site static, with no database and no automated news gathering. The natural places for these later are the daily job (NVIDIA could draft the summary JSON) and, if the JSON files outgrow the repo, Supabase as the data store.
+
+## Supabase tables (optional)
+
+The site still reads only the JSON files. `supabase/` holds a database copy of the same data, for when Supabase becomes the data store:
+
+- `supabase/migrations/0001_init.sql` creates one table per data file (`summaries`, `launches`, `ship_incidents`, `casualties`, `uae`, `opening_wave`) with the same field names, and makes them public read-only. Only the secret key can write.
+- `supabase/seed.sql` copies the current JSON data into those tables. It is a snapshot and is not updated when new days are added.
+
+In Supabase, open **SQL Editor > New query**, paste `0001_init.sql` and click **Run**. "Success. No rows returned." is the correct result. Then do the same with `seed.sql`.
