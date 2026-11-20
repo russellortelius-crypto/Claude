@@ -5,6 +5,7 @@ import json
 import shutil
 import tempfile
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 
 import build
@@ -93,34 +94,42 @@ class PublishFlowTests(unittest.TestCase):
             setattr(build, k, v)
         shutil.rmtree(self.tmp)
 
+    def _next_day(self):
+        """The newest real summary and the day after it, so the test never collides with real data."""
+        latest = max(p.stem for p in (self.tmp / "data/summaries").glob("*.json"))
+        nxt = date.fromisoformat(latest) + timedelta(days=1)
+        return latest, nxt
+
     def test_new_summary_publishes(self):
+        latest, day = self._next_day()
+        iso, long = day.isoformat(), f"{day:%B} {day.day}, {day.year}"
         nxt = copy.deepcopy(SAMPLE)
-        nxt.update(date="2026-11-18", title="Persian Gulf hostilities - 24-hour summary - November 18, 2026",
-                   generated_at="2026-11-18T06:00:10-08:00", top_line="Test day. Second sentence.")
-        (self.tmp / "data/summaries/2026-11-18.json").write_text(json.dumps(nxt), encoding="utf-8")
+        nxt.update(date=iso, title=f"Persian Gulf hostilities - 24-hour summary - {long}",
+                   generated_at=f"{iso}T06:00:10-08:00", top_line="Test day. Second sentence.")
+        (self.tmp / f"data/summaries/{iso}.json").write_text(json.dumps(nxt), encoding="utf-8")
 
         self.assertEqual(build.main([]), 0)
         site = self.tmp / "site"
         home = (site / "index.html").read_text(encoding="utf-8")
-        old = (site / "2026-11-17/index.html").read_text(encoding="utf-8")
-        new = (site / "2026-11-18/index.html").read_text(encoding="utf-8")
+        old = (site / f"{latest}/index.html").read_text(encoding="utf-8")
+        new = (site / f"{iso}/index.html").read_text(encoding="utf-8")
         archive = (site / "archive/index.html").read_text(encoding="utf-8")
 
-        self.assertIn("November 18, 2026", home)
-        self.assertIn('href="/2026-11-18/" rel="next"', old)
-        self.assertIn('href="/2026-11-17/" rel="prev"', new)
-        self.assertLess(archive.index("2026-11-18"), archive.index("2026-11-17"))
+        self.assertIn(long, home)
+        self.assertIn(f'href="/{iso}/" rel="next"', old)
+        self.assertIn(f'href="/{latest}/" rel="prev"', new)
+        self.assertLess(archive.index(iso), archive.index(latest))
         self.assertIn("<p>Test day.</p>", archive)
-        self.assertTrue((site / "data/summaries/2026-11-18.json").exists())
+        self.assertTrue((site / f"data/summaries/{iso}.json").exists())
 
     def test_invalid_summary_stops_build(self):
+        iso = self._next_day()[1].isoformat()
         bad = copy.deepcopy(SAMPLE)
-        bad.update(date="2026-11-18")
+        bad.update(date=iso)
         bad["sources"][0]["url"] = "https://www.google.com/url?q=x"
-        (self.tmp / "data/summaries/2026-11-18.json").write_text(json.dumps(bad), encoding="utf-8")
+        (self.tmp / f"data/summaries/{iso}.json").write_text(json.dumps(bad), encoding="utf-8")
         self.assertEqual(build.main([]), 1)
         self.assertFalse((self.tmp / "site").exists())
-
 
 if __name__ == "__main__":
     unittest.main()
