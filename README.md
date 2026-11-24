@@ -91,15 +91,17 @@ To deploy by hand from your machine, run `npx wrangler deploy`.
 
 Each daily page has an "Ask the data" box, and there is an **Ask** page in the top bar. A question goes to `/api/ask`, handled by `src/worker.js`. The Worker gives the model the 10 most recent summaries plus all chart data, with instructions to answer only from them, cite the summary date or chart, and keep the summaries' caveats. Every other URL is still served straight from `site/`.
 
-**Switching it on (NVIDIA API, the current setting)**
+**Current setting: Cloudflare Workers AI (no key needed)**
 
-1. Sign in at build.nvidia.com and create an API key. It starts with `nvapi-`.
-2. In the Cloudflare dashboard, go to this Worker, then **Settings > Variables and secrets > Add**. Choose type **Secret**, name it `NVIDIA_API_KEY`, and paste the key.
-3. To use a different model, change `LLM_MODEL` in `wrangler.jsonc` to its id on build.nvidia.com (default `meta/llama-3.3-70b-instruct`) and push.
+`wrangler.jsonc` sets `LLM_API_URL` to `workers-ai` and adds the `AI` binding, so questions go to Cloudflare's own AI service, billed to this Cloudflare account. There is no API key to manage.
+
+- Model: `@cf/google/gemma-4-26b-a4b-it`. Each question sends about 24,000 tokens of summaries and chart data, so the model needs a context window that large and a low price per input token.
+- Cost: Workers AI includes 10,000 Neurons a day free, about 40 questions with this model. Past that, on the Workers Free plan, the box says the allowance is used up until midnight UTC; nothing is charged. On Workers Paid, usage past the allowance costs $0.011 per 1,000 Neurons.
+- To change the model, set `LLM_MODEL` to another Workers AI text model id (see Cloudflare's Workers AI model list) and push.
 
 **Other providers**
 
-Any OpenAI-compatible chat API works. Set `LLM_API_URL` and `LLM_MODEL` in `wrangler.jsonc`, then save the key as a secret:
+Any OpenAI-compatible chat API works instead. Set `LLM_API_URL` and `LLM_MODEL` in `wrangler.jsonc`, then save the key as a secret in Cloudflare (**Settings > Variables and secrets > Add**, type **Secret**):
 
 | Provider | `LLM_API_URL` | Secret name |
 |---|---|---|
@@ -118,7 +120,7 @@ Each named key is only sent to its own provider. `LLM_API_KEY`, if set, is used 
 
 **Local testing**
 
-Put `NVIDIA_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wrangler dev`.
+Run `npx wrangler dev --remote`: Workers AI runs on Cloudflare, so local testing needs the remote mode. For an outside provider, put its key in a `.dev.vars` file (git-ignored), for example `NVIDIA_API_KEY=...`.
 
 ## Not built yet
 

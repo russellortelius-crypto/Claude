@@ -73,8 +73,15 @@ export default {
   },
 };
 
+// LLM_API_URL "workers-ai" means Cloudflare Workers AI through the AI binding: no API key,
+// billed to this Cloudflare account (free daily allocation of 10,000 Neurons).
+function useWorkersAi(env) {
+  return env.LLM_API_URL === 'workers-ai';
+}
+
 // Which provider LLM_API_URL points at, so the matching key is used and errors name it.
 function provider(env) {
+  if (useWorkersAi(env)) return 'workers-ai';
   let host = '';
   try { host = new URL(env.LLM_API_URL).hostname; } catch { /* invalid URL: isConfigured() will fail */ }
   if (host.endsWith('nvidia.com')) return 'nvidia';
@@ -93,6 +100,7 @@ function apiKey(env) {
 }
 
 function isConfigured(env) {
+  if (useWorkersAi(env)) return Boolean(env.AI && env.LLM_MODEL);
   return Boolean(apiKey(env) && env.LLM_MODEL && env.LLM_API_URL);
 }
 
@@ -132,6 +140,13 @@ async function handleAsk(request, env) {
     (pageDate ? `The reader is viewing the ${pageDate} summary.\n\n` : '') +
     `Question: ${question}`;
 
+  const messages = [
+    { role: 'system', content: `${SYSTEM_PROMPT}\n\n${context}` },
+    { role: 'user', content: userContent },
+  ];
+
+  if (useWorkersAi(env)) return askWorkersAi(env, messages);
+
   let res;
   try {
     res = await fetch(env.LLM_API_URL, {
@@ -146,10 +161,7 @@ async function handleAsk(request, env) {
         temperature: 0.2,
         max_tokens: 600,
         stream: false,
-        messages: [
-          { role: 'system', content: `${SYSTEM_PROMPT}\n\n${context}` },
-          { role: 'user', content: userContent },
-        ],
+        messages,
       }),
       signal: AbortSignal.timeout(LLM_TIMEOUT_MS),
     });
@@ -166,6 +178,28 @@ async function handleAsk(request, env) {
 
   const data = await res.json();
   const answer = cleanAnswer(data?.choices?.[0]?.message?.content);
+  if (!answer) return json({ error: 'The AI model returned an empty answer. Please rephrase and try again.' }, 502);
+  return json({ answer, model: env.LLM_MODEL });
+}
+
+async function askWorkersAi(env, messages) {
+  let out;
+  try {
+    out = await env.AI.run(env.LLM_MODEL, { messages, max_tokens: 600, temperature: 0.2 });
+  } catch (err) {
+    const msg = String(err && err.message ? err.message : err);
+    console.error('Workers AI error', env.LLM_MODEL, msg.slice(0, 1000));
+    if (/neuron|allocation|quota|limit/i.test(msg)) {
+      return json({ error: "Today's free AI allowance is used up. Questions work again at midnight UTC (4 PM Pacific in winter, 5 PM in summer)." }, 503);
+    }
+    if (/model|not found|invalid/i.test(msg)) {
+      return json({ error: `Workers AI could not use the model "${env.LLM_MODEL}". Details: ${msg.slice(0, 200)}` }, 502);
+    }
+    return json({ error: 'The AI model returned an error. Please try again shortly.' }, 502);
+  }
+  const text = typeof out === 'string' ? out
+    : out?.response ?? out?.choices?.[0]?.message?.content ?? out?.result?.response;
+  const answer = cleanAnswer(typeof text === 'string' ? text : '');
   if (!answer) return json({ error: 'The AI model returned an empty answer. Please rephrase and try again.' }, 502);
   return json({ answer, model: env.LLM_MODEL });
 }

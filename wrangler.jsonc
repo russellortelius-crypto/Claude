@@ -19,7 +19,8 @@
     "run_worker_first": ["/api/*"]
   },
 
-  // "Ask the data" settings. The API key is a secret, set separately:
+  // "Ask the data" settings. Current setting: Cloudflare Workers AI (no key; see "ai" below).
+  // To use an outside provider instead, set its URL here; its API key is a secret, set separately:
   //   Cloudflare dashboard > this Worker > Settings > Variables and secrets > Add > Secret:
   //   NVIDIA_API_KEY for NVIDIA, HUGGINGFACE_API_KEY for Hugging Face (or LLM_API_KEY for either).
   // LLM_API_URL: any OpenAI-compatible chat completions endpoint.
@@ -28,9 +29,13 @@
   //   Hugging Face Inference Endpoint:  https://<your-endpoint>.endpoints.huggingface.cloud/v1/chat/completions
   // LLM_MODEL: the model id as the provider names it, e.g. "meta/llama-3.3-70b-instruct" on NVIDIA.
   "vars": {
-    "LLM_API_URL": "https://integrate.api.nvidia.com/v1/chat/completions",
-    "LLM_MODEL": "meta/llama-3.3-70b-instruct"
+    "LLM_API_URL": "workers-ai",
+    "LLM_MODEL": "@cf/google/gemma-4-26b-a4b-it"
   },
+
+  // Cloudflare Workers AI, used when LLM_API_URL is "workers-ai". No API key needed; usage counts
+  // against this account's free 10,000 Neurons a day (about 40 questions with the model above).
+  "ai": { "binding": "AI" },
 
   // At most 10 questions per visitor (IP address) per minute, to protect the LLM bill.
   "ratelimits": [
