@@ -23,7 +23,13 @@ const CHART_FILES = {
   'casualties.json': ['country', 'killed', 'injured', 'as_of', 'note', 'source'],
   'uae.json': ['date', 'ballistic', 'cruise', 'drones', 'source'],
   'opening_wave.json': ['country', 'missiles', 'drones', 'source'],
+  // Outside data (scripts/fetch_external.py). Long daily series: only the latest rows go to the model.
+  'brent.json': ['date', 'price_usd', 'source'],
+  'hormuz_coverage.json': ['date', 'articles', 'all_articles', 'source'],
 };
+
+// Most rows of a chart file to give the model (newest kept). Files not listed: all rows.
+const MAX_ROWS = { 'brent.json': 60, 'hormuz_coverage.json': 60 };
 
 const CHART_TITLES = {
   'launches.json': 'Iranian missiles and drones launched since July 7 (JINSA running total, lower bound)',
@@ -31,6 +37,8 @@ const CHART_TITLES = {
   'casualties.json': 'Deaths by country (JINSA compiled figures, lower bounds)',
   'uae.json': 'UAE air defense engagements, running totals (UAE Ministry of Defence)',
   'opening_wave.json': 'Opening wave: missiles and drones fired at Gulf states, Feb 28 to Mar 18',
+  'brent.json': 'Brent crude oil spot price, US dollars per barrel, daily (US EIA; latest 60 trading days)',
+  'hormuz_coverage.json': 'News articles per day mentioning the Strait of Hormuz (GDELT; latest 60 days)',
 };
 
 const SYSTEM_PROMPT = `You answer questions about the conflict in the Persian Gulf for readers of the "Persian Gulf Daily Summary" website.
@@ -218,7 +226,8 @@ async function loadContext(env, requestUrl) {
   parts.push('CHART DATA (each row: values, then source):');
   for (const [file, fields] of Object.entries(CHART_FILES)) {
     try {
-      const rows = await getJson(`/data/${file}`);
+      const all = await getJson(`/data/${file}`);
+      const rows = MAX_ROWS[file] ? all.slice(-MAX_ROWS[file]) : all;
       parts.push(`## ${CHART_TITLES[file]}\nColumns: ${fields.join(', ')}\n` +
         rows.map((r) => fields.map((f) => (r[f] === null || r[f] === undefined || r[f] === '' ? 'n/a' : r[f])).join(', ')).join('\n'));
     } catch (err) {

@@ -6,12 +6,17 @@
   ("uae", "UAE air defense engagements", "Running totals reported by the UAE Ministry of Defence."),
   ("opening-wave", "Opening wave: launches at Gulf states", "Missiles and drones fired at each country, Feb 28 to Mar 18"),
 ] %}
-{% macro chart_cards(heading_level=3, open_tables=false, show_sources=false) %}
+{#- Outside data, fetched automatically (scripts/fetch_external.py). Charts page only. -#}
+{% set OUTSIDE_CHARTS = [
+  ("brent", "Brent crude oil price", "Europe Brent spot price, US dollars per barrel (EIA)."),
+  ("hormuz-coverage", "News coverage of the Strait of Hormuz", "Articles per day mentioning the strait (GDELT)."),
+] %}
+{% macro chart_cards(heading_level=3, open_tables=false, show_sources=false, charts=CHARTS, first_fig=1) %}
         <div class="chart-grid">
-{% for key, title, subtitle in CHARTS %}
+{% for key, title, subtitle in charts %}
           <figure class="chart chart-{{ key }}" id="chart-{{ key }}" data-chart="{{ key }}">
             <figcaption>
-              <span class="fig-no" aria-hidden="true">Fig. {{ "%02d" | format(loop.index) }}</span>
+              <span class="fig-no" aria-hidden="true">Fig. {{ "%02d" | format(loop.index0 + first_fig) }}</span>
               <h{{ heading_level }} class="chart-title">{{ title }}</h{{ heading_level }}>
               <p class="chart-subtitle">{{ subtitle }}</p>
             </figcaption>

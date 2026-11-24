@@ -1,0 +1,62 @@
+# Fetch outside data (EIA Brent price, GDELT Hormuz news coverage) into data/ and commit it.
+# Cloudflare publishes the site after each push, as it does for the daily summaries.
+# Needs the EIA_API_KEY secret: Settings > Secrets and variables > Actions.
+name: Fetch outside data
+
+on:
+  schedule:
+    - cron: "23 3,15 * * *"   # twice a day, 7:23 AM and 7:23 PM Pacific (standard time)
+  workflow_dispatch:           # "Run workflow" button on the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - scripts/fetch_external.py
+      - .github/workflows/fetch-data.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - name: Fetch data
+        id: fetch
+        continue-on-error: true   # commit whatever succeeded, then fail the run below
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+        run: python scripts/fetch_external.py
+
+      - name: Check the site still builds
+        run: python build.py --check
+
+      - name: Commit and push if anything changed
+        run: |
+          git add data/brent.json data/hormuz_coverage.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Update outside data (EIA Brent, GDELT Hormuz coverage)"
+          for i in 1 2 3; do
+            git push origin HEAD:main && exit 0
+            git pull --rebase origin main
+          done
+          exit 1
+
+      - name: Report a failed fetch
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::error::At least one source failed to fetch. See the 'Fetch data' step log."
+          exit 1

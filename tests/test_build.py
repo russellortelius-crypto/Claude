@@ -133,3 +133,17 @@ class PublishFlowTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class OutsideDataTests(unittest.TestCase):
+    def test_brent_rows(self):
+        good = [{"date": "2026-11-17", "price_usd": 84.5, "source": "US EIA"}]
+        self.assertEqual(build.validate_chart_file("brent.json", good), [])
+        bad = [{"date": "2026-11-17", "price_usd": "84.5", "source": "US EIA"}]
+        self.assertTrue(build.validate_chart_file("brent.json", bad))
+
+    def test_coverage_rows(self):
+        good = [{"date": "2026-11-17", "articles": 12, "all_articles": None, "source": "GDELT"}]
+        self.assertEqual(build.validate_chart_file("hormuz_coverage.json", good), [])
+        bad = [{"date": "2026-11-17", "articles": -1, "all_articles": 5, "source": "GDELT"}]
+        self.assertTrue(build.validate_chart_file("hormuz_coverage.json", bad))

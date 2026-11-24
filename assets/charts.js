@@ -481,6 +481,98 @@
     }).catch(function () { hideFigure('ships'); hideFigure('seafarers'); });
   }
 
+  // ---------- 6. Brent crude price (outside data: EIA, fetched by scripts/fetch_external.py) ----------
+
+  var usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var WAR_START = '2026-02-28';
+
+  function chartBrent(card) {
+    return load('brent.json').then(function (raw) {
+      var rows = byDate(raw);
+      var latest = rows[rows.length - 1];
+      var prewar = rows.filter(function (r) { return r.date < WAR_START; }).pop();
+      var peak = rows.reduce(function (a, b) { return b.price_usd > a.price_usd ? b : a; });
+      var sub = 'Latest: ' + usd.format(latest.price_usd) + ' on ' + shortDate(latest.date) +
+        (prewar ? '. Last pre-war close: ' + usd.format(prewar.price_usd) + ' on ' + shortDate(prewar.date) : '') +
+        '. High: ' + usd.format(peak.price_usd) + ' on ' + shortDate(peak.date);
+      setText(card, sub,
+        'Column chart of the daily Brent crude spot price from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
+        rows);
+      draw(card, {
+        type: 'bar',
+        data: {
+          labels: rows.map(function (r) { return shortDate(r.date); }),
+          datasets: [{
+            label: 'Brent, USD per barrel',
+            data: rows.map(function (r) { return r.price_usd; }),
+            backgroundColor: rows.map(function (r) { return r.date < WAR_START ? '#5A5A5A' : COLORS.orange; }),
+            categoryPercentage: 1, barPercentage: 0.8,
+          }],
+        },
+        options: baseOptions({
+          plugins: {
+            valueLabels: { mode: false },
+            tooltip: { callbacks: {
+              title: function (items) { return longDate(rows[items[0].dataIndex].date); },
+              label: function (item) { return 'Brent: ' + usd.format(item.raw) + ' per barrel'; },
+              afterLabel: function (item) { return rows[item.dataIndex].date < WAR_START ? 'Before the war began (Feb 28)' : ''; },
+            } },
+          },
+          scales: { y: { ticks: { callback: function (v) { return '$' + v; } } } },
+        }),
+      });
+      fillTable(card, [
+        { label: 'Date', value: function (r) { return longDate(r.date); } },
+        { label: 'USD per barrel', num: true, value: function (r) { return usd.format(r.price_usd); } },
+      ], rows.slice().reverse());
+    });
+  }
+
+  // ---------- 7. Strait of Hormuz news coverage (outside data: GDELT) ----------
+
+  function chartHormuzCoverage(card) {
+    return load('hormuz_coverage.json').then(function (raw) {
+      var rows = byDate(raw);
+      var latest = rows[rows.length - 1];
+      var peak = rows.reduce(function (a, b) { return b.articles > a.articles ? b : a; });
+      var sub = 'Articles per day mentioning the strait. Latest: ' + num(latest.articles) + ' on ' + shortDate(latest.date) +
+        '. Peak: ' + num(peak.articles) + ' on ' + shortDate(peak.date);
+      setText(card, sub,
+        'Column chart of daily news articles mentioning the Strait of Hormuz from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
+        rows);
+      draw(card, {
+        type: 'bar',
+        data: {
+          labels: rows.map(function (r) { return shortDate(r.date); }),
+          datasets: [{
+            label: 'Articles',
+            data: rows.map(function (r) { return r.articles; }),
+            backgroundColor: rows.map(function (r) { return r.date < WAR_START ? '#5A5A5A' : COLORS.blue; }),
+            categoryPercentage: 1, barPercentage: 0.8,
+          }],
+        },
+        options: baseOptions({
+          plugins: {
+            valueLabels: { mode: false },
+            tooltip: { callbacks: {
+              title: function (items) { return longDate(rows[items[0].dataIndex].date); },
+              label: function (item) { return 'Articles: ' + num(item.raw); },
+              afterLabel: function (item) {
+                var r = rows[item.dataIndex];
+                return r.all_articles ? 'Out of ' + num(r.all_articles) + ' articles GDELT monitored that day' : '';
+              },
+            } },
+          },
+        }),
+      });
+      fillTable(card, [
+        { label: 'Date', value: function (r) { return longDate(r.date); } },
+        { label: 'Articles', num: true, value: function (r) { return num(r.articles); } },
+        { label: 'All articles monitored', num: true, value: function (r) { return num(r.all_articles); } },
+      ], rows.slice().reverse());
+    });
+  }
+
   // ---------- boot ----------
 
   var BUILDERS = {
@@ -489,6 +581,8 @@
     casualties: chartCasualties,
     uae: chartUae,
     'opening-wave': chartOpeningWave,
+    brent: chartBrent,
+    'hormuz-coverage': chartHormuzCoverage,
   };
 
   function init() {

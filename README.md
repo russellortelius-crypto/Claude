@@ -125,6 +125,24 @@ Put `NVIDIA_API_KEY=...` in a `.dev.vars` file (git-ignored), then run `npx wran
 - **Backfill (spec step 11):** done. November 13 (marked as the manual test run) through 17 are all in.
 - **NVIDIA and Supabase:** the spec keeps the site static, with no database and no automated news gathering. The natural places for these later are the daily job (NVIDIA could draft the summary JSON) and, if the JSON files outgrow the repo, Supabase as the data store.
 
+## Outside data (fetched automatically)
+
+Two charts on the Charts page, under "Context: oil prices and news coverage", use public data that a GitHub Action fetches. Nobody edits these files by hand.
+
+| File | What it holds | Source | Key |
+|---|---|---|---|
+| `data/brent.json` | Brent crude spot price, daily, from Jan 1, 2026 | US EIA API v2, series RBRTE | `EIA_API_KEY` |
+| `data/hormuz_coverage.json` | News articles per day mentioning "strait of hormuz", from Jan 1, 2026 | GDELT DOC 2.0 API | none |
+
+- `scripts/fetch_external.py` fetches both and rewrites the two files. Unlike the hand-kept chart files, these files are not append-only: each run replaces them with the source's current series.
+- `.github/workflows/fetch-data.yml` runs the script twice a day (7:23 AM and 7:23 PM Pacific), checks that the site still builds, and commits any change. Cloudflare then publishes it. To run it now, go to **Actions > Fetch outside data > Run workflow**.
+- If one source fails, its file stays as it was, the other still updates, and the run shows as failed (GitHub emails you about failed runs).
+- The API key lives in **GitHub > Settings > Secrets and variables > Actions**, not in Cloudflare: the fetch runs on GitHub, and Cloudflare only receives the finished files.
+- Both files are optional for the build. Without them, the two charts show "Chart data unavailable" and every other page works.
+- "Ask the data" also reads these files, limited to the latest 60 rows of each.
+
+To add another source, write a `fetch_<name>()` function in the script, add its file to `OPTIONAL_CHART_FILES` in `build.py`, to `CHART_FILES` in `src/worker.js`, and to `git add` in the workflow, then add a chart to `OUTSIDE_CHARTS` in `templates/_charts.html` and a builder in `assets/charts.js`.
+
 ## Supabase tables (optional)
 
 The site still reads only the JSON files. `supabase/` holds a database copy of the same data, for when Supabase becomes the data store:

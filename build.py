@@ -68,6 +68,18 @@ CHART_FILES = {
     },
 }
 
+# Outside data written by scripts/fetch_external.py (see .github/workflows/fetch-data.yml).
+# Optional: the site builds without them, and their charts show "Chart data unavailable".
+OPTIONAL_CHART_FILES = {
+    "brent.json": {"date": ("date", False), "price_usd": ("num", False), "source": ("str", False)},
+    "hormuz_coverage.json": {
+        "date": ("date", False),
+        "articles": ("int", False),
+        "all_articles": ("int", True),
+        "source": ("str", False),
+    },
+}
+
 DASHES = re.compile("[‒–—―]")  # figure, en, em, horizontal bar
 HTML_TAG = re.compile(r"<\s*[a-zA-Z/!]")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -201,7 +213,7 @@ def validate_summary(path: Path, s) -> list[str]:
 
 def validate_chart_file(name: str, rows) -> list[str]:
     errors: list[str] = []
-    fields = CHART_FILES[name]
+    fields = CHART_FILES.get(name) or OPTIONAL_CHART_FILES[name]
     if not isinstance(rows, list) or not rows:
         return [f"data/{name}: must be a non-empty JSON array"]
     for i, row in enumerate(rows):
@@ -220,6 +232,8 @@ def validate_chart_file(name: str, rows) -> list[str]:
                 continue
             if kind == "int" and (not isinstance(v, int) or isinstance(v, bool) or v < 0):
                 errors.append(f"{w}.{field}: expected a whole number >= 0 (missing values are null, never 0)")
+            elif kind == "num" and (not isinstance(v, (int, float)) or isinstance(v, bool) or v < 0):
+                errors.append(f"{w}.{field}: expected a number >= 0")
             elif kind == "date" and not is_date(v):
                 errors.append(f"{w}.{field}: {v!r} is not a valid YYYY-MM-DD date")
             elif kind == "str":
@@ -289,6 +303,10 @@ def load_and_validate():
             errors.append(f"data/{name}: file is missing")
             continue
         errors.extend(validate_chart_file(name, load_json(path)))
+    for name in OPTIONAL_CHART_FILES:
+        path = DATA / name
+        if path.exists():
+            errors.extend(validate_chart_file(name, load_json(path)))
 
     if errors:
         raise BuildError("Validation failed:\n  - " + "\n  - ".join(errors))
@@ -351,7 +369,7 @@ def render_site(summaries) -> list[Path]:
     write("archive/index.html", env.get_template("archive.html").render(summaries=newest_first, active="archive", canonical="/archive/"))
     write(
         "charts/index.html",
-        env.get_template("charts.html").render(data_files=list(CHART_FILES), active="charts", canonical="/charts/"),
+        env.get_template("charts.html").render(data_files=list(CHART_FILES) + [n for n in OPTIONAL_CHART_FILES if (DATA / n).exists()], active="charts", canonical="/charts/"),
     )
     write("ask/index.html", env.get_template("ask.html").render(active="ask", canonical="/ask/"))
     write("404.html", env.get_template("404.html").render(active=None, canonical=None))

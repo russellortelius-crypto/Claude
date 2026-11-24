@@ -176,6 +176,7 @@ main.frame { border-left: 1px solid var(--line-soft); border-right: 1px solid va
 .chart-casualties .chart-canvas { height: 360px; }
 .chart-error { color: var(--muted); padding: 24px 0; margin: 0; font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
 .chart-sources { margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+.section-note { margin: 0 0 24px; max-width: 620px; color: var(--muted); font-size: 15px; }
 
 .chart-data { margin-top: 14px; border-top: 1px solid var(--line-soft); padding-top: 12px; }
 .chart-data summary { cursor: pointer; color: var(--blue-text); font-size: 12px; width: max-content; list-style: none; }
