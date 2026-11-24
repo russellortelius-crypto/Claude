@@ -1,0 +1,1117 @@
+[
+  {
+    "date": "2026-01-02",
+    "price_usd": 61.98,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-05",
+    "price_usd": 63.0,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-06",
+    "price_usd": 62.1,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-07",
+    "price_usd": 61.08,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-08",
+    "price_usd": 63.34,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-09",
+    "price_usd": 65.11,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-12",
+    "price_usd": 65.4,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-13",
+    "price_usd": 67.58,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-14",
+    "price_usd": 68.87,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-15",
+    "price_usd": 66.16,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-16",
+    "price_usd": 66.97,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-19",
+    "price_usd": 66.91,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-20",
+    "price_usd": 67.68,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-21",
+    "price_usd": 66.72,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-22",
+    "price_usd": 65.46,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-23",
+    "price_usd": 68.16,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-26",
+    "price_usd": 67.7,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-27",
+    "price_usd": 70.28,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-28",
+    "price_usd": 70.9,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-29",
+    "price_usd": 71.0,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-01-30",
+    "price_usd": 72.25,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-02",
+    "price_usd": 67.72,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-03",
+    "price_usd": 70.01,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-04",
+    "price_usd": 71.15,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-05",
+    "price_usd": 69.87,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-06",
+    "price_usd": 70.45,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-09",
+    "price_usd": 71.19,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-10",
+    "price_usd": 71.01,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-11",
+    "price_usd": 71.52,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-12",
+    "price_usd": 69.8,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-13",
+    "price_usd": 69.96,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-16",
+    "price_usd": 70.81,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-17",
+    "price_usd": 69.77,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-18",
+    "price_usd": 71.78,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-19",
+    "price_usd": 73.17,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-20",
+    "price_usd": 72.75,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-23",
+    "price_usd": 71.9,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-24",
+    "price_usd": 71.21,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-25",
+    "price_usd": 70.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-26",
+    "price_usd": 71.66,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-02-27",
+    "price_usd": 71.32,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-02",
+    "price_usd": 77.24,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-03",
+    "price_usd": 83.28,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-04",
+    "price_usd": 81.56,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-05",
+    "price_usd": 88.59,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-06",
+    "price_usd": 95.74,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-09",
+    "price_usd": 94.35,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-10",
+    "price_usd": 89.84,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-11",
+    "price_usd": 90.98,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-12",
+    "price_usd": 102.38,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-13",
+    "price_usd": 103.23,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-16",
+    "price_usd": 101.04,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-17",
+    "price_usd": 108.39,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-18",
+    "price_usd": 118.09,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-19",
+    "price_usd": 111.05,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-20",
+    "price_usd": 118.42,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-23",
+    "price_usd": 103.79,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-24",
+    "price_usd": 108.42,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-25",
+    "price_usd": 109.14,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-26",
+    "price_usd": 113.39,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-27",
+    "price_usd": 121.47,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-30",
+    "price_usd": 121.88,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-03-31",
+    "price_usd": 126.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-01",
+    "price_usd": 119.56,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-02",
+    "price_usd": 127.61,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-07",
+    "price_usd": 138.21,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-08",
+    "price_usd": 122.11,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-09",
+    "price_usd": 119.03,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-10",
+    "price_usd": 119.07,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-13",
+    "price_usd": 123.28,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-14",
+    "price_usd": 118.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-15",
+    "price_usd": 114.93,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-16",
+    "price_usd": 116.63,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-17",
+    "price_usd": 98.63,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-20",
+    "price_usd": 103.4,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-21",
+    "price_usd": 106.14,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-22",
+    "price_usd": 113.44,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-23",
+    "price_usd": 113.25,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-24",
+    "price_usd": 111.86,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-27",
+    "price_usd": 113.89,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-28",
+    "price_usd": 117.62,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-29",
+    "price_usd": 124.16,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-04-30",
+    "price_usd": 124.24,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-01",
+    "price_usd": 118.26,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-05",
+    "price_usd": 114.51,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-06",
+    "price_usd": 103.7,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-07",
+    "price_usd": 101.82,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-08",
+    "price_usd": 103.48,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-11",
+    "price_usd": 106.11,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-12",
+    "price_usd": 111.37,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-13",
+    "price_usd": 110.28,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-14",
+    "price_usd": 110.91,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-15",
+    "price_usd": 113.96,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-18",
+    "price_usd": 116.73,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-19",
+    "price_usd": 114.64,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-20",
+    "price_usd": 108.93,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-21",
+    "price_usd": 105.84,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-22",
+    "price_usd": 106.9,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-26",
+    "price_usd": 102.75,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-27",
+    "price_usd": 97.11,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-28",
+    "price_usd": 95.47,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-05-29",
+    "price_usd": 92.88,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-01",
+    "price_usd": 98.29,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-02",
+    "price_usd": 98.49,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-03",
+    "price_usd": 101.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-04",
+    "price_usd": 98.98,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-05",
+    "price_usd": 97.29,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-08",
+    "price_usd": 97.46,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-09",
+    "price_usd": 94.15,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-10",
+    "price_usd": 95.73,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-11",
+    "price_usd": 92.84,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-12",
+    "price_usd": 88.64,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-15",
+    "price_usd": 84.36,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-16",
+    "price_usd": 80.5,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-17",
+    "price_usd": 80.33,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-18",
+    "price_usd": 79.35,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-19",
+    "price_usd": 80.46,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-22",
+    "price_usd": 76.49,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-23",
+    "price_usd": 75.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-24",
+    "price_usd": 72.09,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-25",
+    "price_usd": 73.74,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-26",
+    "price_usd": 70.16,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-29",
+    "price_usd": 71.59,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-06-30",
+    "price_usd": 70.46,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-01",
+    "price_usd": 69.24,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-02",
+    "price_usd": 68.53,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-03",
+    "price_usd": 68.68,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-06",
+    "price_usd": 69.56,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-07",
+    "price_usd": 71.78,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-08",
+    "price_usd": 76.5,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-09",
+    "price_usd": 74.46,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-10",
+    "price_usd": 74.34,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-13",
+    "price_usd": 81.62,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-14",
+    "price_usd": 83.69,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-15",
+    "price_usd": 83.08,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-16",
+    "price_usd": 81.23,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-17",
+    "price_usd": 85.01,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-20",
+    "price_usd": 86.99,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-21",
+    "price_usd": 93.85,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-22",
+    "price_usd": 94.12,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-23",
+    "price_usd": 105.32,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-24",
+    "price_usd": 100.31,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-27",
+    "price_usd": 91.82,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-28",
+    "price_usd": 85.51,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-29",
+    "price_usd": 91.95,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-30",
+    "price_usd": 91.91,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-07-31",
+    "price_usd": 96.95,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-03",
+    "price_usd": 88.9,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-04",
+    "price_usd": 86.47,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-05",
+    "price_usd": 86.65,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-06",
+    "price_usd": 89.65,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-07",
+    "price_usd": 87.62,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-10",
+    "price_usd": 92.74,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-11",
+    "price_usd": 93.26,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-12",
+    "price_usd": 92.52,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-13",
+    "price_usd": 92.03,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-14",
+    "price_usd": 92.02,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-17",
+    "price_usd": 92.43,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-18",
+    "price_usd": 95.29,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-19",
+    "price_usd": 92.37,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-20",
+    "price_usd": 94.0,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-21",
+    "price_usd": 96.92,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-24",
+    "price_usd": 92.71,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-25",
+    "price_usd": 88.24,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-26",
+    "price_usd": 87.77,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-27",
+    "price_usd": 90.18,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-08-28",
+    "price_usd": 89.75,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-01",
+    "price_usd": 96.02,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-02",
+    "price_usd": 97.59,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-03",
+    "price_usd": 100.52,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-04",
+    "price_usd": 102.24,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-07",
+    "price_usd": 104.47,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-08",
+    "price_usd": 106.12,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-09",
+    "price_usd": 109.51,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-10",
+    "price_usd": 120.98,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-11",
+    "price_usd": 118.06,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-14",
+    "price_usd": 121.25,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-15",
+    "price_usd": 130.8,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-16",
+    "price_usd": 127.84,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-17",
+    "price_usd": 121.18,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-18",
+    "price_usd": 119.66,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-21",
+    "price_usd": 116.15,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-22",
+    "price_usd": 114.89,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-23",
+    "price_usd": 117.45,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-24",
+    "price_usd": 120.92,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-25",
+    "price_usd": 116.01,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-28",
+    "price_usd": 119.97,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-29",
+    "price_usd": 113.96,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-09-30",
+    "price_usd": 115.91,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-01",
+    "price_usd": 114.82,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-02",
+    "price_usd": 135.51,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-05",
+    "price_usd": 125.51,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-06",
+    "price_usd": 125.44,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-07",
+    "price_usd": 126.0,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-08",
+    "price_usd": 130.18,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-09",
+    "price_usd": 130.03,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-12",
+    "price_usd": 129.95,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-13",
+    "price_usd": 125.78,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-14",
+    "price_usd": 126.55,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-15",
+    "price_usd": 126.35,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-16",
+    "price_usd": 119.33,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-19",
+    "price_usd": 118.82,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-20",
+    "price_usd": 115.22,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-21",
+    "price_usd": 117.37,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-22",
+    "price_usd": 125.39,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-23",
+    "price_usd": 128.3,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-26",
+    "price_usd": 128.12,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-27",
+    "price_usd": 123.1,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-28",
+    "price_usd": 119.2,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-29",
+    "price_usd": 115.28,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-10-30",
+    "price_usd": 120.15,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-02",
+    "price_usd": 107.39,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-03",
+    "price_usd": 107.03,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-04",
+    "price_usd": 91.84,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-05",
+    "price_usd": 97.96,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-06",
+    "price_usd": 97.83,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-09",
+    "price_usd": 91.03,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-10",
+    "price_usd": 90.16,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-11",
+    "price_usd": 92.14,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-12",
+    "price_usd": 95.42,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-13",
+    "price_usd": 95.17,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-16",
+    "price_usd": 92.9,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-17",
+    "price_usd": 92.94,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  }
+]
