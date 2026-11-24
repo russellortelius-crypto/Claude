@@ -599,7 +599,8 @@
       var avg = prewar.length ? prewar.reduce(function (s, r) { return s + r.outside_flares; }, 0) / prewar.length : null;
       var peak = rows.reduce(function (a, b) { return b.outside_flares > a.outside_flares ? b : a; });
       var sub = 'Detections per day away from routine gas flare sites, Kuwait to the Gulf of Oman. Latest: ' + num(latest.outside_flares) + ' on ' + shortDate(latest.date) +
-        (avg !== null ? '. Pre-war daily average: ' + num(Math.round(avg)) : '') + '. Peak: ' + num(peak.outside_flares) + ' on ' + shortDate(peak.date);
+        (avg !== null ? '. Pre-war daily average: ' + num(Math.round(avg)) : '') + '. Peak: ' + num(peak.outside_flares) + ' on ' + shortDate(peak.date) +
+        '. Summer highs include crop-stubble burning; a detection is a heat source, not a confirmed strike';
       setText(card, sub,
         'Column chart of daily satellite fire detections around the Persian Gulf from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
         rows);
