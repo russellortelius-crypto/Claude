@@ -32,7 +32,8 @@
     "LLM_API_URL": "workers-ai",
     "LLM_MODEL": "@cf/google/gemma-4-26b-a4b-it",
 
-    // Supabase project (see "Supabase tables" in README.md). Nothing reads these yet. Both are
+    // Supabase project (see "Supabase tables" in README.md). The Worker uses SUPABASE_JWKS_URL to
+    // find the project for the Ask log (which also needs the SUPABASE_SECRET_KEY secret). Both are
     // public by design: the publishable key only allows what row level security allows (read-only
     // tables), and the JWKS URL serves the public keys for checking Supabase sign-in tokens.
     // Kept here because each deploy replaces variables set only in the Cloudflare dashboard.

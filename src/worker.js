@@ -4,7 +4,10 @@
 // handles /api/ask: a visitor's question is answered by an LLM using the summaries
 // and chart data published on this site. Every other request is served from the files.
 //
-// Settings (wrangler.jsonc "vars"):  LLM_API_URL, LLM_MODEL
+// Settings (wrangler.jsonc "vars"):  LLM_API_URL, LLM_MODEL, SUPABASE_JWKS_URL
+// Ask logging: with the SUPABASE_SECRET_KEY secret set, each question and its answer or error
+//   goes to the private ask_log table (supabase/migrations/0002_ask_log.sql) after the reply
+//   is sent. No IP address is stored. Without the secret, nothing is logged.
 // Secret (Cloudflare dashboard or `npx wrangler secret put ...`): the provider's API key,
 //   NVIDIA_API_KEY or HUGGINGFACE_API_KEY (or LLM_API_KEY, which works with any provider).
 // LLM_API_URL must be an OpenAI-compatible chat completions endpoint, for example
@@ -61,7 +64,15 @@ export default {
     if (url.pathname === '/api/ask') {
       try {
         if (request.method === 'GET') return json({ enabled: isConfigured(env) });
-        if (request.method === 'POST') return await handleAsk(request, env);
+        if (request.method === 'POST') {
+          const started = Date.now();
+          const record = {};  // handleAsk fills in question, page_date
+          const res = await handleAsk(request, env, record);
+          if (record.question && ctx && ctx.waitUntil) {
+            ctx.waitUntil(logAsk(env, record, res.clone(), Date.now() - started));
+          }
+          return res;
+        }
         return json({ error: 'Method not allowed.' }, 405, { Allow: 'GET, POST' });
       } catch (err) {
         console.error('ask failed', err && err.stack ? err.stack : err);
@@ -106,7 +117,7 @@ function isConfigured(env) {
 
 // ---------------------------------------------------------------- /api/ask
 
-async function handleAsk(request, env) {
+async function handleAsk(request, env, record = {}) {
   if (!isConfigured(env)) {
     return json({ error: 'Questions are not switched on yet.' }, 503);
   }
@@ -134,6 +145,8 @@ async function handleAsk(request, env) {
   if (!question) return json({ error: 'Please type a question.' }, 400);
   if (question.length > MAX_QUESTION) return json({ error: `Please keep questions under ${MAX_QUESTION} characters.` }, 400);
   const pageDate = typeof body?.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(body.date) ? body.date : null;
+  record.question = question;
+  record.page_date = pageDate;
 
   const context = await loadContext(env, request.url);
   const userContent =
@@ -269,6 +282,46 @@ function cleanAnswer(text) {
     .replace(/\s*[—―]\s*/g, ' - ')      // em dash -> hyphen (site style)
     .replace(/–/g, '-')                      // en dash -> hyphen
     .trim();
+}
+
+// ---------------------------------------------------------------- Ask log (Supabase)
+
+// The project URL comes from SUPABASE_JWKS_URL (https://<ref>.supabase.co/auth/v1/...).
+function supabaseUrl(env) {
+  try { return new URL(env.SUPABASE_JWKS_URL).origin; } catch { return ''; }
+}
+
+// Runs after the reply has gone out (ctx.waitUntil), so it never delays or breaks an answer.
+async function logAsk(env, record, res, latencyMs) {
+  const base = supabaseUrl(env);
+  if (!env.SUPABASE_SECRET_KEY || !base) return;
+  try {
+    let body = {};
+    try { body = await res.json(); } catch { /* not JSON */ }
+    const row = {
+      question: record.question,
+      page_date: record.page_date,
+      ok: res.ok && typeof body.answer === 'string',
+      answer: typeof body.answer === 'string' ? body.answer : null,
+      error: typeof body.error === 'string' ? body.error : null,
+      http_status: res.status,
+      model: env.LLM_MODEL || null,
+      latency_ms: latencyMs,
+    };
+    const out = await fetch(`${base}/rest/v1/ask_log`, {
+      method: 'POST',
+      headers: {
+        apikey: env.SUPABASE_SECRET_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify(row),
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!out.ok) console.error('ask_log insert failed', out.status, (await out.text()).slice(0, 300));
+  } catch (err) {
+    console.error('ask_log insert failed', String(err));
+  }
 }
 
 // ---------------------------------------------------------------- context

@@ -158,4 +158,18 @@ The site still reads only the JSON files. `supabase/` holds a database copy of t
 
 `wrangler.jsonc` also holds the project's `SUPABASE_JWKS_URL` and `SUPABASE_PUBLISHABLE_KEY`, so the Worker can use them later. Both are safe to publish. Never put the secret key there: it bypasses row level security, so it belongs only in Cloudflare as a **Secret**.
 
+### Ask log
+
+The Worker saves each "Ask the data" question to the private `ask_log` table: the question, the page it came from, the answer or the error the visitor saw, the HTTP status, the model and the response time. It stores no IP address or other visitor detail, and the Ask box tells visitors that questions are saved. The Worker writes the row after it sends the reply, so logging never slows or breaks an answer; a failed write only shows in the Worker's logs.
+
+To switch it on:
+
+1. In Supabase, open **SQL Editor > New query**, paste `supabase/migrations/0002_ask_log.sql` and click **Run**.
+2. In Supabase, open **Project Settings > API Keys** and copy a **secret** key (it starts with `sb_secret_`).
+3. In Cloudflare, open the Worker's **Settings > Variables and secrets > Add**, choose type **Secret**, name it `SUPABASE_SECRET_KEY`, paste the key and deploy.
+
+To read the log, open **Table Editor > ask_log** in Supabase. Row level security keeps the table private: the publishable key can neither read nor write it.
+
+### Setting up the data tables
+
 In Supabase, open **SQL Editor > New query**, paste `0001_init.sql` and click **Run**. "Success. No rows returned." is the correct result. Then do the same with `seed.sql`.
