@@ -38,7 +38,7 @@ const CHART_TITLES = {
   'uae.json': 'UAE air defense engagements, running totals (UAE Ministry of Defence)',
   'opening_wave.json': 'Opening wave: missiles and drones fired at Gulf states, Feb 28 to Mar 18',
   'brent.json': 'Brent crude oil spot price, US dollars per barrel, daily (US EIA; latest 60 trading days)',
-  'hormuz_coverage.json': 'News articles per day mentioning the Strait of Hormuz (GDELT; latest 60 days)',
+  'hormuz_coverage.json': 'News articles per day mentioning the Strait of Hormuz, and all articles GDELT monitored that day (GDELT; latest 60 days; compare the ratio, not raw counts, because GDELT intake varies)',
 };
 
 const SYSTEM_PROMPT = `You answer questions about the conflict in the Persian Gulf for readers of the "Persian Gulf Daily Summary" website.

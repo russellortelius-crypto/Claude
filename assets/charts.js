@@ -529,25 +529,36 @@
   }
 
   // ---------- 7. Strait of Hormuz news coverage (outside data: GDELT) ----------
+  // GDELT's own daily intake swings widely (gaps on its side), so the chart shows the share of
+  // monitored articles, not raw counts. Days with a small intake are dimmed: their share is noisy.
+
+  var LOW_INTAKE = 10000;
 
   function chartHormuzCoverage(card) {
     return load('hormuz_coverage.json').then(function (raw) {
-      var rows = byDate(raw);
-      var latest = rows[rows.length - 1];
-      var peak = rows.reduce(function (a, b) { return b.articles > a.articles ? b : a; });
-      var sub = 'Articles per day mentioning the strait. Latest: ' + num(latest.articles) + ' on ' + shortDate(latest.date) +
-        '. Peak: ' + num(peak.articles) + ' on ' + shortDate(peak.date);
+      var rows = byDate(raw).filter(function (r) { return r.all_articles; }).map(function (r) {
+        return Object.assign({}, r, { share: Math.round((r.articles / r.all_articles) * 100000) / 10 });
+      });
+      var solid = rows.filter(function (r) { return r.all_articles >= LOW_INTAKE; });
+      var latest = solid[solid.length - 1] || rows[rows.length - 1];
+      var peak = solid.reduce(function (a, b) { return b.share > a.share ? b : a; }, solid[0] || rows[0]);
+      var share = function (v) { return v.toFixed(1); };
+      var sub = 'Articles mentioning the strait per 10,000 articles GDELT monitored. Latest full day: ' + share(latest.share) + ' on ' + shortDate(latest.date) +
+        '. Peak: ' + share(peak.share) + ' on ' + shortDate(peak.date) + '. Dimmed days: GDELT took in under ' + num(LOW_INTAKE) + ' articles';
       setText(card, sub,
-        'Column chart of daily news articles mentioning the Strait of Hormuz from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
+        'Column chart of the daily share of news coverage mentioning the Strait of Hormuz from ' + longDate(rows[0].date) + ' to ' + longDate(rows[rows.length - 1].date) + '. ' + sub + '.',
         rows);
       draw(card, {
         type: 'bar',
         data: {
           labels: rows.map(function (r) { return shortDate(r.date); }),
           datasets: [{
-            label: 'Articles',
-            data: rows.map(function (r) { return r.articles; }),
-            backgroundColor: rows.map(function (r) { return r.date < WAR_START ? '#5A5A5A' : COLORS.blue; }),
+            label: 'Per 10,000 articles',
+            data: rows.map(function (r) { return r.share; }),
+            backgroundColor: rows.map(function (r) {
+              if (r.all_articles < LOW_INTAKE) return '#3A4A66';
+              return r.date < WAR_START ? '#5A5A5A' : COLORS.blue;
+            }),
             categoryPercentage: 1, barPercentage: 0.8,
           }],
         },
@@ -556,10 +567,12 @@
             valueLabels: { mode: false },
             tooltip: { callbacks: {
               title: function (items) { return longDate(rows[items[0].dataIndex].date); },
-              label: function (item) { return 'Articles: ' + num(item.raw); },
+              label: function (item) { return share(item.raw) + ' per 10,000 articles'; },
               afterLabel: function (item) {
                 var r = rows[item.dataIndex];
-                return r.all_articles ? 'Out of ' + num(r.all_articles) + ' articles GDELT monitored that day' : '';
+                var lines = [num(r.articles) + ' of ' + num(r.all_articles) + ' articles GDELT monitored'];
+                if (r.all_articles < LOW_INTAKE) lines.push('Low GDELT intake that day: treat as rough');
+                return lines;
               },
             } },
           },
@@ -567,8 +580,9 @@
       });
       fillTable(card, [
         { label: 'Date', value: function (r) { return longDate(r.date); } },
+        { label: 'Per 10,000', num: true, value: function (r) { return share(r.share); } },
         { label: 'Articles', num: true, value: function (r) { return num(r.articles); } },
-        { label: 'All articles monitored', num: true, value: function (r) { return num(r.all_articles); } },
+        { label: 'All monitored', num: true, value: function (r) { return num(r.all_articles); } },
       ], rows.slice().reverse());
     });
   }
