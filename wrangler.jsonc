@@ -30,7 +30,14 @@
   // LLM_MODEL: the model id as the provider names it, e.g. "meta/llama-3.3-70b-instruct" on NVIDIA.
   "vars": {
     "LLM_API_URL": "workers-ai",
-    "LLM_MODEL": "@cf/google/gemma-4-26b-a4b-it"
+    "LLM_MODEL": "@cf/google/gemma-4-26b-a4b-it",
+
+    // Supabase project (see "Supabase tables" in README.md). Nothing reads these yet. Both are
+    // public by design: the publishable key only allows what row level security allows (read-only
+    // tables), and the JWKS URL serves the public keys for checking Supabase sign-in tokens.
+    // Kept here because each deploy replaces variables set only in the Cloudflare dashboard.
+    "SUPABASE_JWKS_URL": "https://wmbhhwjlcuwgwwrtjnst.supabase.co/auth/v1/.well-known/jwks.json",
+    "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_yp7XRmkE0evZNo1V59a3JA_uwpMbKnc"
   },
 
   // Cloudflare Workers AI, used when LLM_API_URL is "workers-ai". No API key needed; usage counts

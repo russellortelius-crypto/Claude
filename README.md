@@ -156,4 +156,6 @@ The site still reads only the JSON files. `supabase/` holds a database copy of t
 - `supabase/migrations/0001_init.sql` creates one table per data file (`summaries`, `launches`, `ship_incidents`, `casualties`, `uae`, `opening_wave`) with the same field names, and makes them public read-only. Only the secret key can write.
 - `supabase/seed.sql` copies the current JSON data into those tables. It is a snapshot and is not updated when new days are added.
 
+`wrangler.jsonc` also holds the project's `SUPABASE_JWKS_URL` and `SUPABASE_PUBLISHABLE_KEY`, so the Worker can use them later. Both are safe to publish. Never put the secret key there: it bypasses row level security, so it belongs only in Cloudflare as a **Secret**.
+
 In Supabase, open **SQL Editor > New query**, paste `0001_init.sql` and click **Run**. "Success. No rows returned." is the correct result. Then do the same with `seed.sql`.
