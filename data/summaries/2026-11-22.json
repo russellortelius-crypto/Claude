@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-22",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 22, 2026",
+  "window": "6:00 AM PT Nov 21 to 6:00 AM PT Nov 22, 2026",
+  "generated_at": "2026-11-22T06:01:31-08:00",
+  "top_line": "Iran struck Bahrain on Nov 21. Bahrain says the attack set a civilian industrial facility on fire, and its Interior Ministry later reported two people injured. The IRGC says it hit US positions in Bahrain with missiles and drones; neither Bahrain nor the US confirmed those claims. At sea, UKMTO reported another tanker hit near Hormuz, and talk of an Iranian tanker convoy to run the US blockade grew, though tracking firms found no convoy moving.",
+  "launches_and_strikes": [
+    {
+      "label": "Iran at Bahrain (Nov 21)",
+      "text": "The IRGC said it launched a combined missile-and-drone attack on US positions at the Al-Riffa and Awali bases, calling it retaliation for violations of Iranian airspace. Fars reported two waves against four US bases, naming Sheikh Isa and Juffair. The IRGC claimed hits on two Patriot batteries and a radar. Bahrain and the US did not confirm these claims. Bahrain said its air defenses intercepted the attacks, but one attack hit a civilian industrial facility in Sitra. No missile or drone counts were published."
+    },
+    {
+      "label": "F-16 claim",
+      "text": "Iran's army said an air defense missile damaged a US F-16 over the Gulf on the evening of Nov 20 and forced it to make an emergency landing. CENTCOM called this false and said all US fighter jets in the region are safe and accounted for."
+    },
+    {
+      "label": "Running count",
+      "text": "In its Nov 20 update, JINSA put Iranian missiles and drones launched since July 7 at at least 677, with 2 on Nov 19-20. That count does not yet include the Nov 21 Bahrain attacks."
+    },
+    {
+      "label": null,
+      "text": "No US or Israeli strikes on Iran were confirmed in the window."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "UKMTO reported a tanker struck in its engine room while transiting out of the Strait of Hormuz on Nov 21. Other reporting cites a second incident near Khasab, Oman, with no casualties. These are not yet IMO-confirmed."
+    },
+    {
+      "label": null,
+      "text": "Blockade convoy: Iranian hardliners are pushing for a tanker convoy to run the US blockade, and the IRGC has threatened Gulf energy, oil and communications infrastructure if the US engages it. TankerTrackers says a tracking signal showing the \"Khat Shekan\" tanker near Hormuz early Nov 22 was fake. Windward reported 16 tankers anchored near Kharg Island that have not moved since Nov 13, and found no sign of an organized convoy as of Nov 20. Tehran has not formally endorsed the convoy."
+    },
+    {
+      "label": null,
+      "text": "CENTCOM said Nov 21 marked 130 consecutive days of the US blockade of Iranian ports."
+    },
+    {
+      "label": null,
+      "text": "IMO confirmed count: 138 incidents and 25 seafarer deaths as of Nov 17."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "Bahrain: Early reports said no one was hurt. The Interior Ministry said on Nov 22 that the Nov 21 attacks injured two people: a Pakistani resident in critical condition and a Bahraini citizen in stable condition. A fire at the industrial facility in Sitra caused material damage."
+    },
+    {
+      "label": null,
+      "text": "No new deaths were reported in the window. No new JINSA casualty table was found."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "GCC Secretary-General Jassim AlBudaiwi expressed full solidarity with Bahrain and backed any measures it takes. Bahrain has demanded UN action and compensation from Iran."
+    },
+    {
+      "label": null,
+      "text": "Iranian state TV quoted an official saying talks on reopening Hormuz are pointless until Iran's demands are met. Those demands include ending the war on all fronts, unfreezing assets, lifting oil sanctions and ending the US blockade."
+    },
+    {
+      "label": null,
+      "text": "Iran's army spokesman warned that any renewed aggression would get a decisive and immediate response. Foreign Minister Araghchi said on Nov 20 that the blockade \"must be broken.\""
+    },
+    {
+      "label": null,
+      "text": "CBS reported Nov 20 that the US and Israel are weighing new strikes on Iran. No decision has been announced."
+    }
+  ],
+  "chart_updates": [
+    "Launches: added JINSA rows for Nov 12 (622), Nov 13 (624), Nov 16 (648), Nov 18 (668) and Nov 20 (677).",
+    "Ship incidents: added an IMO row for Nov 17 (138 confirmed incidents, 25 seafarer deaths).",
+    "Casualties: no change."
+  ],
+  "sources": [
+    {
+      "outlet": "Al Jazeera",
+      "title": "Bahrain says Iranian attack caused fire at industrial facility",
+      "url": "https://www.aljazeera.com/news/2026/11/21/bahrain-says-iranian-attack-causes-fire-at-industrial-facility"
+    },
+    {
+      "outlet": "Reuters via ThePrint",
+      "title": "Bahrain says Iran strikes industrial facility as air defences intercept attacks",
+      "url": "https://theprint.in/world/bahrain-says-iran-strikes-industrial-facility-as-air-defences-intercept-attacks/3105784/"
+    },
+    {
+      "outlet": "Euronews",
+      "title": "Iran attacks US bases in Bahrain as its tankers get ready to break the US blockade",
+      "url": "https://www.euronews.com/2026/11/21/iran-attacks-us-bases-in-bahrain-as-its-tankers-get-ready-to-break-the-us-blockade"
+    },
+    {
+      "outlet": "Outlook India",
+      "title": "Iran attacks Bahrain: industrial facility hit, US bases targeted",
+      "url": "https://www.outlookindia.com/international/iran-attacks-bahrain-industrial-facility-us-bases-missile-drone-strikes"
+    },
+    {
+      "outlet": "A News (Anadolu)",
+      "title": "CENTCOM denies Iranian claim of damage to US F-16",
+      "url": "https://www.anews.com.tr/world/2026/11/21/centcom-denies-iranian-claim-of-damage-to-us-f-16-fighter-jet"
+    },
+    {
+      "outlet": "Mediaite",
+      "title": "CENTCOM dismisses Iran's claim as tankers struck in Strait of Hormuz",
+      "url": "https://www.mediaite.com/media/news/centcom-dismisses-irans-claim-it-shot-down-us-fighter-jet-as-tankers-struck-in-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Bahrain intercepts Iranian attacks as Tehran prepares tankers to breach blockade",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-bahrain-intercepts-iranian-attacks-as-tehran-prepares-14-oil-tankers-to-breach-us-naval-blockade-1.500756662"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "'Line-breaker' tanker signal near Hormuz was fake, tracking firm says",
+      "url": "https://www.iranintl.com/en/202611211549"
+    },
+    {
+      "outlet": "Euronews",
+      "title": "Tracking site says Iranian tanker reportedly sailing through Hormuz does not exist",
+      "url": "https://www.euronews.com/2026/11/22/tracking-site-says-iranian-tanker-reportedly-sailing-through-strait-of-hormuz-does-not-exi"
+    },
+    {
+      "outlet": "VINnews",
+      "title": "Iran threatens Gulf energy facilities (cites Windward)",
+      "url": "https://vinnews.com/2026/11/22/iran-threatens-gulf-energy-facilities-as-it-prepares-to-challenge-us-naval-blockade/"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 20, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.20.26.pdf"
+    },
+    {
+      "outlet": "IMO",
+      "title": "Middle East highlighted (confirmed) incidents",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
+    },
+    {
+      "outlet": "UANI",
+      "title": "Iran Shipping Update, Nov 20, 2026",
+      "url": "https://www.unitedagainstnucleariran.com/analysis/iran-shipping-update-november-20-2026"
+    }
+  ]
+}

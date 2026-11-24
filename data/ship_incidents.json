@@ -28,5 +28,17 @@
     "confirmed_incidents": 134,
     "seafarer_deaths": 25,
     "source": "IMO highlighted (confirmed) incidents page"
+  },
+  {
+    "date": "2026-11-17",
+    "confirmed_incidents": 138,
+    "seafarer_deaths": 25,
+    "source": "IMO highlighted (confirmed) incidents page (reported in the Nov 21 summary)"
+  },
+  {
+    "date": "2026-11-17",
+    "confirmed_incidents": 139,
+    "seafarer_deaths": 25,
+    "source": "IMO highlighted (confirmed) incidents page, correction (reported in the Nov 23 summary; one secondary source cites 138)"
   }
 ]

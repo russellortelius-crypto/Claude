@@ -113,5 +113,15 @@
     "date": "2026-11-16",
     "launched_since_jul7": 648,
     "source": "JINSA Iran War Update, Nov 14-16 (reported in the Nov 18 summary)"
+  },
+  {
+    "date": "2026-11-18",
+    "launched_since_jul7": 668,
+    "source": "JINSA Iran War Update, Nov 17-18 (reported in the Nov 20 summary)"
+  },
+  {
+    "date": "2026-11-20",
+    "launched_since_jul7": 677,
+    "source": "JINSA Iran War Update, Nov 19-20 (reported in the Nov 21 summary)"
   }
 ]

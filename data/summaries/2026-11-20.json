@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-20",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 20, 2026",
+  "window": "6:00 AM PT Nov 19 to 6:00 AM PT Nov 20, 2026",
+  "generated_at": "2026-11-20T06:01:38-08:00",
+  "top_line": "The past 24 hours were quieter on direct Iranian fire: no new confirmed Iranian launches at Gulf states were reported inside the window, following Nov 17-18 attacks on Bahrain and Kuwait and a US strike on an IRGC launch site on Qeshm Island. The IRGC claimed two more tankers hit mines in the Strait of Hormuz (unverified), while reporting from Washington and Israel says new US strikes on Iran are being weighed but no decision has been made. Houthi-Saudi exchanges continued, including damage to a Riyadh financial district tower.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "JINSA's Nov 17-18 update puts Iranian missiles and drones launched since July 7 at at least 668, including 13 on Nov 17-18. This is up from 620 on Nov 9 (622 on Nov 12, 624 on Nov 13)."
+    },
+    {
+      "label": null,
+      "text": "Context just before the window (Nov 18): Iran launched three attacks on Bahrain and one on Kuwait, targeting Patriot systems at Ali Al-Salem Air Base. CENTCOM said all launches were intercepted and no US personnel were injured. It was Kuwait's first air defense activation since early September. Bahrain has faced four Iranian attacks in six days. No launch counts were published."
+    },
+    {
+      "label": null,
+      "text": "The US strike on the Qeshm Island IRGC missile site (Nov 17) was described by US officials as self-defense after an Iranian attempt on a US radar site in Bahrain."
+    },
+    {
+      "label": null,
+      "text": "Saudi-led coalition: intercepted a Houthi cruise missile toward southern Saudi Arabia (Nov 19), after intercepting two cruise missiles and two drones aimed at Riyadh on Nov 18. Coalition airstrikes continued in Yemen."
+    },
+    {
+      "label": null,
+      "text": "Israel said it struck a former Hezbollah missile production and storage site in Janta, Beqaa; Lebanon's NNA reported five airstrikes in eastern Lebanon (early Nov 20)."
+    },
+    {
+      "label": null,
+      "text": "Iraqi forces were set to deploy Nov 20 to Kataib Hezbollah's Jurf al-Nasr stronghold; the militia has vowed to resist. No outcome reported yet."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "IRGC claimed two supertankers carrying over 4 million barrels combined hit mines on an \"unauthorized route\" in Hormuz and were burning off Oman's coast. Ships were not identified; not independently verified."
+    },
+    {
+      "label": null,
+      "text": "UKMTO: a tanker was hit in the engine room by an unknown projectile about 6 nm north of Khasab, Oman (evening Nov 18 local); crew safe."
+    },
+    {
+      "label": null,
+      "text": "ADNOC L&S tanker struck Nov 17 north of Khasab: 11 crew injured, one Jordanian seafarer still missing; search continues."
+    },
+    {
+      "label": null,
+      "text": "The Joint Maritime Information Center rates the Hormuz threat \"severe,\" with four attacks in the latest 96 hours and 190 regional maritime incidents logged since Mar 1. Kpler puts Hormuz crude flows at about 8.5 million bpd, roughly half prewar."
+    },
+    {
+      "label": null,
+      "text": "No newer IMO confirmed-incident count found; latest remains 134 incidents and 25 seafarer deaths (Nov 11)."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "No new casualties from Iranian fire on Gulf states reported in the window."
+    },
+    {
+      "label": null,
+      "text": "Riyadh: debris from a Houthi missile threat damaged the 80-storey PIF Tower in King Abdullah Financial District; no injuries reported."
+    },
+    {
+      "label": null,
+      "text": "Yemen: a Houthi-run health ministry official said airstrikes killed 15 people in Mokha and Taiz; unverified."
+    },
+    {
+      "label": null,
+      "text": "No newer JINSA casualty table found."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Trump told Israel's Channel 12 he is \"not rushing\" a decision on new strikes and could wait until after the new year; he also said the US is in contact with Tehran and wants a \"lasting\" deal. Bloomberg and NYT report new strikes are increasingly likely; Netanyahu reportedly urged a short campaign."
+    },
+    {
+      "label": null,
+      "text": "Iran's UN envoy said Iran will not accept unrestricted IAEA cooperation while under attack; Iran's Foreign Ministry called chemical and biological weapons allegations fraudulent."
+    },
+    {
+      "label": null,
+      "text": "Qatar called the Hormuz closure an international crisis and urged continued mediation. Saudi Arabia said it will not tolerate attacks on its territory and asked the UN Security Council to condemn the Riyadh strikes; the UAE condemned the Houthi attacks."
+    },
+    {
+      "label": null,
+      "text": "Pentagon put war costs above $48 billion as of Nov 13. The IEA called the crisis the largest threat to energy security in history."
+    }
+  ],
+  "chart_updates": [
+    "Updated today: launches chart (added Nov 12: 622, Nov 13: 624, Nov 18: 668 from JINSA). Ship incidents and casualties unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 17-18, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.18.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 13, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.13.26.pdf"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 11-12, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.12.2026.pdf"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Live updates",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Riyadh skyscraper damaged, tanker hit near Oman",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-houthi-missile-intercepted-over-saudi-arabia-tanker-hit-in-hormuz-iran-strikes-kuwait-and-bahrain-as-trump-demands-lasting-deal-1.500752996"
+    },
+    {
+      "outlet": "Malay Mail (AFP)",
+      "title": "Gulf nations scramble to intercept fire",
+      "url": "https://www.malaymail.com/news/world/2026/11/19/dangerous-escalation-gulf-nations-scramble-to-intercept-fire-from-iran-allies-after-us-strikes-on-qeshm-island/243858"
+    },
+    {
+      "outlet": "Al-Monitor",
+      "title": "IRGC says tankers hit Hormuz mines",
+      "url": "https://www.al-monitor.com/originals/2026/11/irans-irgc-says-tankers-4m-barrels-oil-hit-hormuz-mines-what-know"
+    },
+    {
+      "outlet": "Marine Insight",
+      "title": "Jordan searches for missing seafarer",
+      "url": "https://www.marineinsight.com/jordanian-seafarer-missing-adnoc-tanker-hormuz-attack/"
+    },
+    {
+      "outlet": "Times of Israel",
+      "title": "Liveblog, Nov 19",
+      "url": "https://www.timesofisrael.com/liveblog-november-19-2026/"
+    },
+    {
+      "outlet": "ShipUniverse",
+      "title": "134 Gulf ship incidents, 25 dead (IMO)",
+      "url": "https://www.shipuniverse.com/news/134-gulf-ship-incidents-25-dead-as-imo-sounds-new-alarm-over-vessels-hiding-their-identities-in-hormuz/"
+    }
+  ]
+}

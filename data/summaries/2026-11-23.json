@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-23",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 23, 2026",
+  "window": "6:00 AM PT Nov 22 to about 6:00 AM PT Nov 23, 2026",
+  "generated_at": "2026-11-23T06:01:37-08:00",
+  "top_line": "The focus shifted to the US naval blockade. Iran is reported to be preparing 14 tankers to run it, UKMTO logged a tanker incident \"involving military forces\" in the Gulf of Oman, and Tehran said it will use \"all tools\" against the blockade. President Trump told Fox News he is inclined to resume strikes after the new year if there is no deal. He also said Iran launched more attacks in the past week than at any point in over a year, and that they had done no damage.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "No new Iranian missile or drone salvo with a reported count fell inside the window. The latest launch figures are from Bahrain's report of several intercepted Iranian aerial attacks on Nov 21-22. Shrapnel caused minor damage. The IRGC said it struck US Patriot radars at Riffa, Awali, Sheikh Isa and Juffair. CENTCOM has not confirmed any hits, and a US official said earlier there were no impacts on US forces."
+    },
+    {
+      "label": null,
+      "text": "JINSA's running count stands at at least 677 Iranian missiles and drones launched since July 7 (as of Nov 20), up from 620 on Nov 9. That includes 13 on Nov 13-16 and 13 on Nov 17-18."
+    },
+    {
+      "label": null,
+      "text": "Yemen: the Saudi-led coalition said it intercepted a Houthi ballistic missile aimed at the kingdom's western region late Nov 22. The Houthis said they attacked the Rabigh refinery (unconfirmed by Saudi authorities). Houthi media said Saudi strikes killed 4, then 10, people in a Yemeni port city (AFP)."
+    },
+    {
+      "label": null,
+      "text": "No US or Israeli strikes on Iran were reported in the window."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "UKMTO reported an incident involving a tanker and military forces in the Gulf of Oman on Nov 22. Euronews placed it near Chabahar, close to the US blockade line. No details have been released."
+    },
+    {
+      "label": null,
+      "text": "Separately, the IRGC navy said two tankers \"exploded and stopped\" after hitting sea mines north of Ghanem Island, east of Hormuz, while using unauthorized routes. ABC News said it is not confirmed whether this is the same incident. UKMTO has consistently attributed recent hits to projectiles, not mines."
+    },
+    {
+      "label": null,
+      "text": "Iran is reported to be readying 14 tankers off Kharg Island to break the blockade, and there are conflicting reports that one has already departed. Trump said of any attempt, \"I hope they do,\" adding that the tankers would end up \"at the bottom of the sea.\""
+    },
+    {
+      "label": null,
+      "text": "IMO count: 139 confirmed incidents and 25 seafarer deaths as of Nov 17. One secondary source cites 138, so the two counts differ by one."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "Bahrain's Interior Ministry said Saturday's attack injured two people: a Bahraini citizen in stable condition and a Pakistani resident in critical condition. A civilian industrial site, reportedly on Sitra Island, caught fire."
+    },
+    {
+      "label": null,
+      "text": "No new deaths in the Gulf theater were reported in the window. Iran has begun rolling power cuts because of war damage to energy infrastructure (state media via Times of Israel)."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": "Iran",
+      "text": "Foreign Ministry spokesman Baqaei said Hormuz could be made safe \"in the shortest possible time\" if the US lifts sanctions and the blockade and meets the June MOU terms. The ministry called the blockade \"military aggression.\""
+    },
+    {
+      "label": "US",
+      "text": "Trump said he is inclined to renew the offensive if no deal is reached by year end."
+    },
+    {
+      "label": "Israel",
+      "text": "IDF intelligence reportedly warned Netanyahu that a unilateral strike on Iran could set off a multifront war. Former Mossad chief Barnea urged war \"as soon as all conditions allow.\" PM-designate Eisenkot said he sees no immediate threat requiring military action."
+    },
+    {
+      "label": "Region",
+      "text": "The Arab League, UAE, Saudi Arabia, Qatar, Kuwait and Jordan condemned the attack on Bahrain. Egypt's foreign minister said a US-Iran deal is still possible."
+    }
+  ],
+  "chart_updates": [
+    "Updated today: launches (new JINSA rows for Nov 12, 13, 16, 18 and 20; latest 677) and ship incidents (IMO, 139 as of Nov 17). Casualties: no newer JINSA table was found, so those figures are unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "Gulf News",
+      "title": "Bahrain intercepts Iranian attacks as Tehran prepares 14 oil tankers to breach US naval blockade",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-bahrain-intercepts-iranian-attacks-as-tehran-prepares-14-oil-tankers-to-breach-us-naval-blockade-1.500756662"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates: Tehran says Strait of Hormuz will be safe if its demands are met",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands/?id=138369648"
+    },
+    {
+      "outlet": "Euronews",
+      "title": "Tanker incident involving military forces reported in Strait of Hormuz",
+      "url": "https://www.euronews.com/2026/11/22/tanker-incident-involving-military-forces-reported-in-strait-of-hormuz"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "UKMTO reports incident involving tanker and military forces in Gulf of Oman",
+      "url": "https://www.arabnews.com/middle-east/ukmto-reports-incident-involving-tanker-and-military-forces-in-gulf-of-oman-3013574"
+    },
+    {
+      "outlet": "Times of Israel",
+      "title": "Liveblog, Nov 22",
+      "url": "https://www.timesofisrael.com/liveblog-november-22-2026/"
+    },
+    {
+      "outlet": "Times of Israel",
+      "title": "Liveblog, Nov 23",
+      "url": "https://www.timesofisrael.com/liveblog-november-23-2026"
+    },
+    {
+      "outlet": "Khaleej Times",
+      "title": "Iran says it will use all its tools to confront US naval blockade",
+      "url": "https://www.khaleejtimes.com/world/mena/us-israel-iran-saudi-arabia-yemen-war-live-updates-november-23-2026"
+    },
+    {
+      "outlet": "The National",
+      "title": "New attacks have failed, claims Trump, as Iran imposes power cuts",
+      "url": "https://www.thenationalnews.com/news/mena/2026/11/23/live-iran-us-war-trump/"
+    },
+    {
+      "outlet": "Liveuamap",
+      "title": "Trump remarks on blockade (Fox News)",
+      "url": "https://iran.liveuamap.com/en"
+    },
+    {
+      "outlet": "Business Standard (Reuters)",
+      "title": "Iran attack hits civilian industrial facility in Bahrain",
+      "url": "https://www.business-standard.com/world-news/iran-attack-hits-civilian-industrial-facility-in-bahrain-sparks-fire-126112300106_1.html"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Iran war live updates",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons/"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 19-20",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.20.26.pdf"
+    },
+    {
+      "outlet": "IMO",
+      "title": "Middle East highlighted (confirmed) incidents",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
+    }
+  ]
+}

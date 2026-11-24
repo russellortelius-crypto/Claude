@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-21",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 21, 2026",
+  "window": "6:00 AM PT Nov 20 to 6:00 AM PT Nov 21, 2026",
+  "generated_at": "2026-11-21T06:01:38-08:00",
+  "top_line": "Three more outbound tankers were hit by unidentified projectiles off Khasab, Oman, in under 15 hours, continuing the concentrated campaign against ships leaving the Gulf; no casualties were reported. Explosions on Iran's Qeshm Island were first attributed by Tasnim to a US missile, but CENTCOM denied a new strike and a provincial official later blamed the controlled disposal of unexploded munitions. CBS reported the US and Israel are weighing a new assault on Iran, while Trump said Tehran wants a deal but on terms he will not accept.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "JINSA's running count of Iranian missiles and drones launched since July 7 reached at least 677 as of Nov 20 (2 on Nov 19-20). No new Iranian launches at Gulf states were confirmed in this window."
+    },
+    {
+      "label": null,
+      "text": "Qeshm Island, Nov 20 (about 1520 GMT): Tasnim said a US missile hit near Qeshm city; Fars said the cause of an explosion was unknown. CENTCOM denied carrying out a new strike. A Hormozgan provincial official later said the blasts came from controlled disposal of unexploded US munitions from earlier strikes. Treat as unresolved."
+    },
+    {
+      "label": null,
+      "text": "The IRGC said its air defenses shot down a US MQ-9 over the Strait of Hormuz (state media called it the 58th MQ-9 downed). Not independently verified; no US comment found."
+    },
+    {
+      "label": null,
+      "text": "Houthis vs. Saudi Arabia: the Saudi-led coalition said it intercepted 3 ballistic missiles aimed at Riyadh and a drone aimed at southern Saudi Arabia on Friday, plus (per CBS/AFP) a ballistic missile and 2 drones at the south earlier Friday. Saudi Civil Defense issued 8 emergency alerts in 24 hours. The coalition said it struck \"operational capabilities\" at Hodeidah port after warning civilians to evacuate."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": null,
+      "text": "Nov 20, about 1500 UTC: outbound tanker hit on the port bow by an unknown projectile 8 nm north of Khasab, causing a fire; no casualties (UKMTO Warning 214-26). The IRGC said the tanker hit a mine."
+    },
+    {
+      "label": null,
+      "text": "Nov 21, 0500 UTC: outbound tanker hit on the stern about 11 nm north of Khasab. 0550 UTC: a second outbound tanker hit in the engine room about 17 nm east of Khasab (UKMTO 215-26 and 216-26). No casualties; environmental impact unconfirmed. Some outlets note it is not yet clear whether these were two vessels. Iran's army navy said a \"violating\" tanker with its AIS off caught fire after striking a naval mine."
+    },
+    {
+      "label": null,
+      "text": "UKMTO weekly (to Nov 18): 263 transits vs. 308 the prior week, about 65% below pre-war; 6 tanker attacks (4 in the strait, 2 in the Gulf); 106 incidents in the strait since Feb 28. JMIC threat level remains SEVERE."
+    },
+    {
+      "label": null,
+      "text": "Orbital Risk Intelligence counted 7 strikes on 6 vessels in the Gulf, Hormuz and Gulf of Oman over the past week, leaving 2 seafarers missing and 13 injured."
+    },
+    {
+      "label": null,
+      "text": "IMO confirmed-incident count: 138 as of Nov 17, with 25 seafarer fatalities."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "No new deaths reported in Gulf incidents during the window. The three tanker strikes caused fire and engine-room damage only, per UKMTO."
+    },
+    {
+      "label": null,
+      "text": "Yemen: Houthi authorities said a Saudi strike on a boat killed 19 civilians Friday, and Houthi sources later put deaths from Saudi airstrikes at 41. These are Houthi figures, not independently confirmed."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "Trump said Friday that Iran wants an agreement but is not offering acceptable terms. On Nov 19 he told Israel's Channel 12 he is \"not rushing\" and may decide after the new year."
+    },
+    {
+      "label": null,
+      "text": "CBS reported the US and Israel are considering a new near-term assault, driven by Israeli concern over Iran's missile rebuilding and moves underground; US forces could launch within 2-4 days if ordered."
+    },
+    {
+      "label": null,
+      "text": "FM Araghchi said Iran's 48-hour proposal to reopen Hormuz and start talks remains on the table, and ruled out shipping its 60% enriched uranium abroad."
+    },
+    {
+      "label": null,
+      "text": "Treasury Secretary Bessent said Iran may never get paid for oil already sold; Treasury sanctioned four Iranian nationals tied to oil-revenue evasion."
+    },
+    {
+      "label": null,
+      "text": "An Iranian MP on the national security commission called a pre-emptive attack on US warships \"an absolute necessity.\" Guards-linked media signaled tankers may try to run the US blockade, warning of strikes on Gulf oil facilities if they are attacked."
+    },
+    {
+      "label": null,
+      "text": "Houthi spokesperson Saree threatened Jeddah and other Saudi Red Sea ports if Hodeidah is attacked."
+    }
+  ],
+  "chart_updates": [
+    "Launches: added JINSA rows for Nov 12 (622), Nov 13 (624), Nov 16 (648), Nov 18 (668) and Nov 20 (677). Ship incidents: added IMO row for Nov 17 (138 confirmed, 25 seafarer deaths). Casualty table: no newer JINSA table found; unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 19-20, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.20.26.pdf"
+    },
+    {
+      "outlet": "gCaptain",
+      "title": "Another Tanker Hit in Strait of Hormuz as Maritime Attacks Surge Worldwide",
+      "url": "https://gcaptain.com/another-tanker-hit-in-strait-of-hormuz-as-maritime-attacks-surge-worldwide/"
+    },
+    {
+      "outlet": "Jerusalem Post",
+      "title": "Two tankers hit by unidentified projectiles off Khasab",
+      "url": "https://www.jpost.com/middle-east/article-915628"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "Tanker hit in Strait of Hormuz as missile strikes Iran's Qeshm Island",
+      "url": "https://www.arabnews.com/middle-east/tanker-hit-in-strait-of-hormuz-as-missile-strikes-irans-qeshm-island-3013176"
+    },
+    {
+      "outlet": "Arab News (Pakistan)",
+      "title": "Maritime agency says 2 tankers struck in Hormuz",
+      "url": "https://www.arabnews.pk/middle-east/maritime-agency-says-2-tankers-struck-in-hormuz-as-iran-says-ship-on-fire-3007686"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "Live blog (Nov 20-21)",
+      "url": "https://www.iranintl.com/en/liveblog/202611143682"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "Live blog (Nov 21)",
+      "url": "https://www.iranintl.com/en/liveblog/202611214578"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Live updates: Trump says next move on Iran may not come until 2027",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons/"
+    },
+    {
+      "outlet": "SSBCrack",
+      "title": "CENTCOM denies U.S. strike as Iranian news agency reports missile hitting Qeshm",
+      "url": "https://news.ssbcrack.com/centcom-denies-u-s-strike-as-iranian-news-agency-reports-missile-hitting-qeshm-island/"
+    },
+    {
+      "outlet": "Middle East Eye",
+      "title": "IRGC says it intercepted US MQ-9 over Hormuz",
+      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-says-its-aerospace-forces-intercepted-us-mq-9-drone-over-hormuz"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Live: Trump says Iran wants deal but terms unacceptable",
+      "url": "https://gulfnews.com/uae/middle-east-war-trump-says-iran-wants-deal-but-terms-are-unacceptable-1.500755788"
+    },
+    {
+      "outlet": "IMO",
+      "title": "Middle East highlighted (confirmed) incidents",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
+    }
+  ]
+}
