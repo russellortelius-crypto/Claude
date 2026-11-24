@@ -197,11 +197,31 @@ async function askWorkersAi(env, messages) {
     }
     return json({ error: 'The AI model returned an error. Please try again shortly.' }, 502);
   }
-  const text = typeof out === 'string' ? out
-    : out?.response ?? out?.choices?.[0]?.message?.content ?? out?.result?.response;
-  const answer = cleanAnswer(typeof text === 'string' ? text : '');
-  if (!answer) return json({ error: 'The AI model returned an empty answer. Please rephrase and try again.' }, 502);
+  const answer = cleanAnswer(workersAiText(out));
+  if (!answer) {
+    const choice = out?.choices?.[0];
+    const shape = out && typeof out === 'object'
+      ? `keys: ${Object.keys(out).join(',')}${choice ? `; finish_reason: ${choice.finish_reason}; message keys: ${Object.keys(choice.message || {}).join(',')}` : ''}`
+      : typeof out;
+    console.error('Workers AI empty answer', env.LLM_MODEL, shape);
+    return json({ error: `The AI model returned an empty answer. Please rephrase and try again. (${shape})` }, 502);
+  }
   return json({ answer, model: env.LLM_MODEL });
+}
+
+// Workers AI models answer in one of several shapes: { response: "..." } for most text models,
+// or an OpenAI-style { choices: [{ message: { content } }] } where content can be a string or a
+// list of parts. Anything inside <think> tags is removed later by cleanAnswer().
+function workersAiText(out) {
+  const asText = (v) => {
+    if (typeof v === 'string') return v;
+    if (Array.isArray(v)) return v.map((p) => (typeof p === 'string' ? p : p?.text || '')).join('');
+    if (v && typeof v === 'object') return asText(v.text ?? v.content ?? v.response);
+    return '';
+  };
+  if (typeof out === 'string') return out;
+  return asText(out?.response) || asText(out?.choices?.[0]?.message?.content) ||
+    asText(out?.choices?.[0]?.text) || asText(out?.result?.response) || asText(out?.output_text) || '';
 }
 
 // Turn the provider's error into a message that says what to fix. The provider's own
