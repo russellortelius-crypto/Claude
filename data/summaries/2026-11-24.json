@@ -1,9 +1,10 @@
 {
   "date": "2026-11-24",
   "title": "Persian Gulf hostilities - 24-hour summary - November 24, 2026",
-  "window": "6:00 AM PT Nov 23 to 6:00 AM PT Nov 24, 2026",
-  "generated_at": "2026-11-24T06:02:55-08:00",
-  "top_line": "The IRGC said three oil tankers hit naval mines and caught fire in the Strait of Hormuz despite a US air escort, and Iran's army chief ordered the strait closed \"further day by day\" until Washington meets Tehran's seven conditions. A tower in Riyadh's financial district was hit in what the Saudi-led coalition called a terrorist attack, the second strike on the district in under a week. Qatar's prime minister met Secretary of State Rubio and Vice President Vance in Washington to push for renewed US-Iran talks.",
+  "window": "6:00 AM PT Nov 23 to 10:00 AM PT Nov 24, 2026",
+  "generated_at": "2026-11-24T10:05:00-08:00",
+  "note": "Updated edition, sent after the 6:00 AM summary. It adds the IRGC's fourth tanker claim, UKMTO's projectile account and new remarks by Araghchi and Ghalibaf.",
+  "top_line": "The IRGC said three oil tankers hit naval mines and caught fire in the Strait of Hormuz despite a US air escort, then claimed a fourth early Tuesday, and Iran's army chief ordered the strait closed \"further day by day\" until Washington meets Tehran's seven conditions. A tower in Riyadh's financial district was hit in what the Saudi-led coalition called a terrorist attack, the second strike on the district in under a week. Qatar's prime minister met Secretary of State Rubio and Vice President Vance in Washington to push for renewed US-Iran talks.",
   "launches_and_strikes": [
     {
       "label": null,
@@ -25,7 +26,7 @@
   "maritime_and_shipping": [
     {
       "label": "Mine claims",
-      "text": "The IRGC said three oil tankers suffered explosions and fires after hitting naval mines, one off the southern shores and two in the east of the strait, while under US air escort. IRNA published an IRGC map of the locations. Iran's army separately said two tankers caught fire and stopped after hitting a mine, having switched off their tracking systems inside a restricted zone east of the strait. Reports vary between two, three and four tankers. Iran has not named the ships, CENTCOM has not responded, and the Joint Maritime Information Centre has called earlier mine claims unconfirmed."
+      "text": "The IRGC said three oil tankers suffered explosions and fires after hitting naval mines, one off the southern shores and two in the east of the strait, while under US air escort. IRNA published an IRGC map of the locations. Iran's army separately said two tankers caught fire and stopped after hitting a mine, having switched off their tracking systems inside a restricted zone east of the strait. Early Tuesday the IRGC Navy, via Tasnim and IRIB, said a fourth tanker exploded and caught fire after hitting a mine in restricted waters east of the strait. Iran has not named the ships, CENTCOM has not responded, and the Joint Maritime Information Centre has called earlier mine claims unconfirmed. UKMTO linked earlier tanker strikes near Khasab on Nov 20 and 21 to unidentified projectiles, not mines (Marine Insight)."
     },
     {
       "label": "Warnings",
@@ -61,7 +62,7 @@
   "diplomacy_and_statements": [
     {
       "label": "Iran",
-      "text": "Army commander Amir Hatami ordered the navy to close Hormuz further day by day until the US meets Iran's seven conditions, citing orders from Mojtaba Khamenei, and warned any new US war would draw a response not limited geographically. Speaker Ghalibaf ruled out talks until the US meets the conditions; they reportedly include lifting the blockade, easing sanctions, releasing frozen funds, ending hostilities on all fronts and formally ending the war. Foreign Minister Araghchi said a US land blockade would be virtually impossible. Iran summoned Qatar's charge d'affaires over a Qatari-German statement condemning Iranian attacks."
+      "text": "Army commander Amir Hatami ordered the navy to close Hormuz further day by day until the US meets Iran's seven conditions, citing orders from Mojtaba Khamenei, and warned any new US war would draw a response not limited geographically. Speaker Ghalibaf ruled out talks until the US meets the conditions; they reportedly include lifting the blockade, easing sanctions, releasing frozen funds, ending hostilities on all fronts and formally ending the war. Foreign Minister Araghchi said a US land blockade would be virtually impossible and that the strait could reopen within two days if the US accepts Iran's demands. Ghalibaf warned that Iran would change the geographical scope of the war if its enemies make a mistake. Iran summoned Qatar's charge d'affaires over a Qatari-German statement condemning Iranian attacks."
     },
     {
       "label": "US",
@@ -87,6 +88,21 @@
       "outlet": "Jerusalem Post",
       "title": "IRGC: Three tankers hit mines, exploded while transiting Hormuz with US support",
       "url": "https://www.jpost.com/middle-east/iran-news/article-915899"
+    },
+    {
+      "outlet": "Middle East Monitor",
+      "title": "Iran says 4th oil tanker hits naval mine, catches fire in Strait of Hormuz",
+      "url": "https://www.middleeastmonitor.com/20261124-iran-says-4th-oil-tanker-hits-naval-mine-catches-fire-in-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Marine Insight",
+      "title": "Iran Claims 5 Oil Tankers Hit Mines In Strait Of Hormuz In 2 Days As UKMTO Reports Projectile Strikes",
+      "url": "https://www.marineinsight.com/iran-claims-tankers-hit-mines-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Capital News Point",
+      "title": "No Talks With US Until Iran's Demands Are Met, Ghalibaf Declares",
+      "url": "https://english.capitalnewspoint.com/2026/11/24/no-talks-with-us-until-irans-demands-are-met-ghalibaf-declares/"
     },
     {
       "outlet": "Al Jazeera",
