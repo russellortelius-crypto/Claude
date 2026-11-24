@@ -1,0 +1,1964 @@
+[
+  {
+    "date": "2026-01-01",
+    "detections": 886,
+    "outside_flares": 30,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-02",
+    "detections": 619,
+    "outside_flares": 11,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-03",
+    "detections": 464,
+    "outside_flares": 19,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-04",
+    "detections": 571,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-05",
+    "detections": 553,
+    "outside_flares": 14,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-06",
+    "detections": 938,
+    "outside_flares": 21,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-07",
+    "detections": 765,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-08",
+    "detections": 572,
+    "outside_flares": 12,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-09",
+    "detections": 350,
+    "outside_flares": 11,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-10",
+    "detections": 485,
+    "outside_flares": 6,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-11",
+    "detections": 720,
+    "outside_flares": 23,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-12",
+    "detections": 705,
+    "outside_flares": 21,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-13",
+    "detections": 307,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-14",
+    "detections": 482,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-15",
+    "detections": 539,
+    "outside_flares": 14,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-16",
+    "detections": 651,
+    "outside_flares": 19,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-17",
+    "detections": 835,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-18",
+    "detections": 650,
+    "outside_flares": 7,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-19",
+    "detections": 500,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-20",
+    "detections": 448,
+    "outside_flares": 9,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-21",
+    "detections": 553,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-22",
+    "detections": 607,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-23",
+    "detections": 228,
+    "outside_flares": 9,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-24",
+    "detections": 141,
+    "outside_flares": 5,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-25",
+    "detections": 481,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-26",
+    "detections": 543,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-27",
+    "detections": 375,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-28",
+    "detections": 358,
+    "outside_flares": 3,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-29",
+    "detections": 601,
+    "outside_flares": 7,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-30",
+    "detections": 487,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-01-31",
+    "detections": 611,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-01",
+    "detections": 721,
+    "outside_flares": 15,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-02",
+    "detections": 937,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-03",
+    "detections": 453,
+    "outside_flares": 19,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-04",
+    "detections": 548,
+    "outside_flares": 12,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-05",
+    "detections": 314,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-06",
+    "detections": 264,
+    "outside_flares": 10,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-07",
+    "detections": 328,
+    "outside_flares": 10,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-08",
+    "detections": 709,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-09",
+    "detections": 577,
+    "outside_flares": 9,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-10",
+    "detections": 430,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-11",
+    "detections": 382,
+    "outside_flares": 22,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-12",
+    "detections": 610,
+    "outside_flares": 24,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-13",
+    "detections": 1097,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-14",
+    "detections": 718,
+    "outside_flares": 38,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-15",
+    "detections": 651,
+    "outside_flares": 28,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-16",
+    "detections": 660,
+    "outside_flares": 22,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-17",
+    "detections": 808,
+    "outside_flares": 26,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-18",
+    "detections": 1145,
+    "outside_flares": 28,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-19",
+    "detections": 843,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-20",
+    "detections": 587,
+    "outside_flares": 26,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-21",
+    "detections": 657,
+    "outside_flares": 36,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-22",
+    "detections": 682,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-23",
+    "detections": 986,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-24",
+    "detections": 692,
+    "outside_flares": 16,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-25",
+    "detections": 636,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-26",
+    "detections": 627,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-27",
+    "detections": 489,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-02-28",
+    "detections": 656,
+    "outside_flares": 35,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-01",
+    "detections": 674,
+    "outside_flares": 26,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-02",
+    "detections": 412,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-03",
+    "detections": 187,
+    "outside_flares": 14,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-04",
+    "detections": 451,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-05",
+    "detections": 541,
+    "outside_flares": 22,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-06",
+    "detections": 951,
+    "outside_flares": 50,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-07",
+    "detections": 445,
+    "outside_flares": 27,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-08",
+    "detections": 401,
+    "outside_flares": 33,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-09",
+    "detections": 262,
+    "outside_flares": 11,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-10",
+    "detections": 305,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-11",
+    "detections": 378,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-12",
+    "detections": 248,
+    "outside_flares": 5,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-13",
+    "detections": 516,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-14",
+    "detections": 496,
+    "outside_flares": 35,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-15",
+    "detections": 307,
+    "outside_flares": 26,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-16",
+    "detections": 333,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-17",
+    "detections": 763,
+    "outside_flares": 19,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-18",
+    "detections": 562,
+    "outside_flares": 23,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-19",
+    "detections": 29,
+    "outside_flares": 7,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-20",
+    "detections": 400,
+    "outside_flares": 22,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-21",
+    "detections": 436,
+    "outside_flares": 20,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-22",
+    "detections": 304,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-23",
+    "detections": 155,
+    "outside_flares": 9,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-24",
+    "detections": 90,
+    "outside_flares": 7,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-25",
+    "detections": 185,
+    "outside_flares": 10,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-26",
+    "detections": 280,
+    "outside_flares": 15,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-27",
+    "detections": 840,
+    "outside_flares": 37,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-28",
+    "detections": 662,
+    "outside_flares": 27,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-29",
+    "detections": 424,
+    "outside_flares": 11,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-30",
+    "detections": 198,
+    "outside_flares": 4,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-03-31",
+    "detections": 469,
+    "outside_flares": 16,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-01",
+    "detections": 777,
+    "outside_flares": 10,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-02",
+    "detections": 914,
+    "outside_flares": 15,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-03",
+    "detections": 385,
+    "outside_flares": 2,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-04",
+    "detections": 375,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-05",
+    "detections": 497,
+    "outside_flares": 13,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-06",
+    "detections": 788,
+    "outside_flares": 27,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-07",
+    "detections": 1285,
+    "outside_flares": 58,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-08",
+    "detections": 802,
+    "outside_flares": 28,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-09",
+    "detections": 497,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-10",
+    "detections": 455,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-11",
+    "detections": 114,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-12",
+    "detections": 648,
+    "outside_flares": 57,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-13",
+    "detections": 739,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-14",
+    "detections": 515,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-15",
+    "detections": 591,
+    "outside_flares": 21,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-16",
+    "detections": 366,
+    "outside_flares": 22,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-17",
+    "detections": 794,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-18",
+    "detections": 623,
+    "outside_flares": 23,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-19",
+    "detections": 447,
+    "outside_flares": 31,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-20",
+    "detections": 197,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-21",
+    "detections": 332,
+    "outside_flares": 12,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-22",
+    "detections": 502,
+    "outside_flares": 11,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-23",
+    "detections": 639,
+    "outside_flares": 14,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-24",
+    "detections": 410,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-25",
+    "detections": 246,
+    "outside_flares": 8,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-26",
+    "detections": 458,
+    "outside_flares": 14,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-27",
+    "detections": 309,
+    "outside_flares": 17,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-28",
+    "detections": 739,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-29",
+    "detections": 814,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-04-30",
+    "detections": 721,
+    "outside_flares": 47,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-01",
+    "detections": 598,
+    "outside_flares": 32,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-02",
+    "detections": 525,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-03",
+    "detections": 846,
+    "outside_flares": 48,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-04",
+    "detections": 961,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-05",
+    "detections": 733,
+    "outside_flares": 59,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-06",
+    "detections": 450,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-07",
+    "detections": 322,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-08",
+    "detections": 317,
+    "outside_flares": 18,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-09",
+    "detections": 907,
+    "outside_flares": 66,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-10",
+    "detections": 745,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-11",
+    "detections": 482,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-12",
+    "detections": 449,
+    "outside_flares": 58,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-13",
+    "detections": 429,
+    "outside_flares": 38,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-14",
+    "detections": 729,
+    "outside_flares": 54,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-15",
+    "detections": 813,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-16",
+    "detections": 539,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-17",
+    "detections": 548,
+    "outside_flares": 78,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-18",
+    "detections": 352,
+    "outside_flares": 37,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-19",
+    "detections": 505,
+    "outside_flares": 32,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-20",
+    "detections": 812,
+    "outside_flares": 101,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-21",
+    "detections": 606,
+    "outside_flares": 77,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-22",
+    "detections": 542,
+    "outside_flares": 58,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-23",
+    "detections": 453,
+    "outside_flares": 52,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-24",
+    "detections": 473,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-25",
+    "detections": 777,
+    "outside_flares": 86,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-26",
+    "detections": 763,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-27",
+    "detections": 491,
+    "outside_flares": 59,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-28",
+    "detections": 472,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-29",
+    "detections": 475,
+    "outside_flares": 88,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-30",
+    "detections": 765,
+    "outside_flares": 79,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-05-31",
+    "detections": 913,
+    "outside_flares": 75,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-01",
+    "detections": 575,
+    "outside_flares": 64,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-02",
+    "detections": 472,
+    "outside_flares": 89,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-03",
+    "detections": 611,
+    "outside_flares": 188,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-04",
+    "detections": 566,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-05",
+    "detections": 929,
+    "outside_flares": 138,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-06",
+    "detections": 661,
+    "outside_flares": 72,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-07",
+    "detections": 514,
+    "outside_flares": 86,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-08",
+    "detections": 616,
+    "outside_flares": 197,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-09",
+    "detections": 509,
+    "outside_flares": 60,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-10",
+    "detections": 819,
+    "outside_flares": 111,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-11",
+    "detections": 904,
+    "outside_flares": 156,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-12",
+    "detections": 514,
+    "outside_flares": 119,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-13",
+    "detections": 495,
+    "outside_flares": 79,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-14",
+    "detections": 530,
+    "outside_flares": 142,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-15",
+    "detections": 788,
+    "outside_flares": 151,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-16",
+    "detections": 957,
+    "outside_flares": 191,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-17",
+    "detections": 594,
+    "outside_flares": 90,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-18",
+    "detections": 479,
+    "outside_flares": 86,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-19",
+    "detections": 670,
+    "outside_flares": 261,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-20",
+    "detections": 589,
+    "outside_flares": 70,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-21",
+    "detections": 732,
+    "outside_flares": 142,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-22",
+    "detections": 872,
+    "outside_flares": 209,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-23",
+    "detections": 522,
+    "outside_flares": 147,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-24",
+    "detections": 553,
+    "outside_flares": 162,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-25",
+    "detections": 554,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-26",
+    "detections": 850,
+    "outside_flares": 125,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-27",
+    "detections": 796,
+    "outside_flares": 111,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-28",
+    "detections": 472,
+    "outside_flares": 59,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-29",
+    "detections": 452,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-06-30",
+    "detections": 522,
+    "outside_flares": 155,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-01",
+    "detections": 720,
+    "outside_flares": 113,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-02",
+    "detections": 850,
+    "outside_flares": 134,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-03",
+    "detections": 533,
+    "outside_flares": 50,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-04",
+    "detections": 485,
+    "outside_flares": 70,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-05",
+    "detections": 629,
+    "outside_flares": 245,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-06",
+    "detections": 614,
+    "outside_flares": 60,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-07",
+    "detections": 951,
+    "outside_flares": 90,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-08",
+    "detections": 706,
+    "outside_flares": 117,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-09",
+    "detections": 475,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-10",
+    "detections": 471,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-11",
+    "detections": 526,
+    "outside_flares": 56,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-12",
+    "detections": 842,
+    "outside_flares": 78,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-13",
+    "detections": 791,
+    "outside_flares": 157,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-14",
+    "detections": 509,
+    "outside_flares": 87,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-15",
+    "detections": 467,
+    "outside_flares": 52,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-16",
+    "detections": 514,
+    "outside_flares": 117,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-17",
+    "detections": 701,
+    "outside_flares": 56,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-18",
+    "detections": 698,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-19",
+    "detections": 449,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-20",
+    "detections": 399,
+    "outside_flares": 36,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-21",
+    "detections": 350,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-22",
+    "detections": 502,
+    "outside_flares": 44,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-23",
+    "detections": 753,
+    "outside_flares": 58,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-24",
+    "detections": 557,
+    "outside_flares": 51,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-25",
+    "detections": 408,
+    "outside_flares": 38,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-26",
+    "detections": 303,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-27",
+    "detections": 352,
+    "outside_flares": 39,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-28",
+    "detections": 661,
+    "outside_flares": 73,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-29",
+    "detections": 557,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-30",
+    "detections": 472,
+    "outside_flares": 77,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-07-31",
+    "detections": 383,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-01",
+    "detections": 403,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-02",
+    "detections": 452,
+    "outside_flares": 47,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-03",
+    "detections": 459,
+    "outside_flares": 57,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-04",
+    "detections": 381,
+    "outside_flares": 33,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-05",
+    "detections": 327,
+    "outside_flares": 48,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-06",
+    "detections": 265,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-07",
+    "detections": 450,
+    "outside_flares": 60,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-08",
+    "detections": 600,
+    "outside_flares": 56,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-09",
+    "detections": 437,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-10",
+    "detections": 389,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-11",
+    "detections": 351,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-12",
+    "detections": 452,
+    "outside_flares": 32,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-13",
+    "detections": 745,
+    "outside_flares": 46,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-14",
+    "detections": 682,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-15",
+    "detections": 423,
+    "outside_flares": 51,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-16",
+    "detections": 328,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-17",
+    "detections": 376,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-18",
+    "detections": 577,
+    "outside_flares": 63,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-19",
+    "detections": 791,
+    "outside_flares": 80,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-20",
+    "detections": 484,
+    "outside_flares": 70,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-21",
+    "detections": 316,
+    "outside_flares": 29,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-22",
+    "detections": 240,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-23",
+    "detections": 482,
+    "outside_flares": 46,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-24",
+    "detections": 757,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-25",
+    "detections": 543,
+    "outside_flares": 76,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-26",
+    "detections": 332,
+    "outside_flares": 34,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-27",
+    "detections": 345,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-28",
+    "detections": 441,
+    "outside_flares": 56,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-29",
+    "detections": 683,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-30",
+    "detections": 666,
+    "outside_flares": 77,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-08-31",
+    "detections": 406,
+    "outside_flares": 56,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (SP)"
+  },
+  {
+    "date": "2026-09-01",
+    "detections": 392,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-02",
+    "detections": 385,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-03",
+    "detections": 646,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-04",
+    "detections": 725,
+    "outside_flares": 91,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-05",
+    "detections": 546,
+    "outside_flares": 76,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-06",
+    "detections": 454,
+    "outside_flares": 103,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-07",
+    "detections": 390,
+    "outside_flares": 82,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-08",
+    "detections": 618,
+    "outside_flares": 106,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-09",
+    "detections": 759,
+    "outside_flares": 112,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-10",
+    "detections": 648,
+    "outside_flares": 150,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-11",
+    "detections": 467,
+    "outside_flares": 103,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-12",
+    "detections": 375,
+    "outside_flares": 64,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-13",
+    "detections": 451,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-14",
+    "detections": 691,
+    "outside_flares": 77,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-15",
+    "detections": 625,
+    "outside_flares": 76,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-16",
+    "detections": 402,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-17",
+    "detections": 400,
+    "outside_flares": 38,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-18",
+    "detections": 418,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-19",
+    "detections": 631,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-20",
+    "detections": 653,
+    "outside_flares": 73,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-21",
+    "detections": 467,
+    "outside_flares": 72,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-22",
+    "detections": 383,
+    "outside_flares": 37,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-23",
+    "detections": 423,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-24",
+    "detections": 574,
+    "outside_flares": 54,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-25",
+    "detections": 761,
+    "outside_flares": 67,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-26",
+    "detections": 590,
+    "outside_flares": 88,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-27",
+    "detections": 416,
+    "outside_flares": 68,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-28",
+    "detections": 435,
+    "outside_flares": 50,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-29",
+    "detections": 485,
+    "outside_flares": 57,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-09-30",
+    "detections": 647,
+    "outside_flares": 75,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-01",
+    "detections": 583,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-02",
+    "detections": 376,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-03",
+    "detections": 412,
+    "outside_flares": 50,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-04",
+    "detections": 432,
+    "outside_flares": 45,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-05",
+    "detections": 687,
+    "outside_flares": 71,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-06",
+    "detections": 760,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-07",
+    "detections": 472,
+    "outside_flares": 50,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-08",
+    "detections": 438,
+    "outside_flares": 49,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-09",
+    "detections": 425,
+    "outside_flares": 47,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-10",
+    "detections": 703,
+    "outside_flares": 126,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-11",
+    "detections": 651,
+    "outside_flares": 79,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-12",
+    "detections": 27,
+    "outside_flares": 6,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-13",
+    "detections": 414,
+    "outside_flares": 35,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-14",
+    "detections": 397,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-15",
+    "detections": 562,
+    "outside_flares": 62,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-16",
+    "detections": 786,
+    "outside_flares": 88,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-17",
+    "detections": 616,
+    "outside_flares": 104,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-18",
+    "detections": 424,
+    "outside_flares": 57,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-19",
+    "detections": 477,
+    "outside_flares": 67,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-20",
+    "detections": 453,
+    "outside_flares": 63,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-21",
+    "detections": 575,
+    "outside_flares": 73,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-22",
+    "detections": 585,
+    "outside_flares": 84,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-23",
+    "detections": 510,
+    "outside_flares": 71,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-24",
+    "detections": 474,
+    "outside_flares": 54,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-25",
+    "detections": 491,
+    "outside_flares": 69,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-26",
+    "detections": 357,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-27",
+    "detections": 690,
+    "outside_flares": 85,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-28",
+    "detections": 440,
+    "outside_flares": 61,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-29",
+    "detections": 414,
+    "outside_flares": 62,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-30",
+    "detections": 446,
+    "outside_flares": 59,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-10-31",
+    "detections": 487,
+    "outside_flares": 62,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-01",
+    "detections": 525,
+    "outside_flares": 76,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-02",
+    "detections": 517,
+    "outside_flares": 55,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-03",
+    "detections": 448,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-04",
+    "detections": 498,
+    "outside_flares": 68,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-05",
+    "detections": 366,
+    "outside_flares": 40,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-06",
+    "detections": 560,
+    "outside_flares": 44,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-07",
+    "detections": 493,
+    "outside_flares": 65,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-08",
+    "detections": 369,
+    "outside_flares": 46,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-09",
+    "detections": 403,
+    "outside_flares": 43,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-10",
+    "detections": 185,
+    "outside_flares": 25,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-11",
+    "detections": 499,
+    "outside_flares": 42,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-12",
+    "detections": 722,
+    "outside_flares": 44,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-13",
+    "detections": 588,
+    "outside_flares": 59,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-14",
+    "detections": 477,
+    "outside_flares": 37,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-15",
+    "detections": 549,
+    "outside_flares": 53,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-16",
+    "detections": 636,
+    "outside_flares": 82,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-17",
+    "detections": 882,
+    "outside_flares": 126,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-18",
+    "detections": 602,
+    "outside_flares": 110,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-19",
+    "detections": 495,
+    "outside_flares": 69,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-20",
+    "detections": 556,
+    "outside_flares": 83,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-21",
+    "detections": 556,
+    "outside_flares": 69,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-22",
+    "detections": 720,
+    "outside_flares": 99,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-23",
+    "detections": 721,
+    "outside_flares": 129,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  }
+]
