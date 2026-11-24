@@ -185,8 +185,20 @@ async function handleAsk(request, env) {
 async function askWorkersAi(env, messages) {
   let out;
   try {
-    // Reasoning models (like Gemma 4) think before answering, so leave room for both.
-    out = await env.AI.run(env.LLM_MODEL, { messages, max_tokens: 2500, temperature: 0.2 });
+    // Newer models take max_completion_tokens (max_tokens is deprecated) and can skip their
+    // "thinking" step, which this task does not need. If a model rejects those options, try
+    // once more with the older ones.
+    try {
+      out = await env.AI.run(env.LLM_MODEL, {
+        messages, temperature: 0.2, max_completion_tokens: 2500,
+        chat_template_kwargs: { enable_thinking: false },
+      });
+    } catch (first) {
+      const m = String(first && first.message ? first.message : first);
+      if (!/input|schema|param|propert|unknown|unrecogni|invalid/i.test(m)) throw first;
+      console.error('Workers AI rejected the newer options; retrying', m.slice(0, 300));
+      out = await env.AI.run(env.LLM_MODEL, { messages, temperature: 0.2, max_tokens: 2500 });
+    }
   } catch (err) {
     const msg = String(err && err.message ? err.message : err);
     console.error('Workers AI error', env.LLM_MODEL, msg.slice(0, 1000));
