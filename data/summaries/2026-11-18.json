@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-18",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 18, 2026",
+  "window": "6:00 AM Pacific Nov 17 to 6:00 AM Pacific Nov 18, 2026",
+  "generated_at": "2026-11-18T06:01:00-08:00",
+  "top_line": "Tit-for-tat exchanges between Iran and the US picked up again. Iran launched a third drone attack in under a week at a US radar site at Sheikh Isa Air Base in Bahrain, CENTCOM said all the drones were intercepted, and US jets then struck an IRGC missile site on Qeshm Island in what a US official called self-defense. Early Nov 18, Iran fired drones at Ali Al-Salem Air Base in Kuwait. Bahrain intercepted more attacks. In the Strait of Hormuz, an attack on an ADNOC L&S vessel left 1 crew member missing and 11 injured.",
+  "launches_and_strikes": [
+    {
+      "label": "Iran at Bahrain (Nov 17)",
+      "text": "The IRGC said it hit a US radar at Sheikh Isa Air Base, its third claimed attack there since Friday. CENTCOM called the claim false and said multiple one-way attack drones were all intercepted, with no US damage or injuries. Bahrain issued a shelter alert, then an all-clear. No drone count was released."
+    },
+    {
+      "label": "US at Qeshm Island (Nov 17)",
+      "text": "US fighter jets struck an IRGC missile launch site. A US official said it responded to IRGC attacks on US personnel and assets and was the third attempted Iranian strike on a US installation in five days, all intercepted. Iranian officials (IRNA) said there was no serious damage."
+    },
+    {
+      "label": "Iran at Kuwait (Nov 17 to 18)",
+      "text": "Iran's army said its drones went after Patriot air defense systems and drone and missile launch platforms at Ali Al-Salem Air Base (state broadcaster IRIB). Kuwait's military said its air defenses were responding to hostile drones. No count, and Iran's claims have not been confirmed."
+    },
+    {
+      "label": "Bahrain (Nov 18)",
+      "text": "The Bahrain Defence Force said it intercepted \"several Iranian air strikes.\" No count, and no casualties or damage were reported."
+    },
+    {
+      "label": "Houthis and Saudi Arabia",
+      "text": "The Saudi-led coalition shot down a Houthi drone near Riyadh (the fourth straight day of attacks, all intercepted) and a Houthi cruise missile aimed at Riyadh. It also said it destroyed 60 Houthi targets in four Yemeni cities. The Houthis claimed drone hits on pumping stations 8 and 9 on the Saudi East-West pipeline. Saudi Arabia has not confirmed this."
+    },
+    {
+      "label": "Running total",
+      "text": "JINSA puts Iranian missiles and drones launched since July 7 at no fewer than 648 as of Nov 16 (13 of them Nov 13 to 16). That is up from 620 on Nov 9. No source has given a launch count covering the last 24 hours."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "ADNOC L&S vessel, Strait of Hormuz (evening Nov 17)",
+      "text": "ADNOC said 1 crew member is missing and 11 are injured. The rest were evacuated, and search and rescue continues. ADNOC did not name the vessel or say who attacked it. gCaptain and Reuters point to the Panama-flagged LPG tanker Tara Gas, which UKMTO says was hit a second time north of Khasab. The first strike disabled it and the second set it on fire. Oman reported rescuing 24 crew. Whether Tara Gas is the ADNOC vessel has not been confirmed."
+    },
+    {
+      "label": "Iranian mine claims",
+      "text": "Iran's navy and the IRGC said up to three tankers, including an LNG carrier, hit mines or caught fire east of the Strait on Nov 17. Iran also said the Strait is \"closed\" to ships that do not coordinate with Iran. These claims have not been verified. Iran has made similar claims almost daily without evidence."
+    },
+    {
+      "label": "Other",
+      "text": "Iraq restarted pipeline oil exports to Turkey at 120,000 barrels/day, with plans to reach 500,000. The Houthis said Bab el-Mandeb shipping lanes are \"safer now\" after taking control of Yemen's Red Sea coast."
+    }
+  ],
+  "casualties_and_damage": "The ADNOC vessel attack left 1 missing and 11 injured. No casualties were reported from the attacks on Bahrain or Kuwait, or from the Qeshm Island strike. No new consolidated casualty table was found.",
+  "diplomacy_and_statements": [
+    {
+      "label": null,
+      "text": "The foreign ministers of Iran and Oman met in Muscat to discuss \"diplomatic options\" on Hormuz. Qatar said US-Iran mediation is continuing, with a meeting with Iranian officials scheduled, and called on all parties to show restraint. Reporting describes US and Iranian negotiators as deadlocked over Hormuz."
+    },
+    {
+      "label": null,
+      "text": "GCC Secretary-General Jasem Albudaiwi condemned the attacks on Bahrain and Kuwait and called on the UN Security Council to act. The UAE condemned the attack on Kuwait. Kuwait called it a \"dangerous escalation,\" said it violated UNSC Resolution 2817, and reserved its right to self-defense under Article 51."
+    },
+    {
+      "label": null,
+      "text": "Trump said he takes a CNN report of a possible Iranian \"dirty bomb\" plot \"very seriously\" and warned of severe consequences. The White House said there are no credible threats to the homeland. Foreign Minister Araghchi called the reports \"rubbish.\""
+    }
+  ],
+  "chart_updates": [
+    "Chart data updated today: JINSA launches running total (648 as of Nov 16). The IMO confirmed-incident count was not updated because no newer figure was found. Al Jazeera cites 136 IMO-tracked security incidents from Mar 1 to Nov 11, but that uses a different basis from the chart series, so it was not added. Casualty figures are unchanged."
+  ],
+  "sources": [
+    {
+      "outlet": "CBS News",
+      "title": "U.S. launches strikes on Iran's Qeshm Island in Strait of Hormuz (live updates)",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-nuclear-oil-strait-of-hormuz/"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Gulf states and tankers under fire as U.S. and Iran ramp back up tit-for-tat strikes",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Iran targets Bahrain, ADNOC vessel attacked, US responds with strikes",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-iran-attacks-bahrain-kuwait-drone-threats-keep-gulf-on-high-alert-as-us-hits-irans-qeshm-1.500751444"
+    },
+    {
+      "outlet": "The National",
+      "title": "Adnoc L&S ship attacked in Strait of Hormuz with one crew member missing",
+      "url": "https://www.thenationalnews.com/business/energy/2026/11/18/adnoc-ls-ship-attacked-at-strait-of-hormuz-with-one-crew-member-missing/"
+    },
+    {
+      "outlet": "gCaptain",
+      "title": "ADNOC L&S says one crew member missing after attack on its vessel in Hormuz",
+      "url": "https://gcaptain.com/uaes-adnoc-ls-says-one-crew-member-missing-after-attack-on-its-vessel-in-hormuz/"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: November 14-16, 2026",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.16.26.pdf"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "UN says 25 seafarers killed in, around Hormuz since February",
+      "url": "https://www.aljazeera.com/news/2026/11/14/un-says-25-seafarers-killed-in-around-hormuz-since-february"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "US strikes Qeshm Island after Iran drone attack on American base in Bahrain",
+      "url": "https://www.iranintl.com/en/202611177708"
+    }
+  ]
+}
