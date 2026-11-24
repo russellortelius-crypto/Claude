@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-24",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 24, 2026",
+  "window": "6:00 AM PT Nov 23 to 6:00 AM PT Nov 24, 2026",
+  "generated_at": "2026-11-24T06:02:55-08:00",
+  "top_line": "The IRGC said three oil tankers hit naval mines and caught fire in the Strait of Hormuz despite a US air escort, and Iran's army chief ordered the strait closed \"further day by day\" until Washington meets Tehran's seven conditions. A tower in Riyadh's financial district was hit in what the Saudi-led coalition called a terrorist attack, the second strike on the district in under a week. Qatar's prime minister met Secretary of State Rubio and Vice President Vance in Washington to push for renewed US-Iran talks.",
+  "launches_and_strikes": [
+    {
+      "label": null,
+      "text": "No new Iranian missile or drone salvo with a reported count was found in the window. Euronews said Iran has attacked US bases in Bahrain and Kuwait on several occasions in recent days, but gave no new dates or figures. JINSA's Nov 21-23 update gives no new running total, so the latest remains at least 677 Iranian missiles and drones launched since July 7 (as of Nov 20). It notes Trump's Nov 22 claim that Iran launched more drones and missiles in the past week than at any time in over a year and that all were knocked down."
+    },
+    {
+      "label": "Riyadh",
+      "text": "A tower in the King Abdullah Financial District was hit on Nov 24. AFP witnesses identified it as the Public Investment Fund tower, which the Houthis struck on Nov 19. Coalition spokesman Turki al-Maliki called it a \"cowardly terrorist attack\" and said authorities are investigating on site. Officials gave no details on the weapon, damage or casualties, and no claim of responsibility for this attack was found. Khaleej Times reported Saudi alerts in the early hours of Tuesday."
+    },
+    {
+      "label": "Yemen",
+      "text": "A Houthi spokesman said the group shot down a Saudi armed reconnaissance aircraft (unconfirmed by the coalition). Saudi-led strikes continued in Yemen (see casualties)."
+    },
+    {
+      "label": null,
+      "text": "No US or Israeli strikes on Iran were reported in the window. A maritime analyst's report of a US attack on a tanker near Chabahar on Nov 22 remains unconfirmed by Washington or Tehran."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "Mine claims",
+      "text": "The IRGC said three oil tankers suffered explosions and fires after hitting naval mines, one off the southern shores and two in the east of the strait, while under US air escort. IRNA published an IRGC map of the locations. Iran's army separately said two tankers caught fire and stopped after hitting a mine, having switched off their tracking systems inside a restricted zone east of the strait. Reports vary between two, three and four tankers. Iran has not named the ships, CENTCOM has not responded, and the Joint Maritime Information Centre has called earlier mine claims unconfirmed."
+    },
+    {
+      "label": "Warnings",
+      "text": "IRGC Navy chief Ali Ozmaei said the strait is not a place to test unauthorized routes. The IRGC said a US escort does not replace compliance with its Traffic Control Center and that it will treat ships using other routes as collaborating with aggressor forces."
+    },
+    {
+      "label": "Traffic",
+      "text": "Marine Traffic data cited by Al Jazeera shows 125 vessels entered or exited the Gulf on Nov 17-23, down from 226 on Nov 1-7, a drop of more than 40 percent. Nov 22 was the lowest day, with three crossings. JMIC logged 114 US-assisted passages on Nov 19-21. UKMTO has recorded at least 22 attacks in November as of Nov 22, after more than 30 in October (Jerusalem Post)."
+    },
+    {
+      "label": "Cyber",
+      "text": "The Wall Street Journal reported the US is investigating whether Iran is behind cyberattacks on as many as 50 commercial vessels. Iran is the primary suspect and investigators are also considering Russia; nothing is confirmed."
+    },
+    {
+      "label": null,
+      "text": "IMO count unchanged: 139 confirmed incidents and 25 seafarer deaths as of Nov 17."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": null,
+      "text": "No casualties were reported from the claimed tanker mine strikes or the Riyadh attack."
+    },
+    {
+      "label": "Yemen",
+      "text": "Houthi media said a Saudi strike on buses and trucks in Lahj left 25 dead or missing and six wounded; Yemeni officials quoted by Khaleej Times put the toll at 26 killed. The Houthis also said strikes in Hodeidah killed 17 on Nov 23. These figures are not independently confirmed."
+    },
+    {
+      "label": "Qatar",
+      "text": "A member of the Qatar Amiri Naval Forces died while on duty. Gulf News gave no cause."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": "Iran",
+      "text": "Army commander Amir Hatami ordered the navy to close Hormuz further day by day until the US meets Iran's seven conditions, citing orders from Mojtaba Khamenei, and warned any new US war would draw a response not limited geographically. Speaker Ghalibaf ruled out talks until the US meets the conditions; they reportedly include lifting the blockade, easing sanctions, releasing frozen funds, ending hostilities on all fronts and formally ending the war. Foreign Minister Araghchi said a US land blockade would be virtually impossible. Iran summoned Qatar's charge d'affaires over a Qatari-German statement condemning Iranian attacks."
+    },
+    {
+      "label": "US",
+      "text": "Treasury sanctioned 22 entities and eight individuals in an Iranian shadow banking network on Nov 23. Trump repeated that he would be inclined to restart strikes if there is no deal by the new year."
+    },
+    {
+      "label": "Qatar",
+      "text": "Prime Minister Mohammed bin Abdulrahman Al Thani met Rubio and Vance (about 10 minutes with Vance, per AP). He said Doha is working to bring both sides back to the table and that Qatar and the US are seeking closer military cooperation."
+    },
+    {
+      "label": "Markets",
+      "text": "Brent fell to about $88 and WTI below $80, a three-month low, as Gulf flows rose. Iran's black-market rial weakened about 5 percent to roughly 2.82 million per dollar."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Euronews",
+      "title": "Iran orders Hormuz closed 'further day by day' as Qatar seeks to revive peace talks",
+      "url": "https://www.euronews.com/2026/11/24/iran-orders-hormuz-closed-further-day-by-day-as-qatar-seeks-to-revive-peace-talks"
+    },
+    {
+      "outlet": "Jerusalem Post",
+      "title": "IRGC: Three tankers hit mines, exploded while transiting Hormuz with US support",
+      "url": "https://www.jpost.com/middle-east/iran-news/article-915899"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran war live: Coalition says tower in Riyadh's financial district targeted",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/24/iran-war-live-iran-says-three-ships-catch-fire-after-hitting-hormuz-mines"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Hormuz oil traffic is down 40 percent: Are Iran's tanker attacks working?",
+      "url": "https://www.aljazeera.com/news/2026/11/24/hormuz-oil-traffic-is-down-40-percent-are-irans-tanker-attacks-working"
+    },
+    {
+      "outlet": "Arab News",
+      "title": "Coalition says tower in Riyadh's financial district subjected to terrorist attack",
+      "url": "https://www.arabnews.com/saudi-arabia/coalition-says-tower-in-riyadhs-financial-district-subjected-to-terrorist-attack-3013857"
+    },
+    {
+      "outlet": "Siasat (AFP)",
+      "title": "Tower hit again in Riyadh's financial centre, Houthis claim attack",
+      "url": "https://www.siasat.com/tower-hit-again-in-riyadhs-financial-centre-houthis-claim-attack-3585809/"
+    },
+    {
+      "outlet": "A News",
+      "title": "Tower in Riyadh's business district hit in cowardly terrorist attack, Saudi-led coalition says",
+      "url": "https://www.anews.com.tr/middle-east/2026/11/24/tower-in-riyadhs-business-district-hit-in-cowardly-terrorist-attack-saudi-led-coalition-says"
+    },
+    {
+      "outlet": "Khaleej Times",
+      "title": "Saudi-led coalition says tower in financial centre targeted in 'terrorist attack' (live updates, Nov 24)",
+      "url": "https://www.khaleejtimes.com/world/mena/us-israel-iran-saudi-arabia-yemen-war-live-updates-november-24-2026"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Iran warns Hormuz ships, rules out US talks until 7 conditions met",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Trump threatens to sink Iranian vessels as US strikes oil tanker, Ghalibaf calls for lasting security",
+      "url": "https://gulfnews.com/world/mena/trump-threatens-to-sink-iranian-vessels-as-us-strikes-oil-tanker-ghalibaf-calls-for-lasting-security-1.500757421"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update, Nov 21-23",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.23.26.pdf"
+    }
+  ]
+}
