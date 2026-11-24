@@ -32,18 +32,29 @@ START = "2026-01-01"  # about two months of pre-war baseline before Feb 28
 USER_AGENT = "PersianGulfDailySummary/1.0 (+https://claude.russell-ortelius.workers.dev/)"
 
 
-def get_json(url: str, attempts: int = 3) -> dict:
+def get_json(url: str, attempts: int = 4, wait: int = 20) -> dict:
+    """GET a JSON document, retrying with growing waits.
+
+    GDELT answers too-frequent requests with a plain-text notice instead of JSON, and GitHub's
+    runners share IP addresses, so a JSON parse failure is retried like a network error.
+    Error messages never include the URL, which can carry the API key.
+    """
     last = None
     for i in range(attempts):
+        body = ""
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=60) as res:
-                body = res.read().decode("utf-8")
+                body = res.read().decode("utf-8", errors="replace")
             return json.loads(body)
-        except (urllib.error.URLError, json.JSONDecodeError, TimeoutError) as err:
-            # Never include the URL in messages: it can carry the API key.
-            last = f"{type(err).__name__}: {getattr(err, 'code', '')} {getattr(err, 'reason', '') or str(err)[:200]}"
-            time.sleep(6 * (i + 1))
+        except urllib.error.HTTPError as err:
+            last = f"HTTP {err.code} {err.reason}"
+        except json.JSONDecodeError:
+            last = "not JSON: " + " ".join(body.split())[:160]
+        except (urllib.error.URLError, TimeoutError) as err:
+            last = f"{type(err).__name__}: {getattr(err, 'reason', err)}"
+        if i < attempts - 1:
+            time.sleep(wait * (i + 1))
     raise RuntimeError(last)
 
 
@@ -127,7 +138,12 @@ def main() -> int:
             fn()
         except Exception as err:  # keep going; report at the end
             failed.append(name)
-            print(f"{name}: FAILED - {err}", file=sys.stderr)
+            msg = str(err)
+            key = os.environ.get("EIA_API_KEY", "").strip()
+            if key:
+                msg = msg.replace(key, "***")
+            print(f"{name}: FAILED - {msg}", file=sys.stderr)
+            print(f"::error title={name} fetch failed::{msg}")  # shows on the run's summary page
     if failed:
         print(f"Failed: {', '.join(failed)}. Their files were left unchanged.", file=sys.stderr)
         return 1
