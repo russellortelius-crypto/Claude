@@ -136,7 +136,7 @@ Two charts on the Charts page, under "Context: oil prices and news coverage", us
 
 - `scripts/fetch_external.py` fetches both and rewrites the two files. Unlike the hand-kept chart files, these files are not append-only: each run replaces them with the source's current series.
 - `.github/workflows/fetch-data.yml` runs the script twice a day (7:23 AM and 7:23 PM Pacific), checks that the site still builds, and commits any change. Cloudflare then publishes it. To run it now, go to **Actions > Fetch outside data > Run workflow**.
-- If one source fails, its file stays as it was, the other still updates, and the run shows as failed (GitHub emails you about failed runs).
+- If a source fails, its file stays as it was and the other source still updates. A single failure only adds a warning to the run. The run fails, and GitHub emails you, only when the failing source's data is out of date: no new GDELT day for 3 days, or no new Brent price for 14 days (EIA posts prices several days late). GDELT often answers "429 Too Many Requests" because GitHub's servers share IP addresses; the next run usually gets through.
 - The API key lives in **GitHub > Settings > Secrets and variables > Actions**, not in Cloudflare: the fetch runs on GitHub, and Cloudflare only receives the finished files.
 - GDELT's own daily intake swings widely (from about 2,000 to 180,000 articles), so the coverage chart shows the share per 10,000 monitored articles, not raw counts, and dims days when GDELT took in under 10,000.
 - Both files are optional for the build. Without them, the two charts show "Chart data unavailable" and every other page works.

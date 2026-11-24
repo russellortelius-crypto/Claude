@@ -23,13 +23,29 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 START = "2026-01-01"  # about two months of pre-war baseline before Feb 28
 USER_AGENT = "PersianGulfDailySummary/1.0 (+https://claude.russell-ortelius.workers.dev/)"
+
+
+# A failed fetch only fails the run when the file's newest row is older than this many days.
+# GDELT is current to yesterday; EIA posts spot prices several days late.
+STALE_AFTER_DAYS = {"brent.json": 14, "hormuz_coverage.json": 3}
+
+
+def is_stale(name: str) -> bool:
+    path = DATA / name
+    if not path.exists():
+        return True
+    try:
+        newest = max(r["date"] for r in json.loads(path.read_text(encoding="utf-8")))
+    except (ValueError, KeyError, json.JSONDecodeError):
+        return True
+    return date.fromisoformat(newest) < date.today() - timedelta(days=STALE_AFTER_DAYS[name])
 
 
 def get_json(url: str, attempts: int = 4, wait: int = 20) -> dict:
@@ -132,20 +148,23 @@ def fetch_hormuz_coverage() -> None:
 
 
 def main() -> int:
-    failed = []
-    for name, fn in (("brent", fetch_brent), ("hormuz_coverage", fetch_hormuz_coverage)):
+    stale = []
+    for name, file, fn in (("brent", "brent.json", fetch_brent), ("hormuz_coverage", "hormuz_coverage.json", fetch_hormuz_coverage)):
         try:
             fn()
         except Exception as err:  # keep going; report at the end
-            failed.append(name)
             msg = str(err)
             key = os.environ.get("EIA_API_KEY", "").strip()
             if key:
                 msg = msg.replace(key, "***")
             print(f"{name}: FAILED - {msg}", file=sys.stderr)
-            print(f"::error title={name} fetch failed::{msg}")  # shows on the run's summary page
-    if failed:
-        print(f"Failed: {', '.join(failed)}. Their files were left unchanged.", file=sys.stderr)
+            if is_stale(file):
+                stale.append(name)
+                print(f"::error title={name} fetch failed, data is stale::{msg}")
+            else:
+                print(f"::warning title={name} fetch failed, kept the last good data::{msg}")
+    if stale:
+        print(f"Stale and failing: {', '.join(stale)}.", file=sys.stderr)
         return 1
     return 0
 
