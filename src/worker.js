@@ -185,7 +185,8 @@ async function handleAsk(request, env) {
 async function askWorkersAi(env, messages) {
   let out;
   try {
-    out = await env.AI.run(env.LLM_MODEL, { messages, max_tokens: 600, temperature: 0.2 });
+    // Reasoning models (like Gemma 4) think before answering, so leave room for both.
+    out = await env.AI.run(env.LLM_MODEL, { messages, max_tokens: 2500, temperature: 0.2 });
   } catch (err) {
     const msg = String(err && err.message ? err.message : err);
     console.error('Workers AI error', env.LLM_MODEL, msg.slice(0, 1000));

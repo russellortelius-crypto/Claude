@@ -96,7 +96,8 @@ Each daily page has an "Ask the data" box, and there is an **Ask** page in the t
 `wrangler.jsonc` sets `LLM_API_URL` to `workers-ai` and adds the `AI` binding, so questions go to Cloudflare's own AI service, billed to this Cloudflare account. There is no API key to manage.
 
 - Model: `@cf/google/gemma-4-26b-a4b-it`. Each question sends about 24,000 tokens of summaries and chart data, so the model needs a context window that large and a low price per input token.
-- Cost: Workers AI includes 10,000 Neurons a day free, about 40 questions with this model. Past that, on the Workers Free plan, the box says the allowance is used up until midnight UTC; nothing is charged. On Workers Paid, usage past the allowance costs $0.011 per 1,000 Neurons.
+- Gemma 4 is a reasoning model: it thinks before it answers, so the Worker allows up to 2,500 output tokens.
+- Cost: Workers AI includes 10,000 Neurons a day free, about 35 to 40 questions with this model. Past that, on the Workers Free plan, the box says the allowance is used up until midnight UTC; nothing is charged. On Workers Paid, usage past the allowance costs $0.011 per 1,000 Neurons.
 - To change the model, set `LLM_MODEL` to another Workers AI text model id (see Cloudflare's Workers AI model list) and push.
 
 **Other providers**
