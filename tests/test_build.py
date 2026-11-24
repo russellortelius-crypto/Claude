@@ -147,3 +147,9 @@ class OutsideDataTests(unittest.TestCase):
         self.assertEqual(build.validate_chart_file("hormuz_coverage.json", good), [])
         bad = [{"date": "2026-11-17", "articles": -1, "all_articles": 5, "source": "GDELT"}]
         self.assertTrue(build.validate_chart_file("hormuz_coverage.json", bad))
+
+    def test_fires_rows(self):
+        good = [{"date": "2026-11-17", "detections": 400, "outside_flares": 12, "source": "NASA FIRMS"}]
+        self.assertEqual(build.validate_chart_file("fires.json", good), [])
+        bad = [{"date": "2026-11-17", "detections": 400, "outside_flares": None, "source": "NASA FIRMS"}]
+        self.assertTrue(build.validate_chart_file("fires.json", bad))

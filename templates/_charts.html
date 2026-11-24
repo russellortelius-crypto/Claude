@@ -10,6 +10,7 @@
 {% set OUTSIDE_CHARTS = [
   ("brent", "Brent crude oil price", "Europe Brent spot price, US dollars per barrel (EIA)."),
   ("hormuz-coverage", "News coverage of the Strait of Hormuz", "Share of global news articles mentioning the strait, per 10,000 (GDELT)."),
+  ("fires", "Satellite fire detections around the Gulf", "Detections per day away from routine gas flare sites (NASA FIRMS)."),
 ] %}
 {% macro chart_cards(heading_level=3, open_tables=false, show_sources=false, charts=CHARTS, first_fig=1) %}
         <div class="chart-grid">

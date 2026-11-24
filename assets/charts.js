@@ -587,6 +587,52 @@
     });
   }
 
+  // ---------- 8. Satellite fire detections (outside data: NASA FIRMS) ----------
+  // outside_flares: detections away from cells that burned on at least 10% of pre-war days
+  // (oil and gas flares). A detection is a heat source seen from orbit, not a confirmed strike.
+
+  function chartFires(card) {
+    return load('fires.json').then(function (raw) {
+      var rows = byDate(raw);
+      var latest = rows[rows.length - 1];
+      var prewar = rows.filter(function (r) { return r.date < WAR_START; });
+      var avg = prewar.length ? prewar.reduce(function (s, r) { return s + r.outside_flares; }, 0) / prewar.length : null;
+      var peak = rows.reduce(function (a, b) { return b.outside_flares > a.outside_flares ? b : a; });
+      var sub = 'Detections per day away from routine gas flare sites, Kuwait to the Gulf of Oman. Latest: ' + num(latest.outside_flares) + ' on ' + shortDate(latest.date) +
+        (avg !== null ? '. Pre-war daily average: ' + num(Math.round(avg)) : '') + '. Peak: ' + num(peak.outside_flares) + ' on ' + shortDate(peak.date);
+      setText(card, sub,
+        'Column chart of daily satellite fire detections around the Persian Gulf from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
+        rows);
+      draw(card, {
+        type: 'bar',
+        data: {
+          labels: rows.map(function (r) { return shortDate(r.date); }),
+          datasets: [{
+            label: 'Away from flare sites',
+            data: rows.map(function (r) { return r.outside_flares; }),
+            backgroundColor: rows.map(function (r) { return r.date < WAR_START ? '#5A5A5A' : COLORS.orange; }),
+            categoryPercentage: 1, barPercentage: 0.8,
+          }],
+        },
+        options: baseOptions({
+          plugins: {
+            valueLabels: { mode: false },
+            tooltip: { callbacks: {
+              title: function (items) { return longDate(rows[items[0].dataIndex].date); },
+              label: function (item) { return 'Away from flare sites: ' + num(item.raw); },
+              afterLabel: function (item) { return 'All detections, flares included: ' + num(rows[item.dataIndex].detections); },
+            } },
+          },
+        }),
+      });
+      fillTable(card, [
+        { label: 'Date', value: function (r) { return longDate(r.date); } },
+        { label: 'Away from flares', num: true, value: function (r) { return num(r.outside_flares); } },
+        { label: 'All detections', num: true, value: function (r) { return num(r.detections); } },
+      ], rows.slice().reverse());
+    });
+  }
+
   // ---------- boot ----------
 
   var BUILDERS = {
@@ -597,6 +643,7 @@
     'opening-wave': chartOpeningWave,
     brent: chartBrent,
     'hormuz-coverage': chartHormuzCoverage,
+    fires: chartFires,
   };
 
   function init() {

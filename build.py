@@ -78,6 +78,12 @@ OPTIONAL_CHART_FILES = {
         "all_articles": ("int", True),
         "source": ("str", False),
     },
+    "fires.json": {
+        "date": ("date", False),
+        "detections": ("int", False),
+        "outside_flares": ("int", False),
+        "source": ("str", False),
+    },
 }
 
 DASHES = re.compile("[‒–—―]")  # figure, en, em, horizontal bar

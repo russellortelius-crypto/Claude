@@ -26,10 +26,11 @@ const CHART_FILES = {
   // Outside data (scripts/fetch_external.py). Long daily series: only the latest rows go to the model.
   'brent.json': ['date', 'price_usd', 'source'],
   'hormuz_coverage.json': ['date', 'articles', 'all_articles', 'source'],
+  'fires.json': ['date', 'detections', 'outside_flares', 'source'],
 };
 
 // Most rows of a chart file to give the model (newest kept). Files not listed: all rows.
-const MAX_ROWS = { 'brent.json': 60, 'hormuz_coverage.json': 60 };
+const MAX_ROWS = { 'brent.json': 60, 'hormuz_coverage.json': 60, 'fires.json': 60 };
 
 const CHART_TITLES = {
   'launches.json': 'Iranian missiles and drones launched since July 7 (JINSA running total, lower bound)',
@@ -39,6 +40,7 @@ const CHART_TITLES = {
   'opening_wave.json': 'Opening wave: missiles and drones fired at Gulf states, Feb 28 to Mar 18',
   'brent.json': 'Brent crude oil spot price, US dollars per barrel, daily (US EIA; latest 60 trading days)',
   'hormuz_coverage.json': 'News articles per day mentioning the Strait of Hormuz, and all articles GDELT monitored that day (GDELT; latest 60 days; compare the ratio, not raw counts, because GDELT intake varies)',
+  'fires.json': 'Satellite fire detections per day in the Gulf region (NASA FIRMS, VIIRS; outside_flares excludes routine gas flare sites found before the war; latest 60 days; a detection is a heat source, not a confirmed strike)',
 };
 
 const SYSTEM_PROMPT = `You answer questions about the conflict in the Persian Gulf for readers of the "Persian Gulf Daily Summary" website.
