@@ -7,7 +7,8 @@ with status 1 if any source failed, so the workflow run shows as failed.
 
     data/brent.json            Europe Brent spot price, daily (EIA API v2; needs EIA_API_KEY)
     data/hormuz_coverage.json  Daily count of news articles mentioning the Strait of Hormuz (GDELT DOC 2.0; no key)
-    data/fires.json            Daily satellite fire detections around the Gulf (NASA FIRMS; needs FIRMS_MAP_KEY)
+    data/fires.json            Daily satellite fire detections around the Gulf, and the same day a year
+                               earlier (NASA FIRMS; needs FIRMS_MAP_KEY)
     data/firms_static_cells.json  Routine flare sites found before the war, used by fires.json
 
 brent.json and hormuz_coverage.json are replaced on each run (they mirror the source).
@@ -225,6 +226,37 @@ def daterange(first: date, last: date):
         d += timedelta(days=1)
 
 
+def last_year(d: date) -> date:
+    try:
+        return d.replace(year=d.year - 1)
+    except ValueError:  # Feb 29
+        return d.replace(year=d.year - 1, day=28)
+
+
+def firms_window(key: str, avail: dict, sensor: str, days: list[date]) -> dict[str, list[tuple[float, float]]]:
+    """Detections for the given days, in requests of up to 5 consecutive days.
+
+    A request never straddles the boundary between the standard (SP) and near-real-time (NRT) product.
+    """
+    by_day: dict[str, list[tuple[float, float]]] = {d.isoformat(): [] for d in days}
+    todo = sorted(set(days))
+    i = 0
+    while i < len(todo):
+        d = todo[i]
+        product = firms_product(avail, sensor, d.isoformat())
+        if not product:
+            raise RuntimeError(f"no {sensor} data for {d}")
+        n = 1
+        while (n < 5 and i + n < len(todo) and todo[i + n] == d + timedelta(days=n)
+               and firms_product(avail, sensor, todo[i + n].isoformat()) == product):
+            n += 1
+        for day, lat, lon in firms_points(key, product, d.isoformat(), n):
+            if day in by_day:
+                by_day[day].append((lat, lon))
+        i += n
+    return by_day
+
+
 def fetch_fires() -> None:
     key = firms_key()
     avail = firms_availability(key)
@@ -232,7 +264,7 @@ def fetch_fires() -> None:
     start = date.fromisoformat(START)
 
     sensor = next((s for s in FIRMS_SENSORS
-                   if firms_product(avail, s, START) and firms_product(avail, s, yesterday.isoformat())), None)
+                   if all(firms_product(avail, s, d.isoformat()) for d in (start, yesterday, last_year(start)))), None)
     if not sensor:
         raise RuntimeError("no VIIRS sensor covers the whole period; available: " + ", ".join(sorted(avail)))
 
@@ -248,21 +280,7 @@ def fetch_fires() -> None:
     else:
         missing = [d for d in daterange(start, yesterday) if d.isoformat() not in rows]
         first = min([yesterday - timedelta(days=4)] + missing)
-
-    by_day: dict[str, list[tuple[float, float]]] = {d.isoformat(): [] for d in daterange(first, yesterday)}
-    d = first
-    while d <= yesterday:
-        days = min(5, (yesterday - d).days + 1)
-        # Never let one request straddle the SP/NRT boundary.
-        product = firms_product(avail, sensor, d.isoformat())
-        while days > 1 and firms_product(avail, sensor, (d + timedelta(days=days - 1)).isoformat()) != product:
-            days -= 1
-        if not product:
-            raise RuntimeError(f"no {sensor} data for {d}")
-        for day, lat, lon in firms_points(key, product, d.isoformat(), days):
-            if day in by_day:
-                by_day[day].append((lat, lon))
-        d += timedelta(days=days)
+    by_day = firms_window(key, avail, sensor, list(daterange(first, yesterday)))
 
     if mask is None:
         prewar = [day for day in by_day if day < WAR_START]
@@ -278,14 +296,29 @@ def fetch_fires() -> None:
         print(f"firms_static_cells.json: {len(cells)} routine flare cells from {len(prewar)} pre-war days")
 
     static = {tuple(c) for c in mask["cells"]}
+
+    def outside(pts: list[tuple[float, float]]) -> int:
+        return sum(1 for lat, lon in pts if not near_static(cell(lat, lon), static))
+
     for day, pts in by_day.items():
-        outside = sum(1 for lat, lon in pts if not near_static(cell(lat, lon), static))
+        old = rows.get(day, {})
         rows[day] = {
             "date": day,
             "detections": len(pts),
-            "outside_flares": outside,
+            "outside_flares": outside(pts),
+            "last_year_outside_flares": old.get("last_year_outside_flares"),
             "source": f"NASA FIRMS, {sensor.replace('_', ' ')} active fire detections ({firms_product(avail, sensor, day).rsplit('_', 1)[1]})",
         }
+
+    # Same calendar day a year earlier, same sensor and flare sites. Fetched once per day (the
+    # standard product is final), so after the first run this is one small request.
+    need_prev = [d for d, r in rows.items() if r.get("last_year_outside_flares") is None]
+    if need_prev:
+        prev = firms_window(key, avail, sensor, [last_year(date.fromisoformat(d)) for d in need_prev])
+        for d in need_prev:
+            rows[d]["last_year_outside_flares"] = outside(prev[last_year(date.fromisoformat(d)).isoformat()])
+        print(f"fires.json: added the year-earlier count for {len(need_prev)} days")
+
     write("fires.json", [rows[k] for k in sorted(rows)])
 
 

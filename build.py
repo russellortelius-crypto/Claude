@@ -82,6 +82,7 @@ OPTIONAL_CHART_FILES = {
         "date": ("date", False),
         "detections": ("int", False),
         "outside_flares": ("int", False),
+        "last_year_outside_flares": ("int", True),
         "source": ("str", False),
     },
 }
@@ -229,7 +230,8 @@ def validate_chart_file(name: str, rows) -> list[str]:
             continue
         for field, (kind, nullable) in fields.items():
             if field not in row:
-                errors.append(f"{w}: missing {field}")
+                if not nullable:  # a nullable field may also be left out
+                    errors.append(f"{w}: missing {field}")
                 continue
             v = row[field]
             if v is None:

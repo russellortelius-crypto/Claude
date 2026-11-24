@@ -26,7 +26,7 @@ const CHART_FILES = {
   // Outside data (scripts/fetch_external.py). Long daily series: only the latest rows go to the model.
   'brent.json': ['date', 'price_usd', 'source'],
   'hormuz_coverage.json': ['date', 'articles', 'all_articles', 'source'],
-  'fires.json': ['date', 'detections', 'outside_flares', 'source'],
+  'fires.json': ['date', 'detections', 'outside_flares', 'last_year_outside_flares', 'source'],
 };
 
 // Most rows of a chart file to give the model (newest kept). Files not listed: all rows.
@@ -40,7 +40,7 @@ const CHART_TITLES = {
   'opening_wave.json': 'Opening wave: missiles and drones fired at Gulf states, Feb 28 to Mar 18',
   'brent.json': 'Brent crude oil spot price, US dollars per barrel, daily (US EIA; latest 60 trading days)',
   'hormuz_coverage.json': 'News articles per day mentioning the Strait of Hormuz, and all articles GDELT monitored that day (GDELT; latest 60 days; compare the ratio, not raw counts, because GDELT intake varies)',
-  'fires.json': 'Satellite fire detections per day in the Gulf region (NASA FIRMS, VIIRS; outside_flares excludes routine gas flare sites found before the war; latest 60 days; a detection is a heat source, not a confirmed strike; June-July highs include seasonal crop burning)',
+  'fires.json': 'Satellite fire detections per day in the Gulf region (NASA FIRMS, VIIRS; outside_flares excludes routine gas flare sites found before the war; latest 60 days; a detection is a heat source, not a confirmed strike; June-July highs include seasonal crop burning; last_year_outside_flares is the same calendar day in 2025, same method, for a seasonal baseline)',
 };
 
 const SYSTEM_PROMPT = `You answer questions about the conflict in the Persian Gulf for readers of the "Persian Gulf Daily Summary" website.

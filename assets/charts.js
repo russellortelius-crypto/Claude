@@ -588,49 +588,84 @@
   }
 
   // ---------- 8. Satellite fire detections (outside data: NASA FIRMS) ----------
-  // outside_flares: detections away from cells that burned on at least 10% of pre-war days
-  // (oil and gas flares). A detection is a heat source seen from orbit, not a confirmed strike.
+  // Weekly totals of detections away from routine flare sites (cells that burned on at least 10%
+  // of pre-war days), 2026 beside the same weeks of 2025 for the seasonal baseline (crop burning).
+  // A detection is a heat source seen from orbit, not a confirmed strike.
+
+  function addDays(iso, n) {
+    var p = parts(iso);
+    var d = new Date(Date.UTC(p.y, p.m - 1, p.d + n));
+    return d.toISOString().slice(0, 10);
+  }
 
   function chartFires(card) {
     return load('fires.json').then(function (raw) {
-      var rows = byDate(raw);
-      var latest = rows[rows.length - 1];
-      var prewar = rows.filter(function (r) { return r.date < WAR_START; });
-      var avg = prewar.length ? prewar.reduce(function (s, r) { return s + r.outside_flares; }, 0) / prewar.length : null;
-      var peak = rows.reduce(function (a, b) { return b.outside_flares > a.outside_flares ? b : a; });
-      var sub = 'Detections per day away from routine gas flare sites, Kuwait to the Gulf of Oman. Latest: ' + num(latest.outside_flares) + ' on ' + shortDate(latest.date) +
-        (avg !== null ? '. Pre-war daily average: ' + num(Math.round(avg)) : '') + '. Peak: ' + num(peak.outside_flares) + ' on ' + shortDate(peak.date) +
-        '. Summer highs include crop-stubble burning; a detection is a heat source, not a confirmed strike';
+      var days = byDate(raw);
+      var start = days[0].date;
+      var weeks = [];
+      days.forEach(function (r) {
+        var p0 = parts(start), p1 = parts(r.date);
+        var k = Math.floor((Date.UTC(p1.y, p1.m - 1, p1.d) - Date.UTC(p0.y, p0.m - 1, p0.d)) / 604800000);
+        if (!weeks[k]) weeks[k] = { start: addDays(start, k * 7), days: 0, now: 0, prev: 0, prevDays: 0, all: 0 };
+        var w = weeks[k];
+        w.days += 1; w.now += r.outside_flares; w.all += r.detections;
+        if (r.last_year_outside_flares !== null && r.last_year_outside_flares !== undefined) { w.prev += r.last_year_outside_flares; w.prevDays += 1; }
+      });
+      weeks = weeks.filter(Boolean);
+      weeks.forEach(function (w) {
+        w.end = addDays(w.start, w.days - 1);
+        if (w.prevDays !== w.days) w.prev = null;  // only compare like with like
+      });
+      var full = weeks.filter(function (w) { return w.days === 7; });
+      var lastFull = full[full.length - 1];
+      var war = weeks.filter(function (w) { return w.start >= WAR_START && w.prev !== null; });
+      var warNow = war.reduce(function (s, w) { return s + w.now; }, 0);
+      var warPrev = war.reduce(function (s, w) { return s + w.prev; }, 0);
+      var sub = 'Weekly detections away from routine gas flare sites, Kuwait to the Gulf of Oman, 2026 beside the same weeks of 2025. ' +
+        'Week of ' + shortDate(lastFull.start) + ': ' + num(lastFull.now) + (lastFull.prev !== null ? ' (2025: ' + num(lastFull.prev) + ')' : '') +
+        (warPrev ? '. Since the war began: ' + num(warNow) + ' vs ' + num(warPrev) + ' in the same weeks of 2025' : '') +
+        '. A detection is a heat source, not a confirmed strike';
       setText(card, sub,
-        'Column chart of daily satellite fire detections around the Persian Gulf from ' + longDate(rows[0].date) + ' to ' + longDate(latest.date) + '. ' + sub + '.',
-        rows);
+        'Clustered column chart of weekly satellite fire detections around the Persian Gulf, 2026 and 2025, from the week of ' + longDate(weeks[0].start) + '. ' + sub + '.',
+        days);
       draw(card, {
         type: 'bar',
         data: {
-          labels: rows.map(function (r) { return shortDate(r.date); }),
-          datasets: [{
-            label: 'Away from flare sites',
-            data: rows.map(function (r) { return r.outside_flares; }),
-            backgroundColor: rows.map(function (r) { return r.date < WAR_START ? '#5A5A5A' : COLORS.orange; }),
-            categoryPercentage: 1, barPercentage: 0.8,
-          }],
+          labels: weeks.map(function (w) { return shortDate(w.start); }),
+          datasets: [
+            { label: '2026', data: weeks.map(function (w) { return w.now; }), backgroundColor: COLORS.orange },
+            { label: 'Same weeks of 2025', data: weeks.map(function (w) { return w.prev; }), backgroundColor: '#6E6E6E' },
+          ],
         },
         options: baseOptions({
+          interaction: { mode: 'index', intersect: false },
+          datasets: { bar: { categoryPercentage: 0.85, barPercentage: 0.95 } },
+          layout: { padding: { top: 6 } },
           plugins: {
+            legend: { display: true, position: 'top', align: 'start', labels: { boxWidth: 10, boxHeight: 10, color: COLORS.label, font: { family: MONO, size: 11 } } },
             valueLabels: { mode: false },
-            tooltip: { callbacks: {
-              title: function (items) { return longDate(rows[items[0].dataIndex].date); },
-              label: function (item) { return 'Away from flare sites: ' + num(item.raw); },
-              afterLabel: function (item) { return 'All detections, flares included: ' + num(rows[item.dataIndex].detections); },
+            tooltip: { displayColors: true, callbacks: {
+              title: function (items) {
+                var w = weeks[items[0].dataIndex];
+                return longDate(w.start) + ' to ' + longDate(w.end) + (w.days < 7 ? ' (' + w.days + ' days so far)' : '');
+              },
+              label: function (item) { return item.dataset.label + ': ' + num(item.raw); },
+              footer: function (items) {
+                var w = weeks[items[0].dataIndex];
+                var lines = ['All 2026 detections, flares included: ' + num(w.all)];
+                if (w.start < WAR_START && w.end >= WAR_START) lines.push('The war began Feb 28');
+                return lines;
+              },
             } },
           },
         }),
       });
       fillTable(card, [
-        { label: 'Date', value: function (r) { return longDate(r.date); } },
-        { label: 'Away from flares', num: true, value: function (r) { return num(r.outside_flares); } },
-        { label: 'All detections', num: true, value: function (r) { return num(r.detections); } },
-      ], rows.slice().reverse());
+        { label: 'Week of', value: function (w) { return longDate(w.start) + (w.days < 7 ? ' (' + w.days + ' days)' : ''); } },
+        { label: '2026', num: true, value: function (w) { return num(w.now); } },
+        { label: '2025', num: true, value: function (w) { return num(w.prev); } },
+        { label: 'All 2026, flares included', num: true, value: function (w) { return num(w.all); } },
+      ], weeks.slice().reverse());
     });
   }
 
