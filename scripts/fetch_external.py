@@ -167,6 +167,7 @@ FIRMS_SENSORS = ["VIIRS_NOAA20", "VIIRS_SNPP", "VIIRS_NOAA21"]  # first one cove
 WAR_START = "2026-02-28"
 CELL = 0.03          # degrees; about 3 km, wider than VIIRS pixel jitter
 STATIC_SHARE = 0.10  # a cell lit on at least 10% of pre-war days is a routine flare site
+MASK_VERSION = 2     # bump to rebuild the flare sites and every count
 
 
 def firms_key() -> str:
@@ -271,8 +272,8 @@ def fetch_fires() -> None:
     path, mask_path = DATA / "fires.json", DATA / "firms_static_cells.json"
     rows = {r["date"]: r for r in json.loads(path.read_text(encoding="utf-8"))} if path.exists() else {}
     mask = json.loads(mask_path.read_text(encoding="utf-8")) if mask_path.exists() else None
-    if mask and mask.get("sensor") != sensor:
-        rows, mask = {}, None  # switched satellites: rebuild everything from one sensor
+    if mask and (mask.get("sensor") != sensor or mask.get("version") != MASK_VERSION):
+        rows, mask = {}, None  # new satellite or new flare method: rebuild everything the same way
 
     # Days to (re)fetch: the whole period on the first run, else the latest 5 days plus any gaps.
     if mask is None:
@@ -283,17 +284,27 @@ def fetch_fires() -> None:
     by_day = firms_window(key, avail, sensor, list(daterange(first, yesterday)))
 
     if mask is None:
+        # Flare sites: cells lit on at least STATIC_SHARE of the pre-war days of EITHER year
+        # (Jan 1 to Feb 27, 2026 and the same days of 2025), so both years are measured alike.
         prewar = [day for day in by_day if day < WAR_START]
-        seen: dict[tuple[int, int], set] = {}
-        for day in prewar:
-            for lat, lon in by_day[day]:
-                seen.setdefault(cell(lat, lon), set()).add(day)
+        prev_prewar = [last_year(date.fromisoformat(d)) for d in prewar]
+        prev_points = firms_window(key, avail, sensor, prev_prewar)
         need = max(2, round(STATIC_SHARE * len(prewar)))
-        cells = sorted([list(c) for c, days in seen.items() if len(days) >= need])
-        mask = {"sensor": sensor, "cell_degrees": CELL, "built_from": f"{START} to {prewar[-1]}",
+        cells = set()
+        for period in (by_day, prev_points):
+            seen: dict[tuple[int, int], set] = {}
+            for day, pts in period.items():
+                if day >= WAR_START:
+                    continue
+                for lat, lon in pts:
+                    seen.setdefault(cell(lat, lon), set()).add(day)
+            cells |= {c for c, days in seen.items() if len(days) >= need}
+        cells = sorted([list(c) for c in cells])
+        mask = {"version": MASK_VERSION, "sensor": sensor, "cell_degrees": CELL,
+                "built_from": f"{START} to {prewar[-1]}, and the same days of {int(START[:4]) - 1}",
                 "min_days": need, "cells": cells}
         mask_path.write_text(json.dumps(mask, separators=(",", ":")) + "\n", encoding="utf-8")
-        print(f"firms_static_cells.json: {len(cells)} routine flare cells from {len(prewar)} pre-war days")
+        print(f"firms_static_cells.json: {len(cells)} routine flare cells from {len(prewar)} pre-war days in each year")
 
     static = {tuple(c) for c in mask["cells"]}
 
