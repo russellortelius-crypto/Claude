@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-25",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 25, 2026",
+  "window": "6:00 AM PT Nov 24 to 6:00 AM PT Nov 25, 2026",
+  "generated_at": "2026-11-25T06:15:00-08:00",
+  "top_line": "The IRGC Navy said two more oil tankers hit mines and caught fire in the Strait of Hormuz early Wednesday, and Iran's army said it shot down a US MQ-9 and a LUCAS drone over the strait; nobody has independently confirmed either claim. The Houthis said they struck Saudi Arabia's Ras Tanura refinery and Riyadh's financial district, while the Saudi-led coalition said it destroyed four drones over Ras Tanura and struck Hodeidah port. Saudi Civil Defence said Tuesday's attack on a Riyadh tower wounded 11 people.",
+  "launches_and_strikes": [
+    {
+      "label": "Ras Tanura",
+      "text": "The Saudi-led coalition said its air defenses intercepted and destroyed four drones over Ras Tanura in the Eastern Province early Wednesday. Debris fell, and an initial assessment found no casualties. Houthi spokesman Yahya Saree claimed direct hits on the Ras Tanura refinery that started fires, but named no weapons. AP could not verify the claim, and no Saudi damage report was found."
+    },
+    {
+      "label": "Riyadh",
+      "text": "The coalition said a Houthi drone targeted a tower in the King Abdullah Financial District on Nov 24, the second strike on the same tower in under a week. Saree said the group attacked the district in three phases and caused significant damage (unconfirmed)."
+    },
+    {
+      "label": "Yemen",
+      "text": "The coalition said it struck operational capabilities at Hodeidah port and targets in Saada and Amran, and told civilians in Hodeidah to evacuate. Houthi media reported intense strikes on the port, the city and its airport. Saree threatened to target Jeddah and other Saudi Red Sea ports if the coalition bombs Hodeidah, and told shipping companies to move their vessels out."
+    },
+    {
+      "label": "Iran",
+      "text": "Iran's army, via IRIB, said its air defenses destroyed a US LUCAS one-way attack drone over the western strait and an MQ-9 Reaper over the eastern strait. No US response was found. A US Mission security alert cited by Gulf News said Iranian attacks have targeted US assets in Bahrain and Kuwait and warned of possible flight cancellations and airspace closures; it gave no dates or figures."
+    },
+    {
+      "label": null,
+      "text": "No US or Israeli strikes on Iran were reported in the window. No new JINSA running total was found, so the latest remains at least 677 Iranian missiles and drones launched since July 7 (as of Nov 20)."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "Mine claims",
+      "text": "The IRGC Navy said two more oil tankers hit naval mines, exploded and caught fire early Wednesday off Iran's southern and eastern coasts after taking a route Iran had not authorized (IRNA, via Reuters and OilPrice). Iran did not name the ships, and no independent confirmation was found. CENTCOM has called earlier IRGC mine claims false (ABC News)."
+    },
+    {
+      "label": "Warnings",
+      "text": "Army spokesman Mohammad Akraminia said Iran has deployed new systems to tighten control of the strait and that ships passing without coordinating with Iranian forces face greater risk and have struck mines in recent weeks."
+    },
+    {
+      "label": "Blockade",
+      "text": "Iran's state broadcaster IRIB denied reports that a convoy of tankers had sailed from Kharg Island toward China (The National). Trump said no Iranian ship has gotten through the US naval blockade since it began."
+    },
+    {
+      "label": null,
+      "text": "IMO count unchanged: 139 confirmed incidents and 25 seafarer deaths as of Nov 17."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": "Riyadh",
+      "text": "Saudi Civil Defence said the Nov 24 attack on the financial district tower wounded at least 11 people: two Saudis and nine foreigners, among them two Indians, three Nepalis and four Egyptians (Reuters, TASS). India's foreign ministry confirmed the attack injured two Indian nationals."
+    },
+    {
+      "label": "Yemen",
+      "text": "The Houthis said a Saudi strike killed eight members of one family in Lahj; AP could not verify the claim. Houthi media reported no casualties from the Hodeidah strikes."
+    },
+    {
+      "label": null,
+      "text": "No casualties were reported at Ras Tanura or from the claimed tanker mine strikes."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": "US",
+      "text": "Trump told the New York Post the war is funded until about the end of January and warned that a Democratic Congress could turn a total win into a loss. He said the US can put the war to bed anytime it wants. Democrats have discussed using spending legislation to restrict offensive operations against Iran (The National)."
+    },
+    {
+      "label": "Iran",
+      "text": "Tehran told Washington through Qatari mediators that normal shipping will not resume until the US meets its demands, including lifting the naval blockade and ending the war on all fronts, and that Iran would reopen the strait within 48 hours of that (Reuters). A Revolutionary Guard commander said Iranian forces are ready to push the enemy back a considerable depth and that the US and Israel have suffered a major strategic setback (Al Jazeera). Vice President Mohammadreza Aref said stocks of essential goods are in good shape."
+    },
+    {
+      "label": "Qatar",
+      "text": "Prime Minister Sheikh Mohammed bin Abdulrahman Al Thani completed his Washington visit; The National said prospects for a breakthrough remain unclear."
+    },
+    {
+      "label": "India",
+      "text": "The foreign ministry condemned the Riyadh attack and called for an immediate halt to attacks on civilian, economic and energy infrastructure in Saudi Arabia."
+    },
+    {
+      "label": "Markets",
+      "text": "Oil prices edged lower on Wednesday as rising output and a possible surplus offset supply concerns (Gulf News)."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Jerusalem Post (Reuters)",
+      "title": "Iran warns vessels to coordinate passage in Hormuz to avoid mines",
+      "url": "https://www.jpost.com/middle-east/iran-news/article-916095"
+    },
+    {
+      "outlet": "OilPrice.com",
+      "title": "Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Reports-Fresh-Tanker-Explosions-as-Hormuz-Attacks-Intensify.html"
+    },
+    {
+      "outlet": "The National",
+      "title": "Trump warns of war funding fight as tanker attacks raise Hormuz tension",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/25/trump-warns-of-war-funding-fight-as-tanker-attacks-raise-hormuz-tension/"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Middle East conflict: Trump says Iran war funded through January amid Saudi, Yemen escalation",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-trump-says-iran-war-funded-through-january-amid-saudi-yemen-escalation-1.500759977"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates: Trump says war 'funded' through January",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands/?id=138369648"
+    },
+    {
+      "outlet": "Aaj English TV (Reuters)",
+      "title": "Houthis say they attacked Saudi oil refinery and Riyadh financial district",
+      "url": "https://english.aaj.tv/news/330482082/houthis-say-they-attacked-saudi-oil-refinery-and-riyadh-financial-district"
+    },
+    {
+      "outlet": "The Federal (AP)",
+      "title": "Houthis claim strikes on Saudi refinery and Riyadh financial district",
+      "url": "https://thefederal.com/category/international/houthis-claim-strikes-on-saudi-refinery-riyadh-financial-district-264070"
+    },
+    {
+      "outlet": "TASS",
+      "title": "Houthis claim attack on oil refinery in Saudi Arabia",
+      "url": "https://tass.com/world/2224399"
+    },
+    {
+      "outlet": "Nation Press",
+      "title": "Houthis claim Ras Tanura, Riyadh strikes; 2 Indians hurt",
+      "url": "https://www.nationpress.com/all/houthis-claim-saudi-oil-riyadh-strikes"
+    },
+    {
+      "outlet": "Open Magazine",
+      "title": "Iran Claims It Shot Down Two US Drones Over Strait of Hormuz",
+      "url": "https://openthemagazine.com/world/iran-claims-it-shot-down-two-us-drones-over-strait-of-hormuz"
+    },
+    {
+      "outlet": "Middle East Eye",
+      "title": "Iranian army claims downing of MQ-9 drone over Hormuz Strait",
+      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-army-claims-downing-mq-9-drone-over-hormuz-strait"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran war live: IRGC mocks US 'strategic ambiguity' after 'major setback'",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/25/iran-war-live-houthis-threaten-saudi-ports-over-coalitions-hodeidah-order"
+    },
+    {
+      "outlet": "Khaleej Times",
+      "title": "Iran says ships hit mines in Hormuz, warns vessels to coordinate passage (live updates, Nov 25)",
+      "url": "https://www.khaleejtimes.com/world/mena/us-israel-iran-saudi-arabia-yemen-war-live-updates-november-25-2026"
+    }
+  ]
+}
