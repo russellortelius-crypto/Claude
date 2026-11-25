@@ -1113,5 +1113,30 @@
     "date": "2026-11-17",
     "price_usd": 92.94,
     "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-18",
+    "price_usd": 92.88,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-19",
+    "price_usd": 95.17,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-20",
+    "price_usd": 92.76,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-23",
+    "price_usd": 91.2,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
+  },
+  {
+    "date": "2026-11-24",
+    "price_usd": 91.8,
+    "source": "US EIA, Europe Brent spot price FOB (RBRTE)"
   }
 ]
