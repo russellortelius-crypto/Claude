@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-26",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 26, 2026",
+  "window": "6:00 AM PT Nov 25 to 6:00 AM PT Nov 26, 2026",
+  "generated_at": "2026-11-26T06:20:00-08:00",
+  "top_line": "Kuwait said Iranian drones attacked a vital facility on Thursday and wounded four people, two of them Italians, and some civilian flights turned away from Kuwaiti airspace. Saudi Arabia said it destroyed two Houthi ballistic missiles fired at Riyadh, a cruise missile and a drone near Jeddah port after the Houthis threatened Saudi Red Sea ports over the coalition's Hodeidah strikes. Israel's military spokesman said Israel is ready to strike Iran on its own, and Netanyahu is convening his security cabinet on Thursday evening.",
+  "launches_and_strikes": [
+    {
+      "label": "Kuwait",
+      "text": "Defense Ministry spokesman Col. Saud al-Atwan said the army detected and engaged several hostile Iranian drones on Thursday. Shrapnel fell on a vital facility, which he did not name, and caused material damage. The ministry gave no drone count (Anadolu, Euronews, LaPresse)."
+    },
+    {
+      "label": "Riyadh and Jeddah",
+      "text": "The Saudi Press Agency said air defenses destroyed two ballistic missiles aimed at Riyadh around midnight local time, one cruise missile in the west and one drone near Jeddah Islamic Port; AFP journalists and residents heard explosions over the capital (Gulf News). Coalition spokesman Turki al-Maliki said debris from the Jeddah drone hurt no civilians. The Houthis said they attacked the ports of Jeddah and Jizan in response to the Hodeidah strikes (Middle East Monitor); Saudi Arabia reported no hits."
+    },
+    {
+      "label": "Ras Tanura",
+      "text": "Satellite images showed black smoke over the Ras Tanura refinery, which the Houthis said they struck on Nov 25 (Al Jazeera, ABC News). Saudi Arabia has reported only drone interceptions there, and no Saudi damage report was found."
+    },
+    {
+      "label": "Yemen",
+      "text": "Al Jazeera reported an explosion in Sanaa after recent air strikes near the city's international airport. It did not say who carried out the strikes or give any casualty figures."
+    },
+    {
+      "label": null,
+      "text": "No US or Israeli strikes on Iran were reported in the window. JINSA's Nov 21-23 update gives no running total, so the latest remains at least 677 Iranian missiles and drones launched since July 7 (as of Nov 20). That update cites Trump saying on Nov 22 that Iran had launched more drones and missiles in the past week than at any time in over a year."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "Khasab",
+      "text": "UKMTO said an unidentified projectile struck an outbound tanker about 18 nautical miles east of Khasab, Oman, at about 1300 UTC on Wednesday (warning 223-26). All crew are accounted for, and UKMTO reported no environmental impact. It did not name the ship (Reuters, Arab Times)."
+    },
+    {
+      "label": "Mine claims",
+      "text": "In a statement carried by Fars, the IRGC said two oil tankers with their navigation systems switched off hit naval mines north of Khasab while crossing without Iran's permission, and that one, a supertanker carrying more than two million barrels of crude, was still burning. No maritime authority has confirmed any mine strike, and the reports do not make clear whether the claim refers to the UKMTO incident."
+    },
+    {
+      "label": "Off Dubai",
+      "text": "A tanker's master reported an explosion from an unknown projectile close to the ship about 50 nautical miles west of Dubai overnight. UKMTO said the ship suffered no damage and the crew are safe (Al Jazeera, Siasat)."
+    },
+    {
+      "label": "Blockade",
+      "text": "US Treasury Secretary Scott Bessent said Iran has run out of oil stored at sea and has not loaded a tanker since the US blockade operation began in August (Iran International)."
+    },
+    {
+      "label": null,
+      "text": "IMO count unchanged: 139 confirmed incidents and 25 seafarer deaths as of Nov 17."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": "Kuwait",
+      "text": "The army said the four people wounded in Thursday's drone attack were a Kuwaiti, two Italians and a Pakistani, and that all went to hospital (Anadolu, LaPresse)."
+    },
+    {
+      "label": "Yemen",
+      "text": "UN humanitarian chief Tom Fletcher said renewed fighting in Yemen has displaced more than 364,000 people since August (ABC News)."
+    },
+    {
+      "label": null,
+      "text": "No casualties were reported from the Riyadh, Jeddah or Ras Tanura interceptions, and the tanker incidents reported by UKMTO caused no injuries."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": "Israel",
+      "text": "IDF spokesman Brig. Gen. Effie Defrin told Kan that Israel is ready to strike with force at any moment, including alone, without the Americans. The Times of Israel reported that Netanyahu will convene his security cabinet on Thursday evening (via Iran International, World Israel News). Defense Minister Israel Katz said on Tuesday that Iran is developing chemical weapons, and Axios reported that Mossad chief Roman Gofman presented intelligence on the claim to CIA Director John Ratcliffe and envoy Steve Witkoff."
+    },
+    {
+      "label": "Iran",
+      "text": "Foreign Minister Abbas Araghchi said Israel is using the chemical weapons claim to drag the US into another war (Gulf News, Al Arabiya)."
+    },
+    {
+      "label": "US",
+      "text": "Envoy Jared Kushner said on a podcast that Trump is keeping all options on the table on Iran and has met Iranian representatives several times (Gulf News). Bessent called the Iranian government a sinking ship."
+    },
+    {
+      "label": "Arab states",
+      "text": "Arab officials at the Aswan Forum told The National they fear a return to full-scale war between the US and Iran. One Arab diplomat said the Democrats' win of both chambers of Congress could slow escalation."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Anadolu Agency",
+      "title": "Kuwait says 4 injured in Iranian drone attack on vital facility",
+      "url": "https://www.aa.com.tr/en/middle-east/kuwait-says-4-injured-in-iranian-drone-attack-on-vital-facility/4138869"
+    },
+    {
+      "outlet": "Euronews",
+      "title": "Civilian flights diverted as Kuwait army intercepts Iranian drone attack",
+      "url": "https://www.euronews.com/2026/11/26/civilian-flights-diverted-as-kuwait-army-intercepts-iranian-drone-attack"
+    },
+    {
+      "outlet": "LaPresse",
+      "title": "Iran: Kuwaiti army, 4 injured in drone attack, 2 of whom are Italian",
+      "url": "https://uk.lapresse.it/world-en/2026/11/26/iran-kuwaiti-army-4-injured-in-drone-attack-2-of-whom-are-italian/"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Middle East conflict: Saudi Arabia intercepts missiles and drones as Trump keeps Iran options open",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-missiles-and-drones-as-trump-keeps-iran-options-open-1.500761343"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "Saudi-led coalition says it intercepted Houthi drone near Jeddah port",
+      "url": "https://www.iranintl.com/en/202611255151"
+    },
+    {
+      "outlet": "Middle East Monitor",
+      "title": "Houthis claim attacks on Saudi ports of Jeddah and Jizan in response to Hodeidah strike",
+      "url": "https://www.middleeastmonitor.com/20261126-houthis-claim-attacks-on-saudi-ports-of-jeddah-and-jizan-in-response-to-hodeidah-strike/"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran war live: Explosion rocks Sanaa; missiles intercepted over Riyadh",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/26/iran-war-live-explosion-rocks-sanaa-missiles-intercepted-over-riyadh"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates: Kuwait says Iranian drone attack injured 4 people",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands/?id=138369648"
+    },
+    {
+      "outlet": "BOE Report (Reuters)",
+      "title": "Tanker struck by projectile while transiting Strait of Hormuz, UKMTO says",
+      "url": "https://boereport.com/2026/11/26/tanker-struck-by-projectile-while-transiting-strait-of-hormuz-ukmto-says/"
+    },
+    {
+      "outlet": "Arab Times",
+      "title": "Outbound Tanker Struck by Unknown Projectile Near Oman's Khasab",
+      "url": "https://www.arabtimesonline.com/news/tanker-struck-by-unknown-projectile-near-omans-khasab-112188/"
+    },
+    {
+      "outlet": "The Siasat Daily",
+      "title": "2 tankers catch fire off Oman while 'secretly' crossing Hormuz: Iran",
+      "url": "https://www.siasat.com/2-tankers-catch-fire-off-oman-while-secretly-crossing-hormuz-iran-3587646/"
+    },
+    {
+      "outlet": "Iran International",
+      "title": "Israel ready to strike Iran without US support, IDF spokesman says",
+      "url": "https://www.iranintl.com/en/202611268653"
+    },
+    {
+      "outlet": "World Israel News",
+      "title": "IDF declares Israel prepared to attack Iran without US as Netanyahu calls cabinet meeting",
+      "url": "https://worldisraelnews.com/idf-declares-israel-prepared-to-attack-iran-without-us-as-netanyahu-calls-cabinet-meeting/"
+    },
+    {
+      "outlet": "Al Arabiya",
+      "title": "Iran says Israel trying to deceive US into war with chemical weapons claim",
+      "url": "https://english.alarabiya.net/News/middle-east/2026/11/25/iran-says-israel-trying-to-deceive-us-into-war-with-chemical-weapons-claim"
+    },
+    {
+      "outlet": "The National",
+      "title": "Arab officials fear return to 'full-scale' war between US and Iran",
+      "url": "https://www.thenationalnews.com/news/mena/2026/11/26/arab-nations-fear-renewed-iran-war-as-officials-warn-of-far-reaching-impact"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: 11/23/26",
+      "url": "https://jinsa.org/jinsa_report/iran-war-update-11-23-26/"
+    }
+  ]
+}
