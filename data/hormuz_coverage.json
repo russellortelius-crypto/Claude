@@ -1804,5 +1804,11 @@
     "articles": 163,
     "all_articles": 53231,
     "source": "GDELT DOC 2.0 (global news in 65 languages, machine translated), query \"strait of hormuz\""
+  },
+  {
+    "date": "2026-11-25",
+    "articles": 112,
+    "all_articles": 40220,
+    "source": "GDELT DOC 2.0 (global news in 65 languages, machine translated), query \"strait of hormuz\""
   }
 ]
