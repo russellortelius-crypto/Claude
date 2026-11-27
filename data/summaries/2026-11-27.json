@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-27",
+  "title": "Persian Gulf hostilities - 24-hour summary - November 27, 2026",
+  "window": "6:00 AM PT Nov 26 to 6:00 AM PT Nov 27, 2026",
+  "generated_at": "2026-11-27T06:30:00-08:00",
+  "top_line": "Kuwait said the two Italian technicians wounded in Thursday's drone attack on an air defense site have died, the first European civilians killed in the war. Iran denied any role and offered a joint investigation, while Italy, the EU, Saudi Arabia and the UK blamed or condemned Iran. A Houthi attack on Saudi Arabia's Jazan refinery killed a Nepali worker and forced a partial shutdown, the Saudi-led coalition said it hit 50 targets in Yemen, and Trump said the US has victory at hand and is giving Tehran a chance to make a deal.",
+  "launches_and_strikes": [
+    {
+      "label": "Kuwait",
+      "text": "Italian Foreign Minister Antonio Tajani said drones of Iranian origin hit a Kuwaiti air defense detection station at about 2 p.m. local time on Thursday. Kuwait's Defense Ministry said its forces intercepted several hostile drones and that falling debris caused the casualties. Neither gave a drone count (CBS News, Al Jazeera)."
+    },
+    {
+      "label": "Jazan",
+      "text": "Coalition spokesman Turki al-Maliki said Houthi forces attacked the Jazan refinery on Thursday and promised a firm military response. He said the coalition then destroyed the ballistic missile launcher in Hodeidah that the Houthis used in the attack (Gulf News)."
+    },
+    {
+      "label": "Riyadh and Eastern Province",
+      "text": "Al-Maliki said Saudi air defenses destroyed two Houthi ballistic missiles aimed at Riyadh and two drones over the Eastern Province on Thursday (The Nation). The reports do not make clear whether the Riyadh missiles are the same two reported in yesterday's summary."
+    },
+    {
+      "label": "Yemen",
+      "text": "Al-Maliki said the coalition destroyed 50 military targets in Sanaa, Hodeidah and Saada governorates (Gulf News). Al Jazeera reported that air strikes on Houthi positions continued for a fourth day."
+    },
+    {
+      "label": "Iran",
+      "text": "Iranian police said they intercepted and brought down a hostile drone near Zahedan in Sistan and Baluchestan province. They did not say whose drone it was (Al Jazeera)."
+    },
+    {
+      "label": null,
+      "text": "No source confirmed any US or Israeli strike on Iran in the window. JINSA published a Nov 25 update, but this run could not retrieve it, so the latest total remains at least 677 Iranian missiles and drones launched since July 7 (as of Nov 20)."
+    }
+  ],
+  "maritime_and_shipping": [
+    {
+      "label": "Mine claim",
+      "text": "The IRGC said another tanker hit a mine and exploded in the Strait of Hormuz. It named no ship and gave no time, and no maritime authority has confirmed the claim (Al Jazeera)."
+    },
+    {
+      "label": "Tankers retaken",
+      "text": "Navy commander Shahram Irani told Fars that Iranian forces boarded two Iranian oil tankers the US military had seized and took them back while their crews slept. He named neither ship, and US officials did not immediately comment (Yeni Safak, citing Anadolu)."
+    },
+    {
+      "label": "Blockade",
+      "text": "Esmaeil Kowsari, a member of the Iranian parliament's national security committee, told state broadcaster IRIB that Iran's armed forces will break the US naval blockade and that Iran has full control of the strait. He warned that any country giving the US use of its territory would bear the consequences (Gulf News)."
+    },
+    {
+      "label": "ADNOC vessel",
+      "text": "Searchers found the body of a Jordanian crew member, missing since the Nov 17 attack on an ADNOC vessel in the strait, off the UAE coast. That attack injured 11 crew (CBS News, Gulf News)."
+    },
+    {
+      "label": null,
+      "text": "CBS News, citing the IMO, put the number of commercial ships attacked in and around Hormuz since February at 141, but gave no as-of date. The chart keeps the IMO's last dated figure: 139 confirmed incidents and 25 seafarer deaths as of Nov 17."
+    }
+  ],
+  "casualties_and_damage": [
+    {
+      "label": "Kuwait",
+      "text": "The two Italians who died worked for Rheinmetall Italia and were maintaining air defense equipment. Italian media named them as Antonio Saccoccio, 65, and Emanuele Lo Russo, 36. The falling debris also wounded a Kuwaiti and a Pakistani (Al Jazeera, ABC News)."
+    },
+    {
+      "label": "Jazan",
+      "text": "The Saudi Press Agency, citing the energy ministry, said the attack killed one Nepali worker, injured several workers of other nationalities, started a fire and shut down some operations for a time. Nepal's foreign ministry said the attack also injured three Nepali nationals (Gulf News)."
+    },
+    {
+      "label": null,
+      "text": "Sources reported no other casualties in the window."
+    }
+  ],
+  "diplomacy_and_statements": [
+    {
+      "label": "Iran",
+      "text": "Foreign Minister Abbas Araghchi called the Kuwait incident suspicious and a pre-cooked recipe for war. He phoned his Kuwaiti and Italian counterparts to deny involvement and offered a joint investigation. Armed forces spokesman Abolfazl Shekarchi said Iranian forces carried out no military operations in the region and called the attack a possible false flag (Al Jazeera, Gulf News)."
+    },
+    {
+      "label": "Condemnations",
+      "text": "Kuwait's foreign ministry called the attack sinful and reserved the right to take all measures to protect its sovereignty. EU Commission President Ursula von der Leyen said Europe must step up pressure on Iran. Saudi Arabia condemned Iranian aggression against Kuwait, UK Middle East minister Stephen Doughty called the attacks utterly unacceptable, and GCC Secretary-General Jasem Albudaiwi called it brutal. Qatar condemned the Jazan refinery attack (Gulf News, Al Jazeera)."
+    },
+    {
+      "label": "US",
+      "text": "On a Thanksgiving call from Mar-a-Lago, Trump said the US has victory at hand in Iran, that it will come whenever he wants, and that he is giving Tehran every chance to make a deal. He also said Russia and China are very little involved with Iran, and spoke with US troops at Al Dhafra Air Base, Prince Sultan Air Base and aboard USS Portland (Gulf News)."
+    },
+    {
+      "label": "Israel",
+      "text": "None of the sources reviewed reported the outcome of the security cabinet meeting Netanyahu had called for Thursday evening."
+    }
+  ],
+  "chart_updates": [],
+  "sources": [
+    {
+      "outlet": "Al Jazeera",
+      "title": "Iran war live: IRGC says tanker hit in Hormuz, drone downed in southeast",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/27/iran-war-live-irans-araghchi-calls-deadly-kuwait-attack-suspicious"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "title": "Italians killed in Kuwait: Why is Iran denying responsibility?",
+      "url": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility"
+    },
+    {
+      "outlet": "CBS News",
+      "title": "Iran accused of deadly drone attack in Kuwait that sparks EU call to step up pressure on Tehran",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-military-ai-weapons-oil/"
+    },
+    {
+      "outlet": "ABC News",
+      "title": "Iran live updates: Iranian drone attack killed 2 Italians, Kuwait says",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands/?id=138369648"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Middle East conflict: Saudi refinery attack kills worker, Iran denies deadly Kuwait strike",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-refinery-attack-kills-worker-iran-denies-deadly-kuwait-strike-1.500761343"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Middle East tensions: Trump signals victory as Iran offers Kuwait drone probe",
+      "url": "https://gulfnews.com/world/mena/middle-east-tensions-trump-signals-victory-as-iran-offers-kuwait-drone-probe-1.500762639"
+    },
+    {
+      "outlet": "The Nation",
+      "title": "Explosions heard over Riyadh as Saudis intercept Houthi missiles, drones",
+      "url": "https://www.nation.com.pk/27-Nov-2026/explosions-heard-riyadh-saudis-intercept-houthi-missiles-drones"
+    },
+    {
+      "outlet": "Yeni Safak (Anadolu)",
+      "title": "Iran claims navy recovered two tankers 'stolen' by US military",
+      "url": "https://en.yenisafak.com/world/iran-claims-navy-recovered-two-tankers-stolen-by-us-military-3726061"
+    },
+    {
+      "outlet": "Gulf News",
+      "title": "Israel ready to strike Iran alone, but US has a message for Netanyahu: End the 'wartime mindset'",
+      "url": "https://gulfnews.com/world/mena/israel-ready-to-strike-iran-alone-but-us-has-a-message-for-netanyahu-end-the-wartime-mindset-1.500761767"
+    },
+    {
+      "outlet": "JINSA",
+      "title": "Iran War Update: 11/25/26",
+      "url": "https://jinsa.org/wp-content/uploads/2026/11/Iran-War-Update-11.25.26.pdf"
+    }
+  ]
+}
