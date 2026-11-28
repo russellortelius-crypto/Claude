@@ -2308,5 +2308,12 @@
     "outside_flares": 59,
     "last_year_outside_flares": 25,
     "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
+  },
+  {
+    "date": "2026-11-27",
+    "detections": 604,
+    "outside_flares": 54,
+    "last_year_outside_flares": 32,
+    "source": "NASA FIRMS, VIIRS NOAA20 active fire detections (NRT)"
   }
 ]
